@@ -1,11 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Short Azure Run Command entrypoint.
-#
-# This script prepares the repo archive on the VM, starts the long embedding
-# job as a systemd unit, and exits. The long job writes status/log artifacts to
-# Blob Storage under logs/<cloud_run_id>/.
+# Azure Run Command entrypoint for starting a background embedding job.
 
 storageAccount="${storageAccount:-}"
 container="${container:-}"

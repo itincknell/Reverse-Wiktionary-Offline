@@ -3,34 +3,6 @@
 set -euo pipefail
 
 # Download and prepare the Kaikki/Wiktextract JSONL dump.
-#
-# Interactive default:
-#   If no existing dump is found, download/decompress without prompting.
-#   If an existing timestamped dump is found, ask whether to download a new copy.
-#
-# Scripted modes:
-#   --use-existing
-#       Never download a new copy if a timestamped dump already exists.
-#       Ensure the latest existing compressed dump is decompressed.
-#
-#   --download-new
-#       Always download a new copy into a fresh timestamped folder.
-#
-#   --yes
-#       Non-interactive default-yes mode. Equivalent to choosing to download
-#       a new copy when prompted.
-#
-#   --root-dir PATH
-#       Override the root output directory.
-#
-#   --url URL
-#       Override the source download URL.
-#
-# Examples:
-#   ./scripts/download_wiktionary_dump.sh
-#   ./scripts/download_wiktionary_dump.sh --use-existing
-#   ./scripts/download_wiktionary_dump.sh --download-new
-#   ./scripts/download_wiktionary_dump.sh --yes
 
 URL="https://kaikki.org/dictionary/raw-wiktextract-data.jsonl.gz"
 ROOT_DIR="data/raw"
@@ -40,7 +12,18 @@ LATEST_LINK=""
 MODE="interactive"
 
 usage() {
-  sed -n '5,38p' "$0"
+  cat <<'EOF'
+Download and prepare the Kaikki/Wiktextract JSONL dump.
+
+Modes:
+  --use-existing    Reuse the latest local raw run.
+  --download-new    Download into a new timestamped raw run.
+  --yes, -y         Non-interactive download-new mode.
+
+Options:
+  --root-dir PATH   Defaults to data/raw.
+  --url URL         Defaults to the Kaikki raw dump URL.
+EOF
 }
 
 while [ "$#" -gt 0 ]; do

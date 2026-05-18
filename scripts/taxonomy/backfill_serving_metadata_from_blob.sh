@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Backfill historical serving_metadata.json files for older processed Blob runs by reading the
-# processed JSONL shards. This does not parse raw Wiktionary data.
+# Backfill serving_metadata.json from processed JSONL shard blobs.
 
 STORAGE_ACCOUNT=""
 CONTAINER=""

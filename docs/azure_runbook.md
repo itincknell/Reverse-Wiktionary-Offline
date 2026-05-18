@@ -343,16 +343,3 @@ az vm get-instance-view \
   --query "instanceView.statuses[?starts_with(code, 'PowerState/')].displayStatus" \
   --output tsv
 ```
-
-## 20260512 Run Notes
-
-```bash
-# 20260512T203456Z: dependency install failed from local pip-freeze requirements.
-# resolution: requirements.txt contains direct runtime dependencies only.
-```
-
-```bash
-# 20260512T204458Z: embeddings completed; original wrapper failed during Qdrant snapshot.
-# recovery: snapshot uploaded manually under indexes/20260512T204458Z.
-# follow-up: background systemd jobs, live Blob status/log upload, 3600s snapshot timeout.
-```

@@ -31,25 +31,15 @@ raw Wiktionary dump
 
 The serving repository restores the snapshot advertised by `indexes/latest.json`.
 
-## Current State
+## Current Index
+
+The active production snapshot is selected by:
 
 ```text
-raw_run_id: 20260506T173841Z
-processed_run_id: 20260512T205400Z
-index_run_id: 20260512T204458Z
-collection_name: reverse_wiktionary_v1
-model: sentence-transformers/all-mpnet-base-v2
-rows_indexed: 3,869,247
-vector_size: 768
-snapshot_size_bytes: 13,601,704,960
-```
-
-The production index snapshot is stored in Azure Blob Storage under:
-
-```text
-indexes/20260512T204458Z/
 indexes/latest.json
 ```
+
+Run-specific details live in [offline run records](runs/offline_embedding/).
 
 ## Documentation
 

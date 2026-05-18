@@ -1,20 +1,6 @@
 #!/usr/bin/env python3
 
-"""
-Generate embeddings for normalized Wiktionary shards and upsert them to Qdrant.
-
-This script is the orchestration layer for the embedding/indexing stage.
-
-Responsibilities:
-- Resolve processed input and embedding output paths
-- Load the SentenceTransformer model
-- Create or validate the Qdrant collection
-- Stream normalized JSONL shards in deterministic order
-- Encode `embedding_text` batches
-- Send completed vector batches to a background Qdrant upsert worker
-- Checkpoint completed shards in an embedding manifest
-- Update the embeddings/latest symlink after a successful run
-"""
+"""Generate embeddings for normalized Wiktionary shards and upsert them to Qdrant."""
 
 from __future__ import annotations
 

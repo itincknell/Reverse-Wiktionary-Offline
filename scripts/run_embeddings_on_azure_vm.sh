@@ -1,10 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Start an existing Azure VM and submit the offline embedding job as a
-# background systemd unit. The VM is left running by default so the job can
-# continue after Azure Run Command returns. Deallocate the VM only after the
-# Blob status artifact reports a terminal state.
+# Submit the offline embedding job to an existing Azure VM.
 
 RESOURCE_GROUP=""
 VM_NAME=""

@@ -2,10 +2,6 @@
 set -euo pipefail
 
 # Ensure data/processed/latest exists for an embedding job.
-#
-# Default behavior is strict: require processed artifacts in Blob Storage.
-# Optional fallback behavior can prepare processed shards from raw Blob data, and
-# optionally download raw data from Kaikki when Blob does not have it.
 
 STORAGE_ACCOUNT=""
 CONTAINER=""

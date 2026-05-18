@@ -1,12 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Remote Azure VM job invoked by scripts/run_embeddings_on_azure_vm.sh.
-#
-# The VM is expected to have Azure CLI, Docker, jq, and the project repo
-# archive supplied by the launcher. Keeping the remote job explicit makes the
-# VM contract visible and avoids hiding infrastructure assumptions inside
-# Python code.
+# Remote Azure VM embedding job invoked by the launcher script.
 
 storageAccount="${storageAccount:-}"
 container="${container:-}"

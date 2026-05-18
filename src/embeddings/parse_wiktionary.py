@@ -354,8 +354,7 @@ def build_serving_metadata(
     """
     Build the compact metadata artifact for processed-run audit.
 
-    The filename is historical; this artifact is the deterministic offline
-    contract for available language/POS values and their counts.
+    This artifact records available language/POS values and their row counts.
     """
     languages = [
         {"lang": lang, "rows": rows}

@@ -7,8 +7,8 @@ uses UTC timestamp format:
 YYYYMMDDTHHMMSSZ
 ```
 
-Consumers should use manifests rather than directory inspection and ignore
-unknown JSON fields.
+Consumers read manifests rather than inferring state from directory contents.
+Unknown JSON fields are reserved for compatible extension.
 
 ## Local Artifact Layout
 
@@ -141,12 +141,12 @@ Optional fields:
 
 - `expansion`: Display text from Wiktionary head templates when available.
 
-Compatibility rules:
+Compatibility:
 
-- Consumers must ignore unknown fields.
+- Consumers ignore unknown fields.
 - Producers bump `SCHEMA_VERSION` before removing or renaming fields.
-- `embedding_text` is the model input contract; presentation fields must not
-  be reconstructed by consumers.
+- `embedding_text` is the model input contract; presentation fields are stored
+  separately.
 
 ## Preprocessing Manifest
 
@@ -191,9 +191,8 @@ processed/<run_id>/serving_metadata.json
 
 Current schema: `v1`
 
-The filename is historical. In this offline repo it is the processed-run
-metadata contract used for audit, taxonomy generation, and downstream artifact
-consumers.
+`serving_metadata.json` is the processed-run metadata artifact used for audit,
+taxonomy generation, and downstream artifact consumers.
 
 Important fields:
 
@@ -204,9 +203,8 @@ Important fields:
 - `languages`: Objects with `lang` and `rows`.
 - `pos`: Objects with `pos` and `rows`.
 
-This metadata is the offline contract for expected language/POS values and row
-counts. Qdrant payloads remain the source of truth for the collection that gets
-snapshotted.
+This metadata records language/POS values and row counts for the processed run.
+Qdrant payloads remain the source of truth for the snapshotted collection.
 
 ## Language Taxonomy
 
@@ -256,8 +254,8 @@ records.
 review-needed labels, sorted by row count. `language_taxonomy_report.json`
 stores aggregate match counts, top families, and the top unmatched candidates.
 
-The override map is the audit trail for Wiktionary labels that should not rely
-on fuzzy matching, including pseudo-language labels such as `Translingual`.
+The override map is the audit trail for Wiktionary labels with reviewed
+taxonomy assignments, including pseudo-language labels such as `Translingual`.
 
 ## Embedding Manifest
 
@@ -316,7 +314,7 @@ Producer: `scripts/qdrant/create_payload_indexes.sh`
 
 Verifier: `scripts/qdrant/check_payload_indexes.sh`
 
-The snapshotted collection should have keyword payload indexes for:
+The snapshotted collection includes keyword payload indexes for:
 
 ```text
 lang
@@ -375,60 +373,4 @@ snapshotting
 uploading_snapshot
 uploading_embedding_manifest
 succeeded
-```
-
-## Azure VM Job Contract
-
-Launcher: `scripts/run_embeddings_on_azure_vm.sh`
-
-Remote job: `scripts/azure/run_embedding_job_remote.sh`
-
-Bootstrap script: `scripts/azure/bootstrap_embedding_vm.sh`
-
-Snapshot-only rerun: `scripts/snapshot_qdrant_on_azure_vm.sh`
-
-The VM is expected to have:
-
-- Azure CLI authenticated with access to the storage account.
-- Docker and Docker Compose available.
-- `jq` available.
-- Python 3 with `venv` available.
-
-The launcher uploads a lightweight repository archive to:
-
-```text
-code/<run_id>/repo.tar.gz
-```
-
-The launcher submits a short Azure Run Command. That command extracts the repo
-archive into `/opt/reverse-wiktionary`, or a custom path passed with
-`--vm-repo-dir`, starts the real job as a background systemd unit, and exits.
-
-The background job creates `.venv`, installs `requirements.txt`, periodically
-uploads `logs/<cloud_run_id>/status.json`, and periodically uploads
-`logs/<cloud_run_id>/remote_embedding_job.log`.
-
-By default, the VM job reads `processed/latest.json`, downloads that processed
-run, and fails if processed input is missing.
-
-Optional fallback flags:
-
-- `--prepare-processed-if-missing`: If processed input is missing, download
-  `raw/latest.json`, preprocess the raw dump, upload the new processed run, and
-  continue embedding.
-- `--allow-raw-download`: If raw input is also missing from Blob Storage,
-  download the Kaikki dump, upload it to `raw/<run_id>/`, preprocess it, upload
-  the new processed run, and continue embedding.
-
-After processed input is ready, the VM job generates embeddings, snapshots
-Qdrant, uploads `indexes/<run_id>/`, and updates `indexes/latest.json`.
-
-If embedding succeeds but snapshot/upload fails, rerun only the snapshot stage
-with `scripts/snapshot_qdrant_on_azure_vm.sh`.
-
-Snapshot-only reruns write:
-
-```text
-logs/snapshot-<run_id>/status.json
-logs/snapshot-<run_id>/remote_snapshot_job.log
 ```

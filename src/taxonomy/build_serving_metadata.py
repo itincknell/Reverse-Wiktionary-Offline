@@ -1,9 +1,7 @@
 """
 Backfill processed language/POS metadata from JSONL shards.
 
-This reads the processed row contract, not the raw Wiktionary dump. It is used
-for older processed runs that were created before `serving_metadata.json` became
-part of the preprocessing output. The filename is historical.
+This reads processed rows, not the raw Wiktionary dump.
 """
 
 from __future__ import annotations

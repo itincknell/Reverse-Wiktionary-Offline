@@ -1,9 +1,8 @@
 """
 Manifest helpers.
 
-Manifests make pipeline runs inspectable and resumable. Each stage should write
-a manifest that records inputs, outputs, schema/model settings, counts, and
-completed shard status.
+Manifests make pipeline runs inspectable and resumable. Each stage records
+inputs, outputs, schema/model settings, counts, and completed shard status.
 """
 
 from __future__ import annotations

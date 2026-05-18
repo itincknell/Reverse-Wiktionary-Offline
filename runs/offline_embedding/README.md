@@ -1,10 +1,7 @@
 # Offline Embedding Run Records
 
-Commit one Markdown file per cloud embedding run after reviewing the Blob logs
-and manifests.
-
-Run records are human-readable summaries. The machine-readable source of truth
-remains in Blob Storage:
+Run records are human-readable summaries of completed cloud embedding runs.
+Machine-readable artifacts remain in Blob Storage:
 
 ```text
 logs/<cloud_run_id>/status.json
@@ -13,7 +10,7 @@ embeddings/<embedding_run_id>/manifest.json
 indexes/<embedding_run_id>/manifest.json
 ```
 
-Generate a record from Blob artifacts:
+Record generation:
 
 ```bash
 ./scripts/create_offline_run_record.sh \

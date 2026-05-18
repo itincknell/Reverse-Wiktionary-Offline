@@ -22,34 +22,6 @@ raw Wiktionary JSONL
 
 <img src="assets/offline-artifact-flow.svg" alt="Offline artifact flow" width="760">
 
-## Production Run
-
-```text
-raw_run_id: 20260506T173841Z
-processed_run_id: 20260512T205400Z
-embedding_run_id: 20260512T210221Z
-index_run_id: 20260512T204458Z
-collection_name: reverse_wiktionary_v1
-model: sentence-transformers/all-mpnet-base-v2
-```
-
-```text
-raw_records_processed: 10,575,029
-processed_rows: 3,869,247
-processed_shards: 78
-embedding_batches: 30,258
-embedding_elapsed_seconds: 19,810.39
-embedding_rows_per_second: 195.3
-vector_size: 768
-snapshot_size_bytes: 13,601,704,960
-```
-
-Run record:
-
-```text
-runs/offline_embedding/20260512T204458Z.md
-```
-
 ## Artifact Layout
 
 Blob prefixes:
@@ -123,8 +95,7 @@ display/filtering.
 
 The parser filters low-value form/variant records, including `form_of`,
 `alt_of`, alternative spellings, abbreviations, misspellings, obsolete senses,
-and archaic senses. The parser keeps topical categories for future metadata
-work; they are not suppression rules.
+and archaic senses. Topical categories are preserved as metadata candidates.
 
 The preprocessing stage also writes:
 
@@ -133,9 +104,8 @@ data/processed/<run_id>/serving_metadata.json
 processed/<run_id>/serving_metadata.json
 ```
 
-This artifact records available language values and part-of-speech counts for
-the processed run. The filename is historical, but in this repository the file
-is an offline contract used for audit, taxonomy generation, and downstream
+`serving_metadata.json` records language values and part-of-speech counts for
+the processed run. It is used for audit, taxonomy generation, and downstream
 artifact consumers.
 
 ## Embedding Generation
@@ -157,7 +127,7 @@ processed shards
   -> embedding manifest checkpoints
 ```
 
-The production run used:
+The production index uses:
 
 ```text
 model: sentence-transformers/all-mpnet-base-v2
@@ -167,10 +137,7 @@ distance: cosine
 point_id_shard_size: 50,000
 ```
 
-The generator checkpoints completed shards in a local embedding manifest. In
-the recovered production run, the original wrapper failed before uploading the
-embedding manifest to Blob; final metrics are preserved in the remote log and
-run record.
+The generator checkpoints completed shards in a local embedding manifest.
 
 ## Qdrant Collection
 
@@ -194,7 +161,7 @@ expansion
 ```
 
 Downstream query systems commonly filter on `lang` and `pos`. The offline
-snapshot should therefore include payload indexes:
+snapshot includes payload indexes:
 
 ```text
 lang: keyword
@@ -205,32 +172,10 @@ These indexes are part of the Qdrant artifact build, not application
 deployment. Creating them before snapshotting lets any consumer restore a
 collection that is already ready for filtered vector search.
 
-## Snapshot Recovery
-
-Qdrant snapshots are the handoff output of the offline pipeline.
-
-The original production wrapper timed out during snapshot creation with a 600
-second HTTP timeout. The completed Qdrant collection was recovered manually by
-rerunning snapshot creation with a 3600 second timeout and uploading:
-
-```text
-indexes/20260512T204458Z/
-indexes/latest.json
-```
-
-The current snapshot path in Blob is recorded by:
-
-```text
-runs/offline_embedding/20260512T204458Z/artifacts/index_manifest.json
-```
-
 ## Operational Constraints
 
 - GPU VMs are batch compute only.
 - Blob Storage is the durable artifact layer.
-- A failed snapshot/upload must not require regenerating embeddings.
-- Scripts must expose enough state to support manual recovery.
-- Root-created VM artifacts can interfere with SSH recovery; VM jobs must
-  converge on a single runtime user before the next production run.
-- Local and VM Qdrant storage must remain under ignored `data/` paths, never in
-  the Git repository.
+- Snapshot/upload recovery is separate from embedding generation.
+- Local and VM Qdrant storage lives under ignored `data/` paths.
+- Run records hold dated operational incidents and recovery notes.

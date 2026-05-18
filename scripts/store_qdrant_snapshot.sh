@@ -1,58 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Create a Qdrant collection snapshot, download it locally, and optionally upload
-# it to Azure Blob Storage using the project blob artifact layout.
-#
-# Required:
-#   --collection-name NAME
-#
-# Optional:
-#   --qdrant-url URL
-#       Defaults to QDRANT_URL or http://localhost:6333.
-#
-#   --output-root PATH
-#       Local root directory for snapshot artifacts.
-#       Defaults to data/indexes.
-#
-#   --run-id RUN_ID
-#       Snapshot run identifier.
-#       Defaults to current UTC timestamp.
-#
-#   --storage-account NAME
-#       Azure Storage account for upload.
-#
-#   --container NAME
-#       Azure Blob container for upload.
-#
-#   --blob-prefix PATH
-#       Destination prefix inside the container.
-#       Defaults to indexes/<run_id>.
-#
-#   --timeout-seconds SECONDS
-#       Snapshot create/download timeout.
-#       Defaults to 3600.
-#
-#   --poll-interval-seconds SECONDS
-#       Poll interval while waiting for snapshot metadata.
-#       Defaults to 5.
-#
-#   --reuse-existing
-#       Upload the newest local snapshot in data/indexes/<run_id>/snapshots
-#       instead of creating a new Qdrant snapshot.
-#
-#   --upload
-#       Upload the downloaded snapshot directory to Azure Blob Storage and
-#       update indexes/latest.json to point at this run.
-#
-# Examples:
-#   ./scripts/store_qdrant_snapshot.sh --collection-name reverse_wiktionary_test
-#
-#   ./scripts/store_qdrant_snapshot.sh \
-#     --collection-name reverse_wiktionary_v1 \
-#     --upload \
-#     --storage-account mystorageacct \
-#     --container reverse-wiktionary
+# Create, download, and optionally upload a Qdrant collection snapshot.
 
 QDRANT_URL="${QDRANT_URL:-http://localhost:6333}"
 COLLECTION_NAME=""

@@ -23,8 +23,8 @@ class EmbeddingModelConfig:
     """
     Configuration for embedding model loading and encoding.
 
-    normalize_embeddings should generally be true when using cosine similarity
-    in the vector index.
+    normalize_embeddings is normally enabled for cosine similarity in the vector
+    index.
     """
 
     model_name: str
