@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1600" viewBox="0 0 1600 1600" role="img" aria-labelledby="title desc">
+  <title id="title">Reverse Wiktionary Offline artifact flow</title>
+  <desc id="desc">Square architecture diagram showing Azure Blob Storage artifacts, an Azure vGPU VM offline indexing pipeline, Kaikki raw data input, checkpoint restore, intermediate checkpoint publication, and final Qdrant snapshot publication.</desc>
+  <defs>
+    <marker id="arrow-purple" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth">
+      <path d="M1,1 L7,4 L1,7 Z" fill="#6c5aa6" />
+    </marker>
+    <marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth">
+      <path d="M1,1 L7,4 L1,7 Z" fill="#486d8d" />
+    </marker>
+    <marker id="arrow-green" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth">
+      <path d="M1,1 L7,4 L1,7 Z" fill="#4d8261" />
+    </marker>
+    <style>
+      .bg { fill: #fbfcfe; }
+      .panel { rx: 24; ry: 24; stroke-width: 2.4; }
+      .blob-panel { fill: #eef6fb; stroke: #98b6cb; }
+      .vm-panel { fill: #fff8e7; stroke: #c4a34a; }
+      .source-panel { fill: #e9f1fb; stroke: #6f95b4; }
+      .card { rx: 16; ry: 16; stroke-width: 1.8; }
+      .blob-card { fill: #ffffff; stroke: #8dafc6; }
+      .vm-card { fill: #fffdf7; stroke: #b89335; }
+      .qdrant-card { fill: #eeeafd; stroke: #7b6bb5; }
+      .final-card { fill: #e3f2ea; stroke: #2f7657; stroke-width: 2.6; }
+      .title { font: 700 60px Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #22313f; }
+      .subtitle { font: 500 28px Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #536577; }
+      .section { font: 700 42px Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #263746; }
+      .label { font: 700 24px Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #243444; }
+      .body { font: 500 21px Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #4d5f70; }
+      .caption { font: 650 21px Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #455b6d; }
+      .muted { font: 500 19px Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #687989; }
+      .chevron { font: 800 20px Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #4d8261; dominant-baseline: middle; }
+      .arrow-vm { fill: none; stroke: #7d6f48; stroke-width: 2.8; marker-end: url(#arrow-green); }
+      .arrow-raw { fill: none; stroke: #6c5aa6; stroke-width: 3.2; marker-end: url(#arrow-purple); }
+      .arrow-restore { fill: none; stroke: #486d8d; stroke-width: 3; stroke-dasharray: 10 8; marker-end: url(#arrow-blue); }
+      .arrow-merge { fill: none; stroke: #4d8261; stroke-width: 3.2; stroke-linecap: square; }
+      .arrow-stage { fill: none; stroke: #4d8261; stroke-width: 3.2; marker-end: url(#arrow-green); }
+      .box-arrow { fill: #b9dccb; stroke: #1f5a44; stroke-width: 3; }
+      .caption-box { rx: 12; ry: 12; stroke-width: 2; }
+      .caption-raw { fill: #f1eefb; stroke: #8a7ac1; }
+      .caption-restore { fill: #eef5fb; stroke: #7292ad; }
+      .caption-stage { fill: #eef8f2; stroke: #74a784; }
+      .caption-final { fill: #f0f8f4; stroke: #7fb293; stroke-width: 1.6; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1600" height="1600" />
+
+  <text class="title" x="80" y="96">Offline Artifact Flow</text>
+  <text class="subtitle" x="80" y="128">github.com/Reverse-Wiktionary-Offline</text>
+
+  <rect class="panel blob-panel" x="80" y="210" width="480" height="1260" />
+  <text class="section" x="126" y="272">Azure Blob Storage</text>
+  <text class="subtitle" x="126" y="312">durable artifact store</text>
+
+  <rect class="card blob-card" x="126" y="496" width="360" height="92" />
+  <text class="label" x="158" y="534">raw/&lt;run_id&gt;</text>
+  <text class="body" x="158" y="562">raw/latest.json</text>
+
+  <rect class="card blob-card" x="126" y="628" width="360" height="100" />
+  <text class="label" x="158" y="666">processed/&lt;run_id&gt;</text>
+  <text class="body" x="158" y="694">JSONL shards + metadata</text>
+
+  <rect class="card blob-card" x="126" y="768" width="360" height="92" />
+  <text class="label" x="158" y="806">code/&lt;cloud_run_id&gt;</text>
+  <text class="body" x="158" y="834">repo archive</text>
+
+  <rect class="card blob-card" x="126" y="900" width="360" height="92" />
+  <text class="label" x="158" y="938">logs/&lt;cloud_run_id&gt;</text>
+  <text class="body" x="158" y="966">status + remote log</text>
+
+  <rect class="card final-card" x="126" y="1284" width="360" height="110" />
+  <text class="label" x="158" y="1322">indexes/&lt;run_id&gt;</text>
+  <text class="body" x="158" y="1350">Qdrant snapshot + manifest</text>
+  <text class="body" x="158" y="1378">indexes/latest.json</text>
+
+  <rect class="panel source-panel" x="992" y="150" width="360" height="104" />
+  <text class="label" x="1034" y="192">kaikki.org</text>
+  <text class="body" x="1034" y="222">current raw Wiktextract dump</text>
+
+  <rect class="panel vm-panel" x="900" y="340" width="580" height="1040" />
+  <text class="section" x="950" y="406">Azure vGPU VM</text>
+  <text class="subtitle" x="950" y="448">offline batch indexing run</text>
+
+  <rect class="card vm-card" x="974" y="524" width="430" height="68" />
+  <text class="label" x="1006" y="552">1. prepare job</text>
+  <text class="body" x="1006" y="578">extract repo, create venv, install deps</text>
+
+  <rect class="card vm-card" x="974" y="668" width="430" height="68" />
+  <text class="label" x="1006" y="696">2. acquire input</text>
+  <text class="body" x="1006" y="722">restore checkpoint or fetch source data</text>
+
+  <rect class="card vm-card" x="974" y="812" width="430" height="68" />
+  <text class="label" x="1006" y="840">3. preprocess</text>
+  <text class="body" x="1006" y="866">normalized JSONL shards</text>
+
+  <rect class="card vm-card" x="974" y="956" width="430" height="68" />
+  <text class="label" x="1006" y="984">4. embed</text>
+  <text class="body" x="1006" y="1010">SentenceTransformer batches</text>
+
+  <rect class="card qdrant-card" x="974" y="1100" width="430" height="68" />
+  <text class="label" x="1006" y="1128">5. index collection</text>
+  <text class="body" x="1006" y="1154">deterministic Qdrant point upserts</text>
+
+  <rect class="card qdrant-card" x="974" y="1244" width="430" height="68" />
+  <text class="label" x="1006" y="1272">6. payload indices</text>
+  <text class="body" x="1006" y="1298">lang + pos keyword indices</text>
+
+  <rect class="card final-card" x="974" y="1422" width="430" height="68" />
+  <text class="label" x="1006" y="1450">7. snapshot</text>
+  <text class="body" x="1006" y="1476">portable Qdrant collection artifact</text>
+
+  <path class="arrow-vm" d="M1174 592 V660" />
+  <path class="arrow-vm" d="M1174 736 V804" />
+  <path class="arrow-vm" d="M1174 880 V948" />
+  <path class="arrow-vm" d="M1174 1024 V1092" />
+  <path class="arrow-vm" d="M1174 1168 V1236" />
+  <path class="arrow-vm" d="M1174 1312 V1414" />
+
+  <path class="arrow-raw" d="M1172 254 V340" />
+  <rect class="caption-box caption-raw" x="1194" y="280" width="278" height="44" />
+  <text class="caption" x="1333" y="308" text-anchor="middle">Fetch current raw dump</text>
+
+  <path class="arrow-restore" d="M560 266 H760 V668 H964" />
+  <rect class="caption-box caption-restore" x="590" y="358" width="270" height="66" />
+  <text class="caption" x="630" y="386">Restore previous</text>
+  <text class="caption" x="630" y="412">checkpoint, if present</text>
+
+  <path class="arrow-merge" d="M974 702 H760" />
+  <path class="arrow-merge" d="M974 846 H760" />
+  <path class="arrow-merge" d="M974 990 H760" />
+  <path class="arrow-merge" d="M974 1134 H760" />
+  <path class="arrow-merge" d="M974 1278 H760" />
+  <text class="chevron" x="858" y="702">&lt;&lt;</text>
+  <text class="chevron" x="858" y="846">&lt;&lt;</text>
+  <text class="chevron" x="858" y="990">&lt;&lt;</text>
+  <text class="chevron" x="858" y="1134">&lt;&lt;</text>
+  <text class="chevron" x="858" y="1278">&lt;&lt;</text>
+  <path class="arrow-merge" d="M760 702 V1278" />
+  <path class="arrow-stage" d="M760 990 H560" />
+  <rect class="caption-box caption-stage" x="598" y="880" width="290" height="66" />
+  <text class="caption" x="628" y="908">Checkpoint intermediate</text>
+  <text class="caption" x="628" y="934">artifacts and metadata</text>
+
+  <polygon class="box-arrow" points="948,1430 632,1430 632,1394 584,1456 632,1518 632,1482 948,1482" />
+  <rect class="caption-box caption-final" x="660" y="1334" width="330" height="66" />
+  <text class="caption" x="686" y="1362">Save Qdrant snapshot,</text>
+  <text class="caption" x="686" y="1388">payload indices, and manifest</text>
+</svg>

@@ -3,6 +3,9 @@
 The offline pipeline builds the production Qdrant collection from Wiktionary
 source data and exports the collection as a Blob-backed snapshot.
 
+The serving sister repository, `itincknell/Reverse-Wiktionary`, consumes the
+snapshot artifacts produced here.
+
 ## Architecture
 
 ```text
@@ -14,6 +17,10 @@ raw Wiktionary JSONL
   -> Qdrant snapshot
   -> Azure Blob Storage
 ```
+
+## Artifact Flow
+
+<img src="assets/offline-artifact-flow.svg" alt="Offline artifact flow" width="760">
 
 ## Production Run
 
@@ -227,9 +234,3 @@ runs/offline_embedding/20260512T204458Z/artifacts/index_manifest.json
   converge on a single runtime user before the next production run.
 - Local and VM Qdrant storage must remain under ignored `data/` paths, never in
   the Git repository.
-
-## Deferred Work
-
-- Global deduplication across duplicate `(lang, word, pos)` records.
-- Quantization and on-disk vector evaluation.
-- Automated restore test from `indexes/latest.json`.

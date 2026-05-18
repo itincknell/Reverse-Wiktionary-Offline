@@ -8,10 +8,6 @@ language/word/part-of-speech record. Glosses from kept senses are cleaned,
 deduplicated in order, and joined into `embedding_text`; word, language, part
 of speech, glosses, and optional headword expansion are retained as indexed
 payload and processed-run metadata.
-
-Rows are not globally merged across duplicate `(lang, word, pos)` records. A
-global merge would require a second aggregation pass and is intentionally
-outside this streaming preprocessing step.
 """
 
 from __future__ import annotations

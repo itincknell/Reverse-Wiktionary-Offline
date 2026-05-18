@@ -1,8 +1,7 @@
 # Repository Layout
 
-This repository owns the offline data and index build path. It intentionally
-does not contain the public web/API service, web deployment manifests, Redis
-session state, Nginx config, or serving smoke benchmarks.
+This repository owns the offline data and index build path. Its serving sister
+repo is `itincknell/Reverse-Wiktionary`.
 
 ```text
 src/common/        Shared file, manifest, logging, and run-id helpers.
@@ -18,22 +17,15 @@ runs/              Small committed offline run records.
 data/              Local generated data; ignored by git.
 ```
 
-## Qdrant Boundary
+## Repository Boundary
 
-Keep Qdrant code that creates the offline artifact:
+`Reverse-Wiktionary-Offline` contains Qdrant code for index construction:
+local container startup, deterministic point upserts, payload index preparation,
+snapshot creation, and Blob upload.
 
-- local Qdrant container startup for indexing
-- collection creation and deterministic point upserts
-- payload index creation and verification
-- optional collection quantization
-- collection snapshot creation, download, and Blob upload
+`Reverse-Wiktionary` contains the deployed application surface: API routes,
+query-time request schemas, UI assets, runtime configuration, and serving
+benchmarks.
 
-Do not keep Qdrant code that exists only to operate a deployed application:
-
-- long-running web/API containers
-- production Nginx or Redis config
-- query-time HTTP routes and templates
-- web smoke tests, route benchmarks, or UI state
-
-The offline output is a Qdrant collection snapshot plus manifests. A separate
-serving repository should decide how to restore and expose that snapshot.
+The offline output is a Qdrant collection snapshot plus manifests.
+`Reverse-Wiktionary` decides how to restore and expose that snapshot.
