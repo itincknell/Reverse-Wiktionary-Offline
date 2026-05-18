@@ -39,7 +39,11 @@ from src.embeddings.utils.qdrant_writer import (
     UpsertBatch,
     UpsertQueue,
 )
-from src.embeddings.utils.shard_reader import iter_source_rows, shard_id_from_path
+from src.embeddings.utils.shard_reader import (
+    iter_source_rows,
+    point_id_for_source_row,
+    shard_id_from_path,
+)
 
 
 DEFAULT_MODEL_NAME = "sentence-transformers/distiluse-base-multilingual-cased-v2"
@@ -189,8 +193,7 @@ def process_shard(
         point_id_parts.append(
             np.array(
                 [
-                    source_row.source_shard_id * point_id_shard_size
-                    + source_row.source_row_index
+                    point_id_for_source_row(source_row, point_id_shard_size)
                     for source_row in source_batch
                 ],
                 dtype=np.int64,

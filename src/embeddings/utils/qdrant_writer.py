@@ -18,7 +18,7 @@ import numpy as np
 from qdrant_client import QdrantClient
 from qdrant_client.models import Distance, PointStruct, VectorParams
 
-from src.embeddings.utils.shard_reader import SourceRow
+from src.embeddings.utils.shard_reader import SourceRow, point_id_for_source_row
 
 
 DEFAULT_POINT_ID_SHARD_SIZE = 50_000
@@ -154,17 +154,7 @@ class QdrantWriter:
         the preprocessing shard size. A validation error is raised if a row index
         would collide with the next shard's ID range.
         """
-        if source_row.source_row_index >= self.config.point_id_shard_size:
-            raise ValueError(
-                "source_row_index exceeds configured point_id_shard_size: "
-                f"row_index={source_row.source_row_index}, "
-                f"point_id_shard_size={self.config.point_id_shard_size}"
-            )
-
-        return (
-            source_row.source_shard_id * self.config.point_id_shard_size
-            + source_row.source_row_index
-        )
+        return point_id_for_source_row(source_row, self.config.point_id_shard_size)
 
     @staticmethod
     def payload(source_row: SourceRow) -> dict[str, Any]:

@@ -56,6 +56,26 @@ def shard_id_from_path(path: Path) -> int:
     return int(stem.removeprefix("shard_"))
 
 
+def point_id_for_source_row(source_row: SourceRow, point_id_shard_size: int) -> int:
+    """
+    Return the deterministic Qdrant point ID for a processed source row.
+
+    The stride must match the preprocessing shard size so that shard-local row
+    indexes do not collide with the next shard's ID range.
+    """
+    if point_id_shard_size <= 0:
+        raise ValueError("point_id_shard_size must be positive")
+
+    if source_row.source_row_index >= point_id_shard_size:
+        raise ValueError(
+            "source_row_index exceeds configured point_id_shard_size: "
+            f"row_index={source_row.source_row_index}, "
+            f"point_id_shard_size={point_id_shard_size}"
+        )
+
+    return source_row.source_shard_id * point_id_shard_size + source_row.source_row_index
+
+
 def iter_source_rows(shard_paths: list[Path]) -> Iterator[SourceRow]:
     """
     Stream valid embedding rows from shard files in deterministic order.
