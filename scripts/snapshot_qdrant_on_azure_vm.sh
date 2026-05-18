@@ -7,7 +7,7 @@ RESOURCE_GROUP=""
 VM_NAME=""
 STORAGE_ACCOUNT=""
 CONTAINER=""
-COLLECTION_NAME="reverse_wiktionary_v1"
+COLLECTION_NAME="reverse_wiktionary_v2"
 VM_REPO_DIR="/opt/reverse-wiktionary"
 RUN_ID="$(date -u +%Y%m%dT%H%M%SZ)"
 TIMEOUT_SECONDS=3600
@@ -27,7 +27,7 @@ Required:
 
 Optional:
   --collection-name NAME
-      Defaults to reverse_wiktionary_v1.
+      Defaults to reverse_wiktionary_v2.
   --vm-repo-dir PATH
       Defaults to /opt/reverse-wiktionary.
   --run-id RUN_ID

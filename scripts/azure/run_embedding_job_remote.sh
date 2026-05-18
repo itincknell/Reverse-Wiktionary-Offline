@@ -6,14 +6,15 @@ set -euo pipefail
 storageAccount="${storageAccount:-}"
 container="${container:-}"
 processedRunId="${processedRunId:-latest}"
-collectionName="${collectionName:-reverse_wiktionary_v1}"
-modelName="${modelName:-sentence-transformers/all-mpnet-base-v2}"
+collectionName="${collectionName:-reverse_wiktionary_v2}"
+modelName="${modelName:-sentence-transformers/distiluse-base-multilingual-cased-v2}"
 repoDir="${repoDir:-/opt/reverse-wiktionary}"
 codeArchiveBlob="${codeArchiveBlob:-}"
 cloudRunId="${cloudRunId:-$(date -u +%Y%m%dT%H%M%SZ)}"
 systemdUnit="${systemdUnit:-}"
 repoPrepared="${repoPrepared:-false}"
 prepareProcessedIfMissing="${prepareProcessedIfMissing:-false}"
+prepareProcessedFromRaw="${prepareProcessedFromRaw:-false}"
 allowRawDownload="${allowRawDownload:-false}"
 startedAtUtc="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
 embeddingRunId=""
@@ -64,6 +65,9 @@ for parameter in "$@"; do
     prepareProcessedIfMissing=*)
       prepareProcessedIfMissing="${parameter#prepareProcessedIfMissing=}"
       ;;
+    prepareProcessedFromRaw=*)
+      prepareProcessedFromRaw="${parameter#prepareProcessedFromRaw=}"
+      ;;
     allowRawDownload=*)
       allowRawDownload="${parameter#allowRawDownload=}"
       ;;
@@ -84,14 +88,14 @@ EOF
 
 current_state_value() {
   local key="$1"
-  local default="$2"
+  local fallback_value="$2"
 
   if [ ! -f "$stateFile" ]; then
-    echo "$default"
+    echo "$fallback_value"
     return
   fi
 
-  awk -F= -v key="$key" -v default="$default" '$1 == key { print $2; found=1 } END { if (!found) print default }' "$stateFile"
+  awk -F= -v key="$key" -v fallback_value="$fallback_value" '$1 == key { print $2; found=1 } END { if (!found) print fallback_value }' "$stateFile"
 }
 
 qdrant_collection_field() {
@@ -147,6 +151,7 @@ upload_run_artifacts() {
     --arg repo_dir "$repoDir" \
     --arg systemd_unit "$systemdUnit" \
     --arg prepare_processed_if_missing "$prepareProcessedIfMissing" \
+    --arg prepare_processed_from_raw "$prepareProcessedFromRaw" \
     --arg allow_raw_download "$allowRawDownload" \
     --arg qdrant_status "$qdrant_status" \
     --arg log_path "logs/$cloudRunId/remote_embedding_job.log" \
@@ -173,6 +178,7 @@ upload_run_artifacts() {
       repo_dir: $repo_dir,
       systemd_unit: (if $systemd_unit == "" then null else $systemd_unit end),
       prepare_processed_if_missing: ($prepare_processed_if_missing == "true"),
+      prepare_processed_from_raw: ($prepare_processed_from_raw == "true"),
       allow_raw_download: ($allow_raw_download == "true"),
       qdrant_status: (if $qdrant_status == "null" then null else $qdrant_status end),
       qdrant_points_count: $qdrant_points_count,
@@ -264,6 +270,7 @@ echo "code archive: $codeArchiveBlob"
 echo "cloud run id: $cloudRunId"
 echo "repo prepared: $repoPrepared"
 echo "prepare processed if missing: $prepareProcessedIfMissing"
+echo "prepare processed from raw: $prepareProcessedFromRaw"
 echo "allow raw download: $allowRawDownload"
 
 if [ "$repoPrepared" != true ] && [ -n "$codeArchiveBlob" ]; then
@@ -304,6 +311,10 @@ if [ "$prepareProcessedIfMissing" = true ]; then
   ensure_args+=(--prepare-if-missing)
 fi
 
+if [ "$prepareProcessedFromRaw" = true ]; then
+  ensure_args+=(--prepare-from-raw)
+fi
+
 if [ "$allowRawDownload" = true ]; then
   ensure_args+=(--allow-raw-download)
 fi
@@ -330,6 +341,9 @@ set_stage "embedding"
   --queue-size 4 \
   --point-id-shard-size 50000 \
   --recreate-collection \
+  --vectors-on-disk \
+  --on-disk-payload \
+  --expected-vector-size 512 \
   --run-id "$embeddingRunId" \
   --progress-every 100000
 
@@ -345,6 +359,21 @@ REVWIK_EMBEDDING_RUN_ID="$embeddingRunId" \
   ./scripts/qdrant/check_payload_indexes.sh \
   --collection-name "$collectionName" \
   --qdrant-url http://localhost:6333
+
+set_stage "quantizing"
+./scripts/qdrant/apply_scalar_quantization.sh \
+  --collection-name "$collectionName" \
+  --qdrant-url http://localhost:6333 \
+  --quantile 0.99 \
+  --always-ram true \
+  --on-disk true
+
+set_stage "waiting_for_qdrant"
+./scripts/qdrant/wait_collection_ready.sh \
+  --collection-name "$collectionName" \
+  --qdrant-url http://localhost:6333 \
+  --timeout-seconds 3600 \
+  --poll-interval-seconds 30
 
 set_stage "snapshotting"
 REVWIK_STAGE_FILE="$stateFile" \

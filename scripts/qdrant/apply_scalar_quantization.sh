@@ -85,9 +85,7 @@ curl -fsS -X PATCH \
   -H "Content-Type: application/json" \
   --data "{
     \"vectors\": {
-      \"\": {
-        \"on_disk\": $ON_DISK
-      }
+      \"on_disk\": $ON_DISK
     },
     \"quantization_config\": {
       \"scalar\": {

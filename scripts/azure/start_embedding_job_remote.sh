@@ -6,12 +6,13 @@ set -euo pipefail
 storageAccount="${storageAccount:-}"
 container="${container:-}"
 processedRunId="${processedRunId:-latest}"
-collectionName="${collectionName:-reverse_wiktionary_v1}"
-modelName="${modelName:-sentence-transformers/all-mpnet-base-v2}"
+collectionName="${collectionName:-reverse_wiktionary_v2}"
+modelName="${modelName:-sentence-transformers/distiluse-base-multilingual-cased-v2}"
 repoDir="${repoDir:-/opt/reverse-wiktionary}"
 codeArchiveBlob="${codeArchiveBlob:-}"
 cloudRunId="${cloudRunId:-$(date -u +%Y%m%dT%H%M%SZ)}"
 prepareProcessedIfMissing="${prepareProcessedIfMissing:-false}"
+prepareProcessedFromRaw="${prepareProcessedFromRaw:-false}"
 allowRawDownload="${allowRawDownload:-false}"
 
 for parameter in "$@"; do
@@ -42,6 +43,9 @@ for parameter in "$@"; do
       ;;
     prepareProcessedIfMissing=*)
       prepareProcessedIfMissing="${parameter#prepareProcessedIfMissing=}"
+      ;;
+    prepareProcessedFromRaw=*)
+      prepareProcessedFromRaw="${parameter#prepareProcessedFromRaw=}"
       ;;
     allowRawDownload=*)
       allowRawDownload="${parameter#allowRawDownload=}"
@@ -108,6 +112,7 @@ systemd-run \
     systemdUnit="$unit_name" \
     repoPrepared=true \
     prepareProcessedIfMissing="$prepareProcessedIfMissing" \
+    prepareProcessedFromRaw="$prepareProcessedFromRaw" \
     allowRawDownload="$allowRawDownload"
 
 echo

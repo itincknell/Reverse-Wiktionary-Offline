@@ -7,6 +7,7 @@ STORAGE_ACCOUNT=""
 CONTAINER=""
 PROCESSED_RUN_ID="latest"
 PREPARE_IF_MISSING=false
+PREPARE_FROM_RAW=false
 ALLOW_RAW_DOWNLOAD=false
 
 write_remote_stage() {
@@ -33,6 +34,8 @@ Optional:
       Defaults to latest.
   --prepare-if-missing
       Prepare processed shards from raw Blob data when processed is missing.
+  --prepare-from-raw
+      Always create a fresh processed run from raw Blob data.
   --allow-raw-download
       Allow Kaikki download if raw Blob artifacts are also missing.
 EOF
@@ -54,6 +57,10 @@ while [ "$#" -gt 0 ]; do
       ;;
     --prepare-if-missing)
       PREPARE_IF_MISSING=true
+      shift
+      ;;
+    --prepare-from-raw)
+      PREPARE_FROM_RAW=true
       shift
       ;;
     --allow-raw-download)
@@ -100,18 +107,18 @@ echo "=== Ensuring Processed Input ==="
 echo "processed run id: $PROCESSED_RUN_ID"
 write_remote_stage "ensuring_processed_input"
 
-if download_processed; then
+if [ "$PREPARE_FROM_RAW" != true ] && download_processed; then
   echo "Processed input is ready."
   exit 0
 fi
 
-if [ "$PREPARE_IF_MISSING" != true ]; then
+if [ "$PREPARE_IF_MISSING" != true ] && [ "$PREPARE_FROM_RAW" != true ]; then
   echo "Processed input was not found, and fallback preparation is disabled."
   exit 1
 fi
 
 echo
-echo "Processed input not found. Preparing processed input from raw data."
+echo "Preparing processed input from raw data."
 write_remote_stage "downloading_raw"
 
 if ! ./scripts/download_raw_from_blob.sh \

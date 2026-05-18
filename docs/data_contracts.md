@@ -23,6 +23,10 @@ data/processed/<run_id>/
 data/processed/latest -> <run_id>
 
 data/embeddings/<run_id>/
+  manifest.json
+  vectors/
+    shard_00000.npz
+    shard_00000.json
 data/embeddings/latest -> <run_id>
 
 data/indexes/<run_id>/
@@ -46,6 +50,10 @@ processed/<run_id>/
 processed/latest.json
 
 embeddings/<run_id>/
+  manifest.json
+  vectors/
+    shard_00000.npz
+    shard_00000.json
 
 code/<run_id>/
 
@@ -125,7 +133,7 @@ Consumers:
 - `src/embeddings/generate_embeddings.py`
 - `src/embeddings/utils/shard_reader.py`
 
-Current row schema: `v4`
+Current row schema: `v5`
 
 Each line in `shard_*.jsonl` is one JSON object.
 
@@ -147,6 +155,21 @@ Compatibility:
 - Producers bump `SCHEMA_VERSION` before removing or renaming fields.
 - `embedding_text` is the model input contract; presentation fields are stored
   separately.
+
+Wiktionary result links are computed by serving clients from existing payload
+fields. The offline collection does not store full URLs or URL-safe title
+copies.
+
+URL construction contract:
+
+- Page title input: `word`
+- Language-section input: `lang`
+- Page path component: replace spaces with underscores, then percent-encode for
+  a MediaWiki path segment.
+- Section fragment: trim/collapse heading whitespace, replace spaces with
+  underscores, then percent-encode for a URL fragment.
+- Preferred validation source: MediaWiki `action=parse&prop=tocdata`, matching
+  top-level sections where `line == lang` and using `linkAnchor || anchor`.
 
 ## Preprocessing Manifest
 
@@ -261,6 +284,8 @@ taxonomy assignments, including pseudo-language labels such as `Translingual`.
 
 Producer: `src/embeddings/generate_embeddings.py`
 
+Current schema: `v2`
+
 Path:
 
 ```text
@@ -276,12 +301,25 @@ Important fields:
 - `processed_dir`: Local processed input path.
 - `model`: Embedding model name and vector size.
 - `qdrant`: Qdrant URL and collection name.
-- `config`: Batch size, queue size, point ID stride, distance metric.
+- `config`: Batch size, queue size, point ID stride, and distance metric.
 - `metrics`: Rows, batches, and shards completed.
-- `shards`: Per-shard completion records.
+- `shards`: Per-shard completion records, including vector artifact paths when
+  available.
 
-Resume behavior depends on the manifest's completed shard list. When changing
-model, processed input, collection, or point ID stride, use a new embedding run.
+Each vector shard artifact stores:
+
+- `vectors`: `float32` NumPy array of encoded vectors.
+- `point_ids`: Deterministic Qdrant point IDs for the rows.
+- `source_row_indices`: Source row indices within the processed shard.
+
+The `.json` sidecar records source shard, row count, vector size, and point ID
+range. Qdrant upsert and snapshot recovery should restart from these vector
+artifacts when they exist rather than re-running GPU embedding from processed
+text.
+
+Resume behavior depends on the manifest's completed shard list and the vector
+artifact directory. When changing model, processed input, collection, or point
+ID stride, use a new embedding run.
 
 ## Qdrant Snapshot Manifest
 
@@ -302,6 +340,15 @@ Important fields:
 - `qdrant_url`: Qdrant HTTP endpoint used to create the snapshot.
 - `collection_name`: Qdrant collection snapshotted.
 - `blob_prefix`: Blob prefix used when uploaded.
+- `points_count`: Point count reported by Qdrant before snapshot upload.
+- `indexed_vectors_count`: Indexed-vector count reported by Qdrant.
+- `vector_size`: Collection vector size.
+- `distance`: Collection distance metric.
+- `vectors_on_disk`: Whether original vectors are stored on disk.
+- `on_disk_payload`: Whether payload storage is on disk.
+- `quantization_config`: Qdrant quantization configuration captured from the
+  collection.
+- `payload_indexes`: Qdrant payload schema captured from the collection.
 - `timeout_seconds`: Snapshot create/download timeout used by the run.
 - `poll_interval_seconds`: Poll interval used while waiting for snapshot metadata.
 - `reused_existing_snapshot`: Whether the run uploaded an already downloaded snapshot.
@@ -369,6 +416,8 @@ uploading_processed
 starting_qdrant
 embedding
 creating_payload_indexes
+quantizing
+waiting_for_qdrant
 snapshotting
 uploading_snapshot
 uploading_embedding_manifest

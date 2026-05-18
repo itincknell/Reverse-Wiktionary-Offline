@@ -30,7 +30,7 @@ from src.common.manifest import write_manifest
 from src.common.run_id import utc_now_iso, utc_run_id
 
 
-SCHEMA_VERSION = "v4"
+SCHEMA_VERSION = "v5"
 SERVING_METADATA_SCHEMA_VERSION = "v1"
 
 

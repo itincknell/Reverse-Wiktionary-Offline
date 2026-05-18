@@ -22,6 +22,7 @@ from src.embeddings.utils.shard_reader import SourceRow
 
 
 DEFAULT_POINT_ID_SHARD_SIZE = 50_000
+QDRANT_UPSERT_TIMEOUT_SECONDS = 3600.0
 
 
 @dataclass(frozen=True)
@@ -42,6 +43,8 @@ class QdrantWriterConfig:
     distance: Distance = Distance.COSINE
     recreate_collection: bool = False
     point_id_shard_size: int = DEFAULT_POINT_ID_SHARD_SIZE
+    vectors_on_disk: bool = False
+    on_disk_payload: bool = False
 
 
 @dataclass(frozen=True)
@@ -108,7 +111,7 @@ class QdrantWriter:
             raise ValueError("point_id_shard_size must be positive")
 
         self.config = config
-        self.client = QdrantClient(url=config.url)
+        self.client = QdrantClient(url=config.url, timeout=QDRANT_UPSERT_TIMEOUT_SECONDS)
 
     def ensure_collection(self) -> None:
         """
@@ -123,7 +126,9 @@ class QdrantWriter:
                 vectors_config=VectorParams(
                     size=self.config.vector_size,
                     distance=self.config.distance,
+                    on_disk=self.config.vectors_on_disk,
                 ),
+                on_disk_payload=self.config.on_disk_payload,
             )
             return
 
@@ -136,7 +141,9 @@ class QdrantWriter:
                 vectors_config=VectorParams(
                     size=self.config.vector_size,
                     distance=self.config.distance,
+                    on_disk=self.config.vectors_on_disk,
                 ),
+                on_disk_payload=self.config.on_disk_payload,
             )
 
     def point_id(self, source_row: SourceRow) -> int:

@@ -46,6 +46,7 @@ Run-specific details live in [offline run records](runs/offline_embedding/).
 - [Offline Indexing Design](docs/design_offline_indexing.md)
 - [Data Contracts](docs/data_contracts.md)
 - [Azure Runbook](docs/azure_runbook.md)
+- [Web Repo Handoff](docs/web_repo_handoff.md)
 - [Repository Layout](docs/repo_layout.md)
 
 ## Design Principles

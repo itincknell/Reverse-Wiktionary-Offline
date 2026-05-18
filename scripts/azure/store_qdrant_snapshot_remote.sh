@@ -6,7 +6,7 @@ set -euo pipefail
 
 storageAccount="${storageAccount:-}"
 container="${container:-}"
-collectionName="${collectionName:-reverse_wiktionary_v1}"
+collectionName="${collectionName:-reverse_wiktionary_v2}"
 repoDir="${repoDir:-/opt/reverse-wiktionary}"
 runId="${runId:-$(date -u +%Y%m%dT%H%M%SZ)}"
 timeoutSeconds="${timeoutSeconds:-3600}"

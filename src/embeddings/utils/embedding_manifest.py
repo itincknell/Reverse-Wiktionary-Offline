@@ -15,7 +15,7 @@ from src.common.manifest import load_manifest, write_manifest
 from src.common.run_id import utc_now_iso
 
 
-EMBEDDING_MANIFEST_SCHEMA_VERSION = "v1"
+EMBEDDING_MANIFEST_SCHEMA_VERSION = "v2"
 
 
 @dataclass(frozen=True)
@@ -109,20 +109,28 @@ def mark_shard_complete(
     shard_path: Path,
     rows: int,
     batches: int,
+    vector_artifact_path: Path | None = None,
+    vector_metadata_path: Path | None = None,
 ) -> None:
     """
     Mark a shard complete after all Qdrant upserts for that shard succeed.
     """
-    manifest.setdefault("shards", []).append(
-        {
-            "shard_id": shard_id,
-            "path": str(shard_path),
-            "status": "complete",
-            "rows": rows,
-            "batches": batches,
-            "completed_at_utc": utc_now_iso(),
-        }
-    )
+    shard_entry = {
+        "shard_id": shard_id,
+        "path": str(shard_path),
+        "status": "complete",
+        "rows": rows,
+        "batches": batches,
+        "completed_at_utc": utc_now_iso(),
+    }
+
+    if vector_artifact_path is not None:
+        shard_entry["vector_artifact_path"] = str(vector_artifact_path)
+
+    if vector_metadata_path is not None:
+        shard_entry["vector_metadata_path"] = str(vector_metadata_path)
+
+    manifest.setdefault("shards", []).append(shard_entry)
 
     metrics = manifest.setdefault("metrics", {})
     metrics["rows_embedded"] = metrics.get("rows_embedded", 0) + rows

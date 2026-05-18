@@ -18,8 +18,8 @@ ADMIN_USER="azureuser"
 ```
 
 ```bash
-PRODUCT_COLLECTION="reverse_wiktionary_v1"
-PRODUCT_MODEL="sentence-transformers/all-mpnet-base-v2"
+PRODUCT_COLLECTION="reverse_wiktionary_v2"
+PRODUCT_MODEL="sentence-transformers/distiluse-base-multilingual-cased-v2"
 ```
 
 ## Providers
@@ -230,7 +230,7 @@ az vm run-command invoke \
   --container "$CONTAINER" \
   --collection-name "$PRODUCT_COLLECTION" \
   --model-name "$PRODUCT_MODEL" \
-  --prepare-processed-if-missing
+  --prepare-processed-from-raw
 ```
 
 ```bash

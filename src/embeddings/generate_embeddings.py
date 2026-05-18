@@ -11,6 +11,7 @@ import time
 from pathlib import Path
 from queue import Full
 
+import numpy as np
 from qdrant_client.models import Distance
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
@@ -19,7 +20,7 @@ if str(REPO_ROOT) not in sys.path:
 
 from src.common.jsonl import batched
 from src.common.logging_utils import ProgressTimer
-from src.common.manifest import load_manifest
+from src.common.manifest import load_manifest, write_manifest
 from src.common.paths import find_shards, update_latest_symlink
 from src.common.run_id import utc_run_id
 
@@ -41,8 +42,8 @@ from src.embeddings.utils.qdrant_writer import (
 from src.embeddings.utils.shard_reader import iter_source_rows, shard_id_from_path
 
 
-DEFAULT_MODEL_NAME = "sentence-transformers/all-mpnet-base-v2"
-DEFAULT_COLLECTION_NAME = "reverse_wiktionary_v1"
+DEFAULT_MODEL_NAME = "sentence-transformers/distiluse-base-multilingual-cased-v2"
+DEFAULT_COLLECTION_NAME = "reverse_wiktionary_v2"
 DEFAULT_BATCH_SIZE = 128
 DEFAULT_QUEUE_SIZE = 4
 DEFAULT_POINT_ID_SHARD_SIZE = 50_000
@@ -86,9 +87,65 @@ def embedding_manifest_path(output_dir: Path) -> Path:
     return output_dir / "manifest.json"
 
 
+def embedding_vector_dir(output_dir: Path) -> Path:
+    """
+    Return the directory used for durable per-shard vector artifacts.
+    """
+    return output_dir / "vectors"
+
+
+def save_vector_artifact(
+    *,
+    vector_dir: Path,
+    shard_id: int,
+    shard_path: Path,
+    vectors: np.ndarray,
+    point_ids: np.ndarray,
+    source_row_indices: np.ndarray,
+) -> tuple[Path, Path]:
+    """
+    Persist one shard's encoded vectors before Qdrant upsert.
+
+    These artifacts make Qdrant upsert/snapshot retryable without re-running
+    GPU embedding for shards that have already been encoded.
+    """
+    vector_dir.mkdir(parents=True, exist_ok=True)
+
+    stem = f"shard_{shard_id:05d}"
+    artifact_path = vector_dir / f"{stem}.npz"
+    metadata_path = vector_dir / f"{stem}.json"
+
+    tmp_artifact_path = artifact_path.with_suffix(".npz.tmp")
+    with tmp_artifact_path.open("wb") as handle:
+        np.savez(
+            handle,
+            vectors=vectors.astype(np.float32, copy=False),
+            point_ids=point_ids.astype(np.int64, copy=False),
+            source_row_indices=source_row_indices.astype(np.int32, copy=False),
+        )
+    tmp_artifact_path.replace(artifact_path)
+
+    write_manifest(
+        metadata_path,
+        {
+            "shard_id": shard_id,
+            "source_shard_path": str(shard_path),
+            "artifact_path": str(artifact_path),
+            "rows": int(vectors.shape[0]),
+            "vector_size": int(vectors.shape[1]),
+            "point_id_min": int(point_ids.min()) if len(point_ids) else None,
+            "point_id_max": int(point_ids.max()) if len(point_ids) else None,
+        },
+    )
+
+    return artifact_path, metadata_path
+
+
 def process_shard(
     *,
     shard_path: Path,
+    vector_dir: Path,
+    point_id_shard_size: int,
     model: EmbeddingModel,
     upsert_queue,
     upsert_worker,
@@ -96,7 +153,7 @@ def process_shard(
     progress_timer: ProgressTimer,
     total_state: dict[str, int],
     limit_rows_remaining: int | None,
-) -> tuple[int, int]:
+) -> tuple[int, int, Path | None, Path | None]:
     """
     Encode one shard and enqueue completed vector batches for Qdrant upsert.
 
@@ -107,8 +164,13 @@ def process_shard(
     Returns:
         A tuple of (rows_processed, batches_processed).
     """
+    shard_id = shard_id_from_path(shard_path)
     shard_rows = 0
     shard_batches = 0
+    upsert_batches: list[UpsertBatch] = []
+    vector_parts: list[np.ndarray] = []
+    point_id_parts: list[np.ndarray] = []
+    source_row_index_parts: list[np.ndarray] = []
 
     source_rows_iter = iter_source_rows([shard_path])
 
@@ -123,23 +185,29 @@ def process_shard(
         texts = [source_row.embedding_text for source_row in source_batch]
         vectors = model.encode(texts, batch_size=encode_batch_size)
 
-        # Preserve bounded-queue backpressure while still giving the producer a
-        # chance to notice if the background writer has failed.
-        while True:
-            upsert_worker.raise_if_failed()
-
-            try:
-                upsert_queue.put(
-                    UpsertBatch(
-                        source_rows=source_batch,
-                        vectors=vectors,
-                    ),
-                    timeout=0.1,
-                )
-                break
-            except Full:
-                time.sleep(0.1)
-                continue
+        vector_parts.append(vectors)
+        point_id_parts.append(
+            np.array(
+                [
+                    source_row.source_shard_id * point_id_shard_size
+                    + source_row.source_row_index
+                    for source_row in source_batch
+                ],
+                dtype=np.int64,
+            )
+        )
+        source_row_index_parts.append(
+            np.array(
+                [source_row.source_row_index for source_row in source_batch],
+                dtype=np.int32,
+            )
+        )
+        upsert_batches.append(
+            UpsertBatch(
+                source_rows=source_batch,
+                vectors=vectors,
+            )
+        )
 
         batch_size = len(source_batch)
         shard_rows += batch_size
@@ -154,7 +222,34 @@ def process_shard(
                 prefix="[embedding-progress]",
             )
 
-    return shard_rows, shard_batches
+    if shard_rows == 0:
+        return shard_rows, shard_batches, None, None
+
+    artifact_path, metadata_path = save_vector_artifact(
+        vector_dir=vector_dir,
+        shard_id=shard_id,
+        shard_path=shard_path,
+        vectors=np.concatenate(vector_parts, axis=0),
+        point_ids=np.concatenate(point_id_parts, axis=0),
+        source_row_indices=np.concatenate(source_row_index_parts, axis=0),
+    )
+
+    print(f"[vectors-saved] shard_id={shard_id} path={artifact_path}")
+
+    for upsert_batch in upsert_batches:
+        # Preserve bounded-queue backpressure while still giving the producer a
+        # chance to notice if the background writer has failed.
+        while True:
+            upsert_worker.raise_if_failed()
+
+            try:
+                upsert_queue.put(upsert_batch, timeout=0.1)
+                break
+            except Full:
+                time.sleep(0.1)
+                continue
+
+    return shard_rows, shard_batches, artifact_path, metadata_path
 
 
 def generate_embeddings(
@@ -175,6 +270,9 @@ def generate_embeddings(
     limit_rows: int | None,
     progress_every: int,
     distance: Distance,
+    vectors_on_disk: bool,
+    on_disk_payload: bool,
+    expected_vector_size: int | None,
 ) -> None:
     """
     Run the embedding/indexing pipeline.
@@ -200,6 +298,7 @@ def generate_embeddings(
 
     output_dir = output_root / run_id
     output_dir.mkdir(parents=True, exist_ok=True)
+    vector_dir = embedding_vector_dir(output_dir)
 
     manifest_path = embedding_manifest_path(output_dir)
 
@@ -225,6 +324,11 @@ def generate_embeddings(
 
     vector_size = model.embedding_dimension
 
+    if expected_vector_size is not None and vector_size != expected_vector_size:
+        raise ValueError(
+            f"model vector size mismatch: got {vector_size}, expected {expected_vector_size}"
+        )
+
     writer = QdrantWriter(
         QdrantWriterConfig(
             url=qdrant_url,
@@ -233,6 +337,8 @@ def generate_embeddings(
             distance=distance,
             recreate_collection=recreate_collection,
             point_id_shard_size=point_id_shard_size,
+            vectors_on_disk=vectors_on_disk,
+            on_disk_payload=on_disk_payload,
         )
     )
 
@@ -265,6 +371,10 @@ def generate_embeddings(
     manifest["config"]["point_id_shard_size"] = point_id_shard_size
     manifest["config"]["distance"] = distance.value
     manifest["config"]["recreate_collection"] = recreate_collection
+    manifest["config"]["normalized_embeddings"] = True
+    manifest["config"]["expected_vector_size"] = expected_vector_size
+    manifest["qdrant"]["vectors_on_disk"] = vectors_on_disk
+    manifest["qdrant"]["on_disk_payload"] = on_disk_payload
 
     completed = completed_shard_ids(manifest)
 
@@ -293,8 +403,15 @@ def generate_embeddings(
 
             print(f"[shard-start] shard_id={shard_id} path={shard_path}")
 
-            shard_rows, shard_batches = process_shard(
+            (
+                shard_rows,
+                shard_batches,
+                vector_artifact_path,
+                vector_metadata_path,
+            ) = process_shard(
                 shard_path=shard_path,
+                vector_dir=vector_dir,
+                point_id_shard_size=point_id_shard_size,
                 model=model,
                 upsert_queue=upsert_queue,
                 upsert_worker=upsert_worker,
@@ -316,6 +433,8 @@ def generate_embeddings(
                 shard_path=shard_path,
                 rows=shard_rows,
                 batches=shard_batches,
+                vector_artifact_path=vector_artifact_path,
+                vector_metadata_path=vector_metadata_path,
             )
             save_embedding_manifest(manifest_path, manifest)
 
@@ -436,6 +555,25 @@ def main() -> None:
     )
 
     parser.add_argument(
+        "--vectors-on-disk",
+        action="store_true",
+        help="Store original Qdrant vectors on disk.",
+    )
+
+    parser.add_argument(
+        "--on-disk-payload",
+        action="store_true",
+        help="Store Qdrant payload on disk.",
+    )
+
+    parser.add_argument(
+        "--expected-vector-size",
+        type=int,
+        default=None,
+        help="Fail if the loaded model does not emit this vector size.",
+    )
+
+    parser.add_argument(
         "--resume",
         action="store_true",
         help="Resume from an existing embedding manifest in the selected run directory.",
@@ -487,6 +625,9 @@ def main() -> None:
         limit_rows=args.limit_rows,
         progress_every=args.progress_every,
         distance=parse_distance(args.distance),
+        vectors_on_disk=args.vectors_on_disk,
+        on_disk_payload=args.on_disk_payload,
+        expected_vector_size=args.expected_vector_size,
     )
 
 

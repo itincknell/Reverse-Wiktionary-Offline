@@ -198,6 +198,15 @@ fi
 
 SNAPSHOT_SIZE_BYTES="$(wc -c < "$SNAPSHOT_PATH" | tr -d ' ')"
 CREATED_AT="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+COLLECTION_INFO="$(curl -fsS "$QDRANT_URL/collections/$COLLECTION_NAME")"
+POINTS_COUNT="$(jq -r '.result.points_count // null' <<< "$COLLECTION_INFO")"
+INDEXED_VECTORS_COUNT="$(jq -r '.result.indexed_vectors_count // null' <<< "$COLLECTION_INFO")"
+VECTOR_SIZE="$(jq -r '.result.config.params.vectors.size // .result.config.params.vectors[""].size // null' <<< "$COLLECTION_INFO")"
+VECTOR_DISTANCE="$(jq -r '.result.config.params.vectors.distance // .result.config.params.vectors[""].distance // null' <<< "$COLLECTION_INFO")"
+VECTORS_ON_DISK="$(jq -r '.result.config.params.vectors.on_disk // .result.config.params.vectors[""].on_disk // null' <<< "$COLLECTION_INFO")"
+ON_DISK_PAYLOAD="$(jq -r '.result.config.params.on_disk_payload // null' <<< "$COLLECTION_INFO")"
+QUANTIZATION_CONFIG="$(jq -c '.result.config.quantization_config // null' <<< "$COLLECTION_INFO")"
+PAYLOAD_INDEXES="$(jq -c '.result.payload_schema // {}' <<< "$COLLECTION_INFO")"
 
 cat > "$MANIFEST" <<EOF
 {
@@ -207,6 +216,14 @@ cat > "$MANIFEST" <<EOF
   "qdrant_url": "$QDRANT_URL",
   "collection_name": "$COLLECTION_NAME",
   "blob_prefix": "$BLOB_PREFIX",
+  "points_count": $POINTS_COUNT,
+  "indexed_vectors_count": $INDEXED_VECTORS_COUNT,
+  "vector_size": $VECTOR_SIZE,
+  "distance": "$VECTOR_DISTANCE",
+  "vectors_on_disk": $VECTORS_ON_DISK,
+  "on_disk_payload": $ON_DISK_PAYLOAD,
+  "quantization_config": $QUANTIZATION_CONFIG,
+  "payload_indexes": $PAYLOAD_INDEXES,
   "timeout_seconds": $TIMEOUT_SECONDS,
   "poll_interval_seconds": $POLL_INTERVAL_SECONDS,
   "reused_existing_snapshot": $REUSE_EXISTING,

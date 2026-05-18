@@ -71,7 +71,7 @@ usable semantic glosses. The row unit is:
 language + word + part of speech + aggregated semantic glosses
 ```
 
-Current processed row schema: `v4`
+Current processed row schema: `v5`
 
 Required fields:
 
@@ -92,6 +92,11 @@ expansion
 `embedding_text` is the joined gloss text. It does not include the word,
 language, or part of speech. Those fields are stored as metadata and used for
 display/filtering.
+
+Wiktionary result links are derived by the serving layer from `word` and `lang`.
+The offline artifact does not store full URLs or duplicate URL components that
+can be computed from existing payload fields. The documented validation source
+for language-section fragments is MediaWiki `action=parse&prop=tocdata`.
 
 The parser filters low-value form/variant records, including `form_of`,
 `alt_of`, alternative spellings, abbreviations, misspellings, obsolete senses,
@@ -116,12 +121,15 @@ Producer:
 src/embeddings/generate_embeddings.py
 ```
 
+Current embedding artifact schema: `v2`
+
 The embedding generator:
 
 ```text
 processed shards
   -> deterministic shard iteration
   -> SentenceTransformer batching
+  -> per-shard vector artifacts
   -> bounded Qdrant upsert queue
   -> background Qdrant writer
   -> embedding manifest checkpoints
@@ -130,14 +138,24 @@ processed shards
 The production index uses:
 
 ```text
-model: sentence-transformers/all-mpnet-base-v2
+collection: reverse_wiktionary_v2
+model: sentence-transformers/distiluse-base-multilingual-cased-v2
+vector_size: 512
 batch_size: 128
 queue_size: 4
 distance: cosine
 point_id_shard_size: 50,000
+vectors_on_disk: true
+on_disk_payload: true
+scalar_quantization: int8, quantile 0.99, always_ram true
 ```
 
-The generator checkpoints completed shards in a local embedding manifest.
+The generator writes per-shard vector artifacts before Qdrant upsert. This makes
+Qdrant upsert and snapshot recovery independent of GPU embedding once a shard
+has been encoded.
+
+Qdrant upsert requests use a fixed 3600-second client timeout. This is an
+internal guardrail for large on-disk collection writes, not a run parameter.
 
 ## Qdrant Collection
 
@@ -146,7 +164,7 @@ One Qdrant collection stores all normalized rows.
 Vector configuration:
 
 ```text
-dimension: 768
+dimension: 512
 distance: cosine
 ```
 

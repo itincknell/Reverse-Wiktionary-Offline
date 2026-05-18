@@ -8,13 +8,14 @@ VM_NAME=""
 STORAGE_ACCOUNT=""
 CONTAINER=""
 PROCESSED_RUN_ID="latest"
-COLLECTION_NAME="reverse_wiktionary_v1"
-MODEL_NAME="sentence-transformers/all-mpnet-base-v2"
+COLLECTION_NAME="reverse_wiktionary_v2"
+MODEL_NAME="sentence-transformers/distiluse-base-multilingual-cased-v2"
 VM_REPO_DIR="/opt/reverse-wiktionary"
 JOB_RUN_ID="$(date -u +%Y%m%dT%H%M%SZ)"
 CODE_ARCHIVE_BLOB="code/$JOB_RUN_ID/repo.tar.gz"
 LOCAL_ARCHIVE=""
 PREPARE_PROCESSED_IF_MISSING=false
+PREPARE_PROCESSED_FROM_RAW=false
 ALLOW_RAW_DOWNLOAD=false
 
 usage() {
@@ -32,13 +33,15 @@ Optional:
   --processed-run-id RUN_ID
       Defaults to latest.
   --collection-name NAME
-      Defaults to reverse_wiktionary_v1.
+      Defaults to reverse_wiktionary_v2.
   --model-name NAME
-      Defaults to sentence-transformers/all-mpnet-base-v2.
+      Defaults to sentence-transformers/distiluse-base-multilingual-cased-v2.
   --vm-repo-dir PATH
       Defaults to /opt/reverse-wiktionary.
   --prepare-processed-if-missing
       Prepare processed shards from raw Blob data when processed is missing.
+  --prepare-processed-from-raw
+      Always create a fresh processed run from raw Blob data.
   --allow-raw-download
       Allow Kaikki download if both processed and raw Blob artifacts are missing.
   --leave-running
@@ -86,6 +89,10 @@ while [ "$#" -gt 0 ]; do
       ;;
     --prepare-processed-if-missing)
       PREPARE_PROCESSED_IF_MISSING=true
+      shift
+      ;;
+    --prepare-processed-from-raw)
+      PREPARE_PROCESSED_FROM_RAW=true
       shift
       ;;
     --allow-raw-download)
@@ -168,6 +175,7 @@ az vm run-command invoke \
     codeArchiveBlob="$CODE_ARCHIVE_BLOB" \
     cloudRunId="$JOB_RUN_ID" \
     prepareProcessedIfMissing="$PREPARE_PROCESSED_IF_MISSING" \
+    prepareProcessedFromRaw="$PREPARE_PROCESSED_FROM_RAW" \
     allowRawDownload="$ALLOW_RAW_DOWNLOAD"
 
 echo
