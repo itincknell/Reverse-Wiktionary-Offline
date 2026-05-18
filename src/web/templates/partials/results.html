@@ -1,0 +1,8 @@
+{% if results %}
+  <div class="result-list">
+    {% include "partials/result_items.html" %}
+  </div>
+{% else %}
+  <p class="empty-state">No results found.</p>
+{% endif %}
+

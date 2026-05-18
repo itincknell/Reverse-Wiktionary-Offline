@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block body %}
+<main class="app-shell">
+  <section class="workspace">
+    <aside class="controls">
+      <form
+        hx-post="/ui/search"
+        hx-target="#results"
+        hx-swap="innerHTML"
+        class="search-form"
+      >
+        <label class="field-label" for="query">Search prompt</label>
+        <textarea
+          id="query"
+          name="query"
+          rows="5"
+          maxlength="500"
+          placeholder="a word for remembering the past fondly"
+          required
+        >{{ state.latest_query or "" }}</textarea>
+
+        <button class="primary-button" type="submit">Search</button>
+
+        <input type="hidden" name="limit" value="{{ state.limit }}">
+
+        {% include "partials/filters.html" %}
+      </form>
+    </aside>
+
+    <section class="results-pane" aria-live="polite">
+      <div id="results" class="results">
+        <p class="empty-state">Enter a description and search.</p>
+      </div>
+    </section>
+  </section>
+</main>
+
+<script src="{{ url_for('static', path='language_filters.js') }}"></script>
+<script>
+  ReverseWiktionaryLanguageFilters.initializeLanguageFilters();
+</script>
+<script src="https://unpkg.com/htmx.org@2.0.4"></script>
+{% endblock %}

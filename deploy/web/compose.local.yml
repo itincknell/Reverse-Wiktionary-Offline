@@ -1,0 +1,41 @@
+services:
+  qdrant:
+    image: qdrant/qdrant:latest
+    ports:
+      - "6333:6333"
+      - "6334:6334"
+    volumes:
+      - ../../data/qdrant/storage:/qdrant/storage
+    restart: unless-stopped
+
+  redis:
+    image: redis:7
+    ports:
+      - "6379:6379"
+    volumes:
+      - ../../data/redis:/data
+    command: redis-server --appendonly yes
+    restart: unless-stopped
+
+  web:
+    build:
+      context: ../..
+      dockerfile: deploy/web/Dockerfile
+    environment:
+      APP_ENV: development
+      COLLECTION_NAME: ${COLLECTION_NAME:-reverse_wiktionary_v1}
+      MODEL_NAME: ${MODEL_NAME:-sentence-transformers/all-mpnet-base-v2}
+      MODEL_DEVICE: ${MODEL_DEVICE:-auto}
+      QDRANT_URL: http://qdrant:6333
+      REDIS_URL: redis://redis:6379/0
+      DEFAULT_LIMIT: ${DEFAULT_LIMIT:-25}
+      MAX_LIMIT: ${MAX_LIMIT:-100}
+      SESSION_TTL_SECONDS: ${SESSION_TTL_SECONDS:-86400}
+      SECURE_COOKIES: "false"
+    ports:
+      - "8000:8000"
+    depends_on:
+      - qdrant
+      - redis
+    restart: unless-stopped
+

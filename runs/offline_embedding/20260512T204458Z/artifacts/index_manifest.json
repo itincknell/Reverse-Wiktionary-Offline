@@ -1,0 +1,13 @@
+{
+  "run_id": "20260512T204458Z",
+  "stage": "qdrant_snapshot",
+  "created_at_utc": "2026-05-13T16:24:26Z",
+  "qdrant_url": "http://localhost:6333",
+  "collection_name": "reverse_wiktionary_v1",
+  "blob_prefix": "indexes/20260512T204458Z",
+  "timeout_seconds": 3600,
+  "poll_interval_seconds": 5,
+  "reused_existing_snapshot": false,
+  "snapshot_path": "data/indexes/20260512T204458Z/snapshots/reverse_wiktionary_v1-4592053453619765-2026-05-13-16-07-44.snapshot",
+  "snapshot_size_bytes": 13601704960
+}

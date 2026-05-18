@@ -1,0 +1,15 @@
+{% for result in results %}
+  {% include "partials/result_card.html" %}
+{% endfor %}
+
+{% if has_more %}
+  <button
+    class="secondary-button load-more"
+    hx-post="/ui/search/more"
+    hx-target="this"
+    hx-swap="outerHTML"
+  >
+    Load more
+  </button>
+{% endif %}
+

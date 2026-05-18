@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block body %}
+<main class="content-page">
+  <h1>About Reverse Wiktionary</h1>
+
+  <p>
+    Reverse Wiktionary is a semantic search interface for finding words from
+    natural-language descriptions. In plain English: you describe a meaning,
+    and Reverse Wiktionary finds words, across more than 4,600 languages, that
+    match what you are describing. It is meant for anyone interested in exploring
+    language, from writers to researchers to the merely curious.
+  </p>
+
+  <p>
+    To learn more about Reverse Wiktionary and how it works,
+    <a href="https://ian-tincknell.com/reverse-wiktionary">check out this blog post</a>.
+  </p>
+
+  <p>
+    The source code is available on
+    <a href="https://github.com/itincknell/Reverse-Wiktionary">GitHub</a>.
+  </p>
+
+  <section class="acknowledgements" aria-labelledby="acknowledgements-heading">
+    <h2 id="acknowledgements-heading">Acknowledgements</h2>
+    <p>
+      Lexical data comes from
+      <a href="https://kaikki.org">Kaikki.org</a>, which publishes structured
+      extracts of <a href="https://www.wiktionary.org">Wiktionary</a>.
+      Wiktionary is a Wikimedia Foundation project maintained by its
+      contributor community.
+    </p>
+  </section>
+</main>
+{% endblock %}

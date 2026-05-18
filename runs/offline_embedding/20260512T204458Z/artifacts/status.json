@@ -1,0 +1,20 @@
+{
+  "cloud_run_id": "20260512T204458Z",
+  "embedding_run_id": "20260512T210221Z",
+  "started_at_utc": "2026-05-12T20:45:18Z",
+  "finished_at_utc": "2026-05-13T02:43:39Z",
+  "status": "failed",
+  "exit_code": 1,
+  "storage_account": "revwik05111434",
+  "container": "reverse-wiktionary",
+  "processed_run_id": "latest",
+  "collection_name": "reverse_wiktionary_v1",
+  "model_name": "sentence-transformers/all-mpnet-base-v2",
+  "code_archive_blob": "code/20260512T204458Z/repo.tar.gz",
+  "prepare_processed_if_missing": "true",
+  "allow_raw_download": "false",
+  "log_path": "logs/20260512T204458Z/remote_embedding_job.log",
+  "status_path": "logs/20260512T204458Z/status.json",
+  "embedding_manifest_path": "embeddings/20260512T210221Z/manifest.json",
+  "snapshot_prefix": "indexes/20260512T210221Z"
+}

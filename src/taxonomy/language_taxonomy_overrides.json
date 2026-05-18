@@ -1,0 +1,1055 @@
+{
+  "Albanian": {
+    "glottocode": "alba1267",
+    "branch": "Albanian",
+    "reason": "Wiktionary Albanian is kept as its own Indo-European branch."
+  },
+  "Achang": {
+    "glottocode": "acha1249",
+    "branch": "Burmo-Qiangic",
+    "reason": "Wiktionary Achang maps to Glottolog Longchuan Achang."
+  },
+  "Ahtna": {
+    "glottocode": "ahte1237",
+    "branch": "Athabaskan-Eyak",
+    "reason": "Wiktionary Ahtna maps to Glottolog Ahtena."
+  },
+  "Akkala Sami": {
+    "glottocode": "akka1237",
+    "branch": "Saami",
+    "reason": "Wiktionary Akkala Sami maps to Glottolog Akkala Saami."
+  },
+  "Ancient Greek": {
+    "glottocode": "anci1242",
+    "branch": "Hellenic",
+    "reason": "Wiktionary label maps to Glottolog Ionic-Attic Ancient Greek."
+  },
+  "Antillean Creole": {
+    "glottocode": "less1242",
+    "branch": "Creole",
+    "reason": "Manual review: Antillean Creole is a French-based Lesser Antillean creole; Glottolog records the family as Lesser Antillean French Creole."
+  },
+  "Ashokan Prakrit": {
+    "family": "Indo-European",
+    "branch": "Indic",
+    "path": ["Indo-European", "Indic"],
+    "reason": "Historical Prakrit label kept with Indo-Aryan/Indic languages for browsing."
+  },
+  "Alemannic German": {
+    "glottocode": "alem1243",
+    "branch": "Germanic",
+    "reason": "Wiktionary Alemannic German maps to the Glottolog Alemannic family."
+  },
+  "Armenian": {
+    "glottocode": "nucl1235",
+    "branch": "Armenian",
+    "reason": "Wiktionary Armenian entries are treated as the modern Eastern Armenian standard."
+  },
+  "Azerbaijani": {
+    "glottocode": "nort2697",
+    "branch": "Common Turkic",
+    "reason": "Wiktionary unqualified Azerbaijani is mapped to North Azerbaijani."
+  },
+  "Baluchi": {
+    "glottocode": "balo1260",
+    "branch": "Iranian",
+    "reason": "Wiktionary Baluchi maps to the Glottolog Balochic family."
+  },
+  "Buryat": {
+    "glottocode": "buri1258",
+    "branch": "Mongolic",
+    "reason": "Wiktionary Buryat maps to the Glottolog Buriat family."
+  },
+  "Carpathian Rusyn": {
+    "glottocode": "rusy1239",
+    "branch": "Slavic",
+    "reason": "Wiktionary Carpathian Rusyn is grouped with Glottolog Rusyn."
+  },
+  "Bourguignon": {
+    "glottocode": "bour1247",
+    "branch": "Italic / Romance",
+    "reason": "Wiktionary Bourguignon maps to Glottolog Bourguignon-Morvandiau."
+  },
+  "Bogaya": {
+    "glottocode": "boga1247",
+    "family": "Nuclear Trans New Guinea",
+    "branch": "Duna-Pogaya",
+    "path": ["Nuclear Trans New Guinea", "Duna-Pogaya"],
+    "reason": "Manual review: Bogaya/Pogaya is commonly grouped with Duna in the proposed Duna-Pogaya branch of Trans-New Guinea."
+  },
+  "Bangi": {
+    "glottocode": "baan1242",
+    "branch": "Volta-Congo",
+    "reason": "Wiktionary Bangi maps to Glottolog Baangi."
+  },
+  "Biao": {
+    "glottocode": "biao1257",
+    "branch": "Biaoic",
+    "reason": "Wiktionary Biao is grouped with the Glottolog Biaoic family."
+  },
+  "Chinese": {
+    "family": "Sino-Tibetan",
+    "branch": "Sinitic",
+    "path": ["Sino-Tibetan", "Sinitic"],
+    "reason": "Wiktionary Chinese is a macrolanguage label; Glottolog has named Sinitic varieties rather than a single Chinese language row."
+  },
+  "Central Bikol": {
+    "glottocode": "cent2087",
+    "branch": "Malayo-Polynesian",
+    "reason": "Wiktionary Central Bikol maps to Glottolog Coastal-Naga Bikol."
+  },
+  "Central Atlas Tamazight": {
+    "glottocode": "stan1324",
+    "branch": "Berber",
+    "reason": "Wiktionary Central Atlas Tamazight is grouped with Standard Moroccan Tamazight in Glottolog."
+  },
+  "Central Dusun": {
+    "glottocode": "cent2100",
+    "branch": "Malayo-Polynesian",
+    "reason": "Wiktionary Central Dusun maps to Glottolog Kadazan Dusun."
+  },
+  "Central Franconian": {
+    "glottocode": "midd1319",
+    "branch": "Germanic",
+    "reason": "Wiktionary Central Franconian is mapped to the Glottolog Middle Franconian family."
+  },
+  "Chichewa": {
+    "glottocode": "nyan1308",
+    "branch": "Volta-Congo",
+    "reason": "Wiktionary Chichewa maps to Glottolog Nyanja."
+  },
+  "Chungli Ao": {
+    "glottocode": "chon1286",
+    "branch": "Kuki-Chin-Naga",
+    "reason": "Wiktionary Chungli Ao maps to the Glottolog Chungli dialect row."
+  },
+  "Dacian": {
+    "family": "Indo-European",
+    "branch": "Hellenic",
+    "path": ["Indo-European", "Hellenic"],
+    "reason": "Ancient Balkan Indo-European label placed with Hellenic-adjacent browse branch."
+  },
+  "Duna": {
+    "glottocode": "duna1248",
+    "family": "Nuclear Trans New Guinea",
+    "branch": "Duna-Pogaya",
+    "path": ["Nuclear Trans New Guinea", "Duna-Pogaya"],
+    "reason": "Manual review: Duna is commonly grouped with Bogaya/Pogaya in the proposed Duna-Pogaya branch of Trans-New Guinea."
+  },
+  "East Central German": {
+    "family": "Indo-European",
+    "branch": "Germanic",
+    "path": ["Indo-European", "Germanic"],
+    "reason": "Wiktionary regional German label kept with Germanic for browsing."
+  },
+  "East Circassian": {
+    "glottocode": "circ1239",
+    "branch": "Circassian",
+    "reason": "Wiktionary East Circassian kept with Circassian pending finer Adyghe/Kabardian split."
+  },
+  "Emilian": {
+    "glottocode": "emil1241",
+    "branch": "Italic / Romance",
+    "reason": "Wiktionary Emilian maps to Glottolog Emiliano."
+  },
+  "Franco-Provençal": {
+    "glottocode": "fran1269",
+    "branch": "Italic / Romance",
+    "reason": "Wiktionary Franco-Provençal maps to Glottolog Francoprovencalic."
+  },
+  "Fuyug": {
+    "glottocode": "fuyu1242",
+    "family": "Nuclear Trans New Guinea",
+    "branch": "Goilalan",
+    "path": ["Nuclear Trans New Guinea", "Goilalan"],
+    "reason": "Manual review: Fuyug is commonly classified with the Goilalan languages of Papua New Guinea."
+  },
+  "Greenlandic": {
+    "glottocode": "kala1399",
+    "branch": "Inuit",
+    "reason": "Wiktionary Greenlandic maps to Glottolog Kalaallisut."
+  },
+  "Guinea-Bissau Creole": {
+    "glottocode": "biss1249",
+    "branch": "Creole",
+    "reason": "Wiktionary Guinea-Bissau Creole maps to Glottolog Bissau-Bolama Creole."
+  },
+  "Ghomala'": {
+    "glottocode": "ghom1247",
+    "branch": "Volta-Congo",
+    "reason": "Wiktionary Ghomala' maps to Glottolog Ghomálá'."
+  },
+  "Gamilaraay": {
+    "glottocode": "gami1243",
+    "branch": "Southeastern Pama-Nyungan",
+    "reason": "Wiktionary Gamilaraay maps to Glottolog Yuwaalaraay-Gamilaraay."
+  },
+  "Ge'ez": {
+    "glottocode": "geez1241",
+    "branch": "Semitic",
+    "reason": "Wiktionary Ge'ez maps to Glottolog Geez."
+  },
+  "Haitian Creole": {
+    "glottocode": "hait1244",
+    "branch": "Creole",
+    "reason": "Wiktionary Haitian Creole maps to Glottolog Haitian."
+  },
+  "Hebrew": {
+    "glottocode": "hebr1245",
+    "branch": "Semitic",
+    "reason": "Wiktionary Hebrew entries are mapped to Modern Hebrew."
+  },
+  "Hmong Daw": {
+    "glottocode": "hmon1333",
+    "branch": "Hmongic",
+    "reason": "Wiktionary Hmong Daw maps to Glottolog Hmong Daw."
+  },
+  "Indonesian": {
+    "glottocode": "indo1316",
+    "branch": "Malayo-Polynesian",
+    "reason": "Wiktionary Indonesian entries map to Glottolog Standard Indonesian."
+  },
+  "Ilocano": {
+    "glottocode": "ilok1237",
+    "branch": "Malayo-Polynesian",
+    "reason": "Wiktionary Ilocano maps to Glottolog Iloko."
+  },
+  "Inuktitut": {
+    "glottocode": "east2534",
+    "branch": "Inuit",
+    "reason": "Wiktionary Inuktitut maps to Eastern Canadian Inuktitut."
+  },
+  "Inupiaq": {
+    "glottocode": "inup1234",
+    "branch": "Inuit",
+    "reason": "Wiktionary Inupiaq maps to the Glottolog Alaskan Inupiaq family."
+  },
+  "Itelmen": {
+    "glottocode": "itel1242",
+    "branch": "Kamchatkan",
+    "reason": "Wiktionary Itelmen is grouped with Glottolog West Itelmen."
+  },
+  "Inari Sami": {
+    "glottocode": "inar1241",
+    "branch": "Saami",
+    "reason": "Wiktionary Inari Sami maps to Glottolog Inari Saami."
+  },
+  "Jamaican Creole": {
+    "glottocode": "jama1262",
+    "branch": "Creole",
+    "reason": "Wiktionary Jamaican Creole maps to Jamaican Creole English."
+  },
+  "Jeju": {
+    "glottocode": "jeju1234",
+    "branch": "Other",
+    "reason": "Wiktionary Jeju maps to Glottolog Jejueo."
+  },
+  "Kapampangan": {
+    "glottocode": "pamp1243",
+    "branch": "Malayo-Polynesian",
+    "reason": "Wiktionary Kapampangan maps to Glottolog Pampanga."
+  },
+  "Kalasha": {
+    "glottocode": "kala1372",
+    "branch": "Indic",
+    "reason": "Wiktionary Kalasha maps to Glottolog Chitral Kalasha."
+  },
+  "Kanakanabu": {
+    "glottocode": "kana1286",
+    "branch": "Tsouic",
+    "reason": "Wiktionary Kanakanabu maps to Glottolog Kanakanavu."
+  },
+  "Kariri": {
+    "glottocode": "kari1254",
+    "family": "Kariri",
+    "branch": "Kariri",
+    "path": ["Kariri", "Kariri"],
+    "reason": "Manual review: Kariri is better presented as its own small primary family/dialect cluster than inside the generic isolate bucket."
+  },
+  "Kamkata-viri": {
+    "glottocode": "kati1279",
+    "branch": "Indo-Iranian",
+    "reason": "Wiktionary Kamkata-viri is grouped with Glottolog Kataviri."
+  },
+  "Kari'na": {
+    "glottocode": "gali1262",
+    "branch": "Cariban",
+    "reason": "Wiktionary Kari'na maps to Glottolog Galibi Carib."
+  },
+  "Laboya": {
+    "glottocode": "lamb1273",
+    "branch": "Malayo-Polynesian",
+    "reason": "Wiktionary Laboya maps to Glottolog Lamboya."
+  },
+  "Karakhanid": {
+    "glottocode": "qara1244",
+    "branch": "Common Turkic",
+    "reason": "Wiktionary Karakhanid maps to Glottolog Qarakhanid."
+  },
+  "Kildin Sami": {
+    "glottocode": "kild1236",
+    "branch": "Saami",
+    "reason": "Wiktionary Kildin Sami maps to Glottolog Kildin Saami."
+  },
+  "Khmer": {
+    "glottocode": "cent1989",
+    "branch": "Khmeric",
+    "reason": "Wiktionary Khmer maps to Glottolog Central Khmer."
+  },
+  "Kyrgyz": {
+    "glottocode": "kirg1245",
+    "branch": "Common Turkic",
+    "reason": "Wiktionary Kyrgyz maps to Glottolog Kirghiz."
+  },
+  "Kongo": {
+    "glottocode": "kiko1235",
+    "branch": "Volta-Congo",
+    "reason": "Wiktionary Kongo is grouped with the Glottolog Kikongo language cluster."
+  },
+  "Kurtöp": {
+    "glottocode": "kurt1248",
+    "branch": "Burmo-Qiangic",
+    "reason": "Wiktionary Kurtöp maps to Glottolog Kurtokha."
+  },
+  "Kurux": {
+    "glottocode": "kuru1301",
+    "branch": "Dravidian",
+    "reason": "Wiktionary Kurux maps to Glottolog Kurukh."
+  },
+  "Limburgish": {
+    "glottocode": "limb1263",
+    "branch": "Germanic",
+    "reason": "Wiktionary Limburgish maps to Glottolog Limburgan."
+  },
+  "Lingala": {
+    "glottocode": "ling1263",
+    "branch": "Volta-Congo",
+    "reason": "Wiktionary Lingala maps to Kinshasa Lingala."
+  },
+  "Latgalian": {
+    "family": "Indo-European",
+    "branch": "Baltic",
+    "path": ["Indo-European", "Baltic"],
+    "reason": "Wiktionary Latgalian is grouped with Baltic languages for browsing."
+  },
+  "Lindu": {
+    "glottocode": "lind1248",
+    "branch": "Malayo-Polynesian",
+    "reason": "Wiktionary Lindu maps to Glottolog Tado-Lindu."
+  },
+  "Lezgi": {
+    "glottocode": "lezg1247",
+    "branch": "Lezgic",
+    "reason": "Wiktionary Lezgi maps to Glottolog Lezgian."
+  },
+  "Louisiana Creole": {
+    "glottocode": "loui1240",
+    "branch": "Creole",
+    "reason": "Wiktionary Louisiana Creole maps to Glottolog Louisiana Creole French."
+  },
+  "Lule Sami": {
+    "glottocode": "lule1254",
+    "branch": "Saami",
+    "reason": "Wiktionary Lule Sami maps to Glottolog Lule Saami."
+  },
+  "Lushootseed": {
+    "glottocode": "lush1251",
+    "branch": "Central Salish",
+    "reason": "Wiktionary Lushootseed maps to the Glottolog Lushootseed-Puget family."
+  },
+  "Lutuv": {
+    "family": "Sino-Tibetan",
+    "branch": "Kuki-Chin-Naga",
+    "path": ["Sino-Tibetan", "Kuki-Chin-Naga"],
+    "reason": "Manual review: Lutuv, also known as Lautu Chin, is a Kuki-Chin language."
+  },
+  "Livonian": {
+    "glottocode": "livv1244",
+    "branch": "Finnic",
+    "reason": "Wiktionary Livonian maps to Glottolog Liv."
+  },
+  "Malagasy": {
+    "glottocode": "plat1254",
+    "branch": "Malayo-Polynesian",
+    "reason": "Unqualified Wiktionary Malagasy is mapped to Plateau Malagasy."
+  },
+  "Mecayapan Nahuatl": {
+    "glottocode": "isth1242",
+    "branch": "Nahuatl",
+    "reason": "Wiktionary Mecayapan Nahuatl maps to Glottolog Isthmus-Mecayapan Nahuatl."
+  },
+  "Messapic": {
+    "family": "Indo-European",
+    "branch": "Unclassified Indo-European",
+    "path": ["Indo-European", "Unclassified Indo-European"],
+    "selectable": false,
+    "reason": "Obscure ancient Indo-European language; excluded from the browse filter until a better display branch is chosen."
+  },
+  "Middle Armenian": {
+    "family": "Indo-European",
+    "branch": "Armenian",
+    "path": ["Indo-European", "Armenian"],
+    "reason": "Historical Armenian label kept with Armenian languages for browsing."
+  },
+  "Middle Persian": {
+    "glottocode": "pahl1241",
+    "branch": "Iranian",
+    "reason": "Wiktionary Middle Persian maps to Glottolog Pahlavi."
+  },
+  "Māori": {
+    "glottocode": "maor1246",
+    "branch": "Malayo-Polynesian",
+    "reason": "Wiktionary Māori maps to Glottolog Maori."
+  },
+  "Mbya Guarani": {
+    "glottocode": "mbya1239",
+    "branch": "Tupi-Guarani",
+    "reason": "Wiktionary Mbya Guarani maps to Glottolog Mbyá Guaraní."
+  },
+  "Moore": {
+    "glottocode": "moss1236",
+    "branch": "Volta-Congo",
+    "reason": "Wiktionary Moore maps to Glottolog Mossi."
+  },
+  "Neapolitan": {
+    "family": "Indo-European",
+    "branch": "Italic / Romance",
+    "path": ["Indo-European", "Italic / Romance"],
+    "reason": "Wiktionary Neapolitan is grouped with Romance languages for browsing."
+  },
+  "Nheengatu": {
+    "glottocode": "nhen1239",
+    "branch": "Tupi-Guarani",
+    "reason": "Wiktionary Nheengatu maps to Glottolog Nhengatu."
+  },
+  "Northern Ohlone": {
+    "glottocode": "nort2969",
+    "branch": "Costanoan",
+    "reason": "Wiktionary Northern Ohlone maps to Glottolog San Francisco Bay Ohlone."
+  },
+  "Nǀuu": {
+    "glottocode": "nuuu1242",
+    "branch": "!Ui",
+    "reason": "Wiktionary Nǀuu maps to Glottolog N|u."
+  },
+  "Norman": {
+    "glottocode": "norm1245",
+    "branch": "Italic / Romance",
+    "reason": "Wiktionary Norman maps to Glottolog Normand."
+  },
+  "Northern Sami": {
+    "glottocode": "nort2671",
+    "branch": "Saami",
+    "reason": "Wiktionary Northern Sami maps to Glottolog North Saami."
+  },
+  "Northern Ndebele": {
+    "glottocode": "nort2795",
+    "branch": "Volta-Congo",
+    "reason": "Wiktionary Northern Ndebele maps to Glottolog Zimbabwean Ndebele."
+  },
+  "North Frisian": {
+    "glottocode": "nort2626",
+    "branch": "Germanic",
+    "reason": "Wiktionary North Frisian maps to Glottolog Northern Frisian."
+  },
+  "North Levantine Arabic": {
+    "glottocode": "nort3139",
+    "branch": "Semitic",
+    "reason": "Wiktionary North Levantine Arabic maps to Glottolog Levantine Arabic."
+  },
+  "Okinawan": {
+    "glottocode": "cent2126",
+    "branch": "Ryukyuan",
+    "reason": "Wiktionary Okinawan maps to Glottolog Central Okinawan."
+  },
+  "Norwegian Bokmål": {
+    "glottocode": "norw1259",
+    "branch": "Germanic",
+    "reason": "Glottolog records Bokmål as a dialect under Norwegian."
+  },
+  "Norwegian Nynorsk": {
+    "glottocode": "norw1262",
+    "branch": "Germanic",
+    "reason": "Glottolog records Nynorsk as a dialect under Norwegian."
+  },
+  "Ojibwe": {
+    "glottocode": "nucl1723",
+    "branch": "Algonquian",
+    "reason": "Wiktionary Ojibwe maps to the Glottolog Nuclear Ojibwe family."
+  },
+  "Nupe": {
+    "glottocode": "nupe1254",
+    "branch": "Volta-Congo",
+    "reason": "Wiktionary Nupe maps to Glottolog Nupe-Nupe-Tako."
+  },
+  "Nuosu": {
+    "glottocode": "sich1238",
+    "branch": "Loloish",
+    "reason": "Wiktionary Nuosu is grouped with Glottolog Sichuan Yi."
+  },
+  "Old Armenian": {
+    "glottocode": "clas1249",
+    "branch": "Armenian",
+    "reason": "Wiktionary Old Armenian maps to Glottolog Classical-Middle Armenian."
+  },
+  "Old Anatolian Turkish": {
+    "glottocode": "anat1259",
+    "branch": "Common Turkic",
+    "reason": "Manual review: Old Anatolian Turkish is an Oghuz/Turkic historical language; Glottolog records it as Anatolian Turkish."
+  },
+  "Old Church Slavonic": {
+    "family": "Indo-European",
+    "branch": "Slavic",
+    "path": ["Indo-European", "Slavic"],
+    "reason": "Liturgical Slavic label kept with Slavic for browsing."
+  },
+  "Old East Slavic": {
+    "glottocode": "east1426",
+    "branch": "Slavic",
+    "reason": "Historical East Slavic label maps to the Glottolog East Slavic family row."
+  },
+  "Old Javanese": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": ["Austronesian", "Malayo-Polynesian", "Javanesic"],
+    "reason": "Historical Javanese label kept with Javanesic languages for browsing."
+  },
+  "Old Novgorodian": {
+    "family": "Indo-European",
+    "branch": "Slavic",
+    "path": ["Indo-European", "Slavic"],
+    "reason": "Historical Novgorodian label kept with Slavic languages for browsing."
+  },
+  "Old Galician-Portuguese": {
+    "family": "Indo-European",
+    "branch": "Italic / Romance",
+    "path": ["Indo-European", "Italic / Romance"],
+    "reason": "Historical Galician-Portuguese label kept with Romance languages for browsing."
+  },
+  "Old Gujarati": {
+    "glottocode": "guja1252",
+    "branch": "Indic",
+    "reason": "Historical Gujarati label kept with Glottolog Gujarati for browsing."
+  },
+  "Old Occitan": {
+    "glottocode": "occi1239",
+    "branch": "Italic / Romance",
+    "reason": "Historical Occitan label kept with Glottolog Occitan."
+  },
+  "Old Leonese": {
+    "glottocode": "leon1250",
+    "branch": "Italic / Romance",
+    "reason": "Historical Leonese label kept with Glottolog Leonese."
+  },
+  "Old Ruthenian": {
+    "family": "Indo-European",
+    "branch": "Slavic",
+    "path": ["Indo-European", "Slavic"],
+    "reason": "Historical Ruthenian label kept with Slavic languages for browsing."
+  },
+  "Old Slovak": {
+    "glottocode": "slov1269",
+    "branch": "Slavic",
+    "reason": "Historical Slovak label kept with Glottolog Slovak."
+  },
+  "Old Tupi": {
+    "glottocode": "tupi1273",
+    "branch": "Tupi-Guarani",
+    "reason": "Wiktionary Old Tupi maps to Glottolog Tupinambá."
+  },
+  "Oromo": {
+    "glottocode": "cent2302",
+    "branch": "Cushitic",
+    "reason": "Wiktionary Oromo kept with the Glottolog Central-Eastern Oromo family."
+  },
+  "Ossetian": {
+    "glottocode": "osse1243",
+    "branch": "Iranian",
+    "reason": "Wiktionary Ossetian maps to the Glottolog Modern Ossetic family."
+  },
+  "Pannonian Rusyn": {
+    "glottocode": "pann1240",
+    "branch": "Slavic",
+    "reason": "Wiktionary Pannonian Rusyn maps to Glottolog Pannonian Ruthenian."
+  },
+  "Papiamentu": {
+    "family": "Indo-European",
+    "branch": "Creole",
+    "path": ["Indo-European", "Creole"],
+    "reason": "Wiktionary Papiamentu kept with Indo-European-based creoles for browsing."
+  },
+  "Pawaia": {
+    "glottocode": "pawa1255",
+    "family": "Nuclear Trans New Guinea",
+    "branch": "Teberan-Pawaian",
+    "path": ["Nuclear Trans New Guinea", "Teberan-Pawaian"],
+    "reason": "Manual review: Pawaia is often treated as a tentative independent branch associated with Trans-New Guinea."
+  },
+  "Persian": {
+    "glottocode": "west2369",
+    "branch": "Iranian",
+    "reason": "Wiktionary Persian entries map to Western Farsi."
+  },
+  "Pichinglis": {
+    "glottocode": "fern1234",
+    "branch": "Creole",
+    "reason": "Wiktionary Pichinglis maps to Glottolog Pichi."
+  },
+  "Prakrit": {
+    "family": "Indo-European",
+    "branch": "Indic",
+    "path": ["Indo-European", "Indic"],
+    "reason": "Wiktionary Prakrit is a cover label for Middle Indo-Aryan Prakrits."
+  },
+  "Proto-Austronesian": {
+    "glottocode": "aust1307",
+    "branch": "Other",
+    "reason": "Proto-language label maps to the Glottolog Austronesian family row."
+  },
+  "Proto-Algonquian": {
+    "glottocode": "algo1257",
+    "branch": "Algonquian",
+    "reason": "Proto-language label maps to the Glottolog Algonquian family row."
+  },
+  "Proto-Albanian": {
+    "glottocode": "alba1267",
+    "branch": "Albanian",
+    "reason": "Proto-language label maps to the Glottolog Albanian family row."
+  },
+  "Proto-Austroasiatic": {
+    "glottocode": "aust1305",
+    "branch": "Other",
+    "reason": "Proto-language label maps to the Glottolog Austroasiatic family row."
+  },
+  "Proto-Celtic": {
+    "glottocode": "celt1248",
+    "branch": "Celtic",
+    "reason": "Proto-language label maps to the Glottolog Celtic family row."
+  },
+  "Proto-Balto-Slavic": {
+    "glottocode": "balt1263",
+    "branch": "Balto-Slavic",
+    "reason": "Proto-language label maps to the Glottolog Balto-Slavic family row."
+  },
+  "Proto-Bantu": {
+    "family": "Atlantic-Congo",
+    "branch": "Volta-Congo",
+    "path": ["Atlantic-Congo", "Volta-Congo", "Bantu"],
+    "reason": "Proto-language label kept with Bantu languages for browsing."
+  },
+  "Proto-Brythonic": {
+    "glottocode": "bryt1239",
+    "branch": "Celtic",
+    "reason": "Proto-language label maps to the Glottolog Brythonic family row."
+  },
+  "Proto-Dravidian": {
+    "glottocode": "drav1251",
+    "branch": "Other",
+    "reason": "Proto-language label maps to the Glottolog Dravidian family row."
+  },
+  "Proto-Finnic": {
+    "glottocode": "finn1317",
+    "branch": "Finnic",
+    "reason": "Proto-language label maps to the Glottolog Finnic family row."
+  },
+  "Proto-Germanic": {
+    "glottocode": "germ1287",
+    "branch": "Germanic",
+    "reason": "Proto-language label maps to the Glottolog Germanic family row."
+  },
+  "Proto-Basque": {
+    "glottocode": "basq1248",
+    "branch": "Other",
+    "reason": "Proto-language label kept with Glottolog Basque for browsing."
+  },
+  "Proto-Bodish": {
+    "glottocode": "bodi1257",
+    "branch": "Bodish",
+    "reason": "Proto-language label maps to the Glottolog Bodish family row."
+  },
+  "Proto-Indo-European": {
+    "glottocode": "indo1319",
+    "branch": "Other Indo-European",
+    "reason": "Proto-language label maps to the Glottolog Indo-European family row."
+  },
+  "Proto-Indo-Iranian": {
+    "glottocode": "indo1320",
+    "branch": "Indo-Iranian",
+    "reason": "Proto-language label maps to the Glottolog Indo-Iranian family row."
+  },
+  "Proto-Iranian": {
+    "glottocode": "iran1269",
+    "branch": "Iranian",
+    "reason": "Proto-language label maps to the Glottolog Iranian family row."
+  },
+  "Proto-Hellenic": {
+    "family": "Indo-European",
+    "branch": "Hellenic",
+    "path": ["Indo-European", "Hellenic"],
+    "reason": "Proto-language label kept with Hellenic languages for browsing."
+  },
+  "Proto-Italic": {
+    "glottocode": "ital1284",
+    "branch": "Italic / Romance",
+    "reason": "Proto-language label maps to the Glottolog Italic family row."
+  },
+  "Proto-Japonic": {
+    "glottocode": "japo1237",
+    "branch": "Other",
+    "reason": "Proto-language label maps to the Glottolog Japonic family row."
+  },
+  "Proto-Malayo-Polynesian": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": ["Austronesian", "Malayo-Polynesian"],
+    "reason": "Proto-language label kept with Malayo-Polynesian languages for browsing."
+  },
+  "Proto-Malayic": {
+    "glottocode": "mala1538",
+    "branch": "Malayo-Polynesian",
+    "reason": "Proto-language label maps to the Glottolog Malayic family row."
+  },
+  "Proto-Mixtec": {
+    "glottocode": "mixt1427",
+    "branch": "Mixtec",
+    "reason": "Proto-language label maps to the Glottolog Mixtec family row."
+  },
+  "Proto-Naish": {
+    "glottocode": "nais1236",
+    "branch": "Burmo-Qiangic",
+    "reason": "Proto-language label maps to the Glottolog Naish family row."
+  },
+  "Proto-Nakh": {
+    "glottocode": "nakh1245",
+    "branch": "Other",
+    "reason": "Proto-language label maps to the Glottolog Nakh-Daghestanian family row."
+  },
+  "Proto-Permic": {
+    "glottocode": "perm1256",
+    "branch": "Permian",
+    "reason": "Proto-language label maps to the Glottolog Permian family row."
+  },
+  "Proto-Ryukyuan": {
+    "glottocode": "ryuk1243",
+    "branch": "Ryukyuan",
+    "reason": "Proto-language label maps to the Glottolog Ryukyuan family row."
+  },
+  "Proto-Samic": {
+    "family": "Uralic",
+    "branch": "Saami",
+    "path": ["Uralic", "Saami"],
+    "reason": "Proto-language label kept with Saami languages for browsing."
+  },
+  "Proto-Samoyedic": {
+    "family": "Uralic",
+    "branch": "Samoyedic",
+    "path": ["Uralic", "Samoyedic"],
+    "reason": "Proto-language label kept with Samoyedic languages for browsing."
+  },
+  "Proto-Semitic": {
+    "glottocode": "semi1276",
+    "branch": "Semitic",
+    "reason": "Proto-language label maps to the Glottolog Semitic family row."
+  },
+  "Proto-Uralic": {
+    "glottocode": "ural1272",
+    "branch": "Other",
+    "reason": "Proto-language label maps to the Glottolog Uralic family row."
+  },
+  "Proto-Sino-Tibetan": {
+    "glottocode": "sino1245",
+    "branch": "Other",
+    "reason": "Proto-language label maps to the Glottolog Sino-Tibetan family row."
+  },
+  "Proto-Slavic": {
+    "glottocode": "slav1255",
+    "branch": "Slavic",
+    "reason": "Proto-language label maps to the Glottolog Slavic family row."
+  },
+  "Proto-Turkic": {
+    "glottocode": "turk1311",
+    "family": "Turkic",
+    "branch": "Common Turkic",
+    "path": ["Turkic", "Common Turkic"],
+    "reason": "Proto-language label maps to the Glottolog Turkic family row."
+  },
+  "Pyu (Myanmar)": {
+    "glottocode": "burm1262",
+    "family": "Sino-Tibetan",
+    "branch": "Pyu",
+    "path": ["Sino-Tibetan", "Pyu"],
+    "reason": "Manual review: parenthetical label disambiguates the ancient Burma Pyu language from the Papuan language named Pyu."
+  },
+  "Proto-Tungusic": {
+    "glottocode": "tung1282",
+    "branch": "Other",
+    "reason": "Proto-language label maps to the Glottolog Tungusic family row."
+  },
+  "Proto-West Germanic": {
+    "glottocode": "west2793",
+    "branch": "Germanic",
+    "reason": "Proto-language label maps to the Glottolog West Germanic family row."
+  },
+  "Punjabi": {
+    "glottocode": "panj1256",
+    "branch": "Indic",
+    "reason": "Wiktionary Punjabi maps to Glottolog Eastern Panjabi."
+  },
+  "Piedmontese": {
+    "glottocode": "piem1238",
+    "branch": "Italic / Romance",
+    "reason": "Wiktionary Piedmontese maps to Glottolog Piemontese."
+  },
+  "Quechua": {
+    "glottocode": "quec1387",
+    "branch": "Other",
+    "reason": "Wiktionary Quechua is a macrolanguage label; Glottolog treats Quechuan as a family."
+  },
+  "Rapa Nui": {
+    "glottocode": "rapa1244",
+    "branch": "Malayo-Polynesian",
+    "reason": "Wiktionary Rapa Nui maps to Glottolog Rapanui."
+  },
+  "Rwanda-Rundi": {
+    "family": "Atlantic-Congo",
+    "branch": "Volta-Congo",
+    "path": ["Atlantic-Congo", "Volta-Congo"],
+    "reason": "Wiktionary Rwanda-Rundi kept with Bantu languages for browsing."
+  },
+  "Sambali": {
+    "glottocode": "samb1319",
+    "branch": "Malayo-Polynesian",
+    "reason": "Wiktionary Sambali is grouped with the Glottolog Sambalic family."
+  },
+  "Sardinian": {
+    "glottocode": "sard1257",
+    "branch": "Italic / Romance",
+    "reason": "Wiktionary Sardinian maps to the Glottolog Southern Romance family."
+  },
+  "Saterland Frisian": {
+    "glottocode": "sate1242",
+    "branch": "Germanic",
+    "reason": "Wiktionary Saterland Frisian maps to Glottolog Ems-Weser Frisian."
+  },
+  "Sassarese": {
+    "glottocode": "sass1235",
+    "branch": "Italic / Romance",
+    "reason": "Wiktionary Sassarese maps to Glottolog Sassarese Sardinian."
+  },
+  "Serbo-Croatian": {
+    "family": "Indo-European",
+    "branch": "Slavic",
+    "path": ["Indo-European", "Slavic"],
+    "reason": "Wiktionary Serbo-Croatian is a standard/macro label for South Slavic varieties."
+  },
+  "Seychellois Creole": {
+    "glottocode": "sese1246",
+    "branch": "Creole",
+    "reason": "Wiktionary Seychellois Creole maps to Glottolog Seselwa Creole French."
+  },
+  "Sirenik": {
+    "glottocode": "sire1246",
+    "branch": "Eskimo-Aleut",
+    "reason": "Wiktionary Sirenik maps to Glottolog Old Sirenik."
+  },
+  "Skolt Sami": {
+    "glottocode": "skol1241",
+    "branch": "Saami",
+    "reason": "Wiktionary Skolt Sami maps to Glottolog Skolt Saami."
+  },
+  "Shor": {
+    "glottocode": "shor1247",
+    "branch": "Common Turkic",
+    "reason": "Wiktionary Shor maps to Glottolog Mrassu Shor-Tutal."
+  },
+  "Slovene": {
+    "glottocode": "slov1268",
+    "branch": "Slavic",
+    "reason": "Wiktionary Slovene label maps to Glottolog Slovenian."
+  },
+  "Southern Ndebele": {
+    "glottocode": "sout3270",
+    "branch": "Volta-Congo",
+    "reason": "Wiktionary Southern Ndebele maps to Glottolog South Transvaal Ndebele."
+  },
+  "Sinhalese": {
+    "glottocode": "sinh1246",
+    "branch": "Indic",
+    "reason": "Wiktionary Sinhalese maps to Glottolog Sinhala."
+  },
+  "Sotho": {
+    "glottocode": "sout2807",
+    "branch": "Volta-Congo",
+    "reason": "Wiktionary Sotho maps to Glottolog Southern Sotho."
+  },
+  "Southern Sami": {
+    "glottocode": "sout2674",
+    "branch": "Saami",
+    "reason": "Wiktionary Southern Sami maps to Glottolog South Saami."
+  },
+  "Swazi": {
+    "glottocode": "swat1243",
+    "branch": "Volta-Congo",
+    "reason": "Wiktionary Swazi maps to Glottolog Swati."
+  },
+  "Talysh": {
+    "glottocode": "taly1247",
+    "branch": "Iranian",
+    "reason": "Wiktionary Talysh is grouped with Glottolog North-Central Talysh."
+  },
+  "Tsuut'ina": {
+    "glottocode": "sars1236",
+    "branch": "Athabaskan-Eyak",
+    "reason": "Wiktionary Tsuut'ina maps to Glottolog Sarsi."
+  },
+  "Thracian": {
+    "family": "Indo-European",
+    "branch": "Hellenic",
+    "path": ["Indo-European", "Hellenic"],
+    "reason": "Ancient Balkan Indo-European label placed with Hellenic-adjacent browse branch."
+  },
+  "Tarifit": {
+    "glottocode": "tari1263",
+    "branch": "Berber",
+    "reason": "Wiktionary Tarifit maps to Glottolog Tarifiyt-Beni-Iznasen-Eastern Middle Atlas Berber."
+  },
+  "Tashelhit": {
+    "glottocode": "tach1250",
+    "branch": "Berber",
+    "reason": "Wiktionary Tashelhit maps to Glottolog Tachelhit."
+  },
+  "Tarantino": {
+    "family": "Indo-European",
+    "branch": "Italic / Romance",
+    "path": ["Indo-European", "Italic / Romance"],
+    "reason": "Wiktionary Tarantino kept with Romance languages for browsing."
+  },
+  "Tocharian B": {
+    "glottocode": "tokh1243",
+    "branch": "Tocharian",
+    "reason": "Wiktionary spelling Tocharian maps to Glottolog Tokharian."
+  },
+  "Tocharian A": {
+    "glottocode": "tokh1242",
+    "branch": "Tocharian",
+    "reason": "Wiktionary spelling Tocharian maps to Glottolog Tokharian."
+  },
+  "Tongan": {
+    "glottocode": "tong1325",
+    "branch": "Malayo-Polynesian",
+    "reason": "Wiktionary Tongan maps to Tonga (Tonga Islands)."
+  },
+  "Tokelauan": {
+    "glottocode": "toke1240",
+    "branch": "Malayo-Polynesian",
+    "reason": "Wiktionary Tokelauan maps to Glottolog Tokelau."
+  },
+  "Tauade": {
+    "glottocode": "taua1242",
+    "family": "Nuclear Trans New Guinea",
+    "branch": "Goilalan",
+    "path": ["Nuclear Trans New Guinea", "Goilalan"],
+    "reason": "Manual review: Tauade is commonly classified with the Goilalan languages of Papua New Guinea."
+  },
+  "Tuvan": {
+    "glottocode": "tuvi1240",
+    "branch": "Common Turkic",
+    "reason": "Wiktionary Tuvan maps to Glottolog Tuvinian."
+  },
+  "Translingual": {
+    "family": "Special",
+    "branch": "Cross-language labels",
+    "path": ["Special", "Cross-language labels"],
+    "reason": "Wiktionary label for entries not tied to one natural language."
+  },
+  "Uyghur": {
+    "glottocode": "uigh1240",
+    "branch": "Common Turkic",
+    "reason": "Wiktionary Uyghur maps to Glottolog Uighur."
+  },
+  "Venetan": {
+    "glottocode": "vene1258",
+    "branch": "Italic / Romance",
+    "reason": "Wiktionary Venetan maps to Glottolog Venetian."
+  },
+  "Vilamovian": {
+    "glottocode": "wymy1235",
+    "branch": "Germanic",
+    "reason": "Wiktionary Vilamovian maps to Glottolog Wymysorys."
+  },
+  "Waray-Waray": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": ["Austronesian", "Malayo-Polynesian"],
+    "reason": "Wiktionary Waray-Waray kept with Philippine Malayo-Polynesian languages for browsing."
+  },
+  "Wadjiginy": {
+    "glottocode": "wadj1254",
+    "family": "Wagaydyic",
+    "branch": "Wagaydyic",
+    "path": ["Wagaydyic", "Wagaydyic"],
+    "reason": "Manual review: Wadjiginy is better presented with the Wagaydyic/Anson Bay grouping than inside the generic isolate bucket."
+  },
+  "West Flemish": {
+    "glottocode": "west2365",
+    "branch": "Germanic",
+    "reason": "Wiktionary West Flemish maps to Glottolog Western Flemish."
+  },
+  "West Frisian": {
+    "glottocode": "west2354",
+    "branch": "Germanic",
+    "reason": "Wiktionary West Frisian maps to Glottolog Western Frisian."
+  },
+  "Western Pwo": {
+    "glottocode": "pwow1235",
+    "branch": "Kuki-Chin-Naga",
+    "reason": "Wiktionary Western Pwo maps to Glottolog Pwo Western Karen."
+  },
+  "White Hmong": {
+    "glottocode": "hmon1333",
+    "branch": "Hmongic",
+    "reason": "Wiktionary White Hmong maps to Glottolog Hmong Daw."
+  },
+  "Yakut": {
+    "glottocode": "yaku1245",
+    "branch": "Common Turkic",
+    "reason": "Wiktionary Yakut maps to Glottolog Sakha."
+  },
+  "Yazghulami": {
+    "glottocode": "yazg1240",
+    "branch": "Iranian",
+    "reason": "Wiktionary Yazghulami maps to Glottolog Yazgulyam."
+  },
+  "Yiddish": {
+    "glottocode": "east2295",
+    "branch": "Germanic",
+    "reason": "Unqualified Wiktionary Yiddish is mapped to Eastern Yiddish."
+  },
+  "Yup'ik": {
+    "glottocode": "yupi1267",
+    "branch": "Yupik",
+    "reason": "Wiktionary Yup'ik is grouped with the Glottolog Yupik family."
+  },
+  "ǃXóõ": {
+    "glottocode": "taaa1242",
+    "branch": "Taa",
+    "reason": "Manual review: ǃXóõ is commonly treated as part of the Taa branch of the Tuu family."
+  },
+  "Zhuang": {
+    "family": "Tai-Kadai",
+    "branch": "Tai",
+    "path": ["Tai-Kadai", "Tai"],
+    "reason": "Wiktionary Zhuang is a macrolanguage label for several Tai varieties."
+  },
+  "Zazaki": {
+    "glottocode": "zaza1246",
+    "branch": "Iranian",
+    "reason": "Wiktionary Zazaki maps to the Glottolog Zaza family."
+  },
+  "Undetermined": {
+    "family": "Special",
+    "branch": "Unclassified labels",
+    "path": ["Special", "Unclassified labels"],
+    "reason": "Wiktionary label for entries without a determined language."
+  }
+}

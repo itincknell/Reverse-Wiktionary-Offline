@@ -1,0 +1,33 @@
+<article class="result-card">
+  <header class="result-header">
+    <div>
+      <h2>{{ result.word }}</h2>
+      <div class="metadata">{{ result.pos }}, {{ result.lang }}</div>
+    </div>
+
+    {% if result.expansion %}
+      <details class="expansion">
+        <summary>details</summary>
+        <p>{{ result.expansion }}</p>
+      </details>
+    {% endif %}
+  </header>
+
+  <ol class="gloss-list">
+    {% for gloss in result.glosses[:3] %}
+      <li>{{ gloss }}</li>
+    {% endfor %}
+  </ol>
+
+  {% if result.glosses|length > 3 %}
+    <details class="more-glosses">
+      <summary>show more</summary>
+      <ol class="gloss-list" start="4">
+        {% for gloss in result.glosses[3:] %}
+          <li>{{ gloss }}</li>
+        {% endfor %}
+      </ol>
+    </details>
+  {% endif %}
+</article>
+
