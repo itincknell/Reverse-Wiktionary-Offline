@@ -1,5 +1,5 @@
 """
-Build a serving language taxonomy from processed serving metadata.
+Build a language taxonomy from processed metadata.
 """
 
 from __future__ import annotations

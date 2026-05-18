@@ -1,10 +1,10 @@
 # Reverse Wiktionary Design
 
-Reverse Wiktionary is a semantic lexical search system. The offline pipeline
-builds a Qdrant vector index from Wiktionary data; the online service will serve
-natural-language reverse dictionary queries against that index.
+Reverse Wiktionary is a semantic lexical indexing system. This repository owns
+the offline pipeline that builds a Qdrant vector index from Wiktionary data and
+publishes the index as durable Blob artifacts.
 
-The system is intentionally split into two execution profiles:
+The system is intentionally split across repositories. This repository owns:
 
 ```text
 offline indexing:
@@ -14,13 +14,11 @@ offline indexing:
   -> Qdrant collection
   -> Qdrant snapshot
   -> Azure Blob artifacts
-
-online serving:
-  Qdrant snapshot
-  -> serving VM
-  -> Qdrant + web/API service
-  -> public search UI
 ```
+
+The online serving repository should consume `indexes/latest.json` and restore a
+snapshot, but it should not own raw parsing, embedding generation, or index
+construction.
 
 ## Current State
 
@@ -45,7 +43,6 @@ indexes/latest.json
 ## Design Documents
 
 - [Offline Indexing Design](docs/design_offline_indexing.md)
-- [Web Serving Design](docs/design_web_serving.md)
 - [Data Contracts](docs/data_contracts.md)
 - [Azure Runbook](docs/azure_runbook.md)
 - [Repository Layout](docs/repo_layout.md)
@@ -54,8 +51,7 @@ indexes/latest.json
 
 - Keep GPU compute ephemeral.
 - Treat Blob Storage as the durable artifact layer.
-- Treat Qdrant snapshots as deployable index artifacts.
-- Keep online serving independent of offline indexing.
+- Treat Qdrant snapshots as the handoff artifact to serving systems.
+- Keep offline indexing independent of online serving.
 - Keep metadata separate from embedding text.
 - Prefer explicit scripts and manifests over implicit state.
-- Benchmark before increasing serving infrastructure size.

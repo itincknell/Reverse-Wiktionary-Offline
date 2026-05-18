@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Build language taxonomy artifacts from a local processed serving metadata file.
+# Build language taxonomy artifacts from a local processed metadata file.
 
 SERVING_METADATA=""
 OUTPUT_DIR=""
@@ -12,14 +12,14 @@ PYTHON_BIN="${PYTHON:-python3}"
 
 usage() {
   cat <<'EOF'
-Build language taxonomy artifacts from serving metadata.
+Build language taxonomy artifacts from processed metadata.
 
 Required:
   --serving-metadata PATH
 
 Optional:
   --output-dir PATH
-      Defaults to the serving metadata directory.
+      Defaults to the processed metadata directory.
   --glottolog-version VERSION
       Defaults to 5.3.
   --glottolog-csv PATH

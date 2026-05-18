@@ -6,8 +6,8 @@ Normalize Wiktionary JSONL into sharded rows for semantic indexing.
 The parser streams raw Wiktextract records and emits one row per usable
 language/word/part-of-speech record. Glosses from kept senses are cleaned,
 deduplicated in order, and joined into `embedding_text`; word, language, part
-of speech, glosses, and optional headword expansion are retained for serving
-metadata.
+of speech, glosses, and optional headword expansion are retained as indexed
+payload and processed-run metadata.
 
 Rows are not globally merged across duplicate `(lang, word, pos)` records. A
 global merge would require a second aggregation pass and is intentionally
@@ -356,10 +356,10 @@ def build_serving_metadata(
     pos_counts: dict[str, int],
 ) -> dict[str, Any]:
     """
-    Build the compact metadata artifact used by serving startup.
+    Build the compact metadata artifact for processed-run audit.
 
-    The web service can still derive metadata from Qdrant, but this artifact is
-    the deterministic offline contract for available filters and their counts.
+    The filename is historical; this artifact is the deterministic offline
+    contract for available language/POS values and their counts.
     """
     languages = [
         {"lang": lang, "rows": rows}
@@ -539,7 +539,7 @@ def normalize_jsonl(
     print(f"non-object records skipped: {skipped_non_object:,}")
     print(f"empty lines skipped: {skipped_empty_lines:,}")
     print(f"languages: {len(language_counts):,}")
-    print(f"serving metadata: {serving_metadata_path}")
+    print(f"processed metadata: {serving_metadata_path}")
     print(f"elapsed seconds: {elapsed:.2f}")
     print(f"records/sec: {format_rate(total_records, elapsed)}")
     print(f"rows/sec: {format_rate(total_rows, elapsed)}")

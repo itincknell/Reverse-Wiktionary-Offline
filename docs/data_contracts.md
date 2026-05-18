@@ -51,8 +51,6 @@ code/<run_id>/
 
 indexes/<run_id>/
 indexes/latest.json
-
-logs/web_smoke/<run_id>/
 ```
 
 Blob `latest.json` pointer files replace local symlinks without duplicating
@@ -177,10 +175,10 @@ Important fields:
 - `skipped_empty_lines`: Empty input lines skipped.
 - `language_count`: Number of language values emitted into processed rows.
 - `pos_counts`: Row counts by allowed part-of-speech value.
-- `serving_metadata_path`: Local path to the serving metadata artifact.
+- `serving_metadata_path`: Local path to the processed metadata artifact.
 - `shards`: Per-shard metadata.
 
-## Processed Serving Metadata
+## Processed Metadata
 
 Producer: `src/embeddings/parse_wiktionary.py`
 
@@ -193,17 +191,22 @@ processed/<run_id>/serving_metadata.json
 
 Current schema: `v1`
 
+The filename is historical. In this offline repo it is the processed-run
+metadata contract used for audit, taxonomy generation, and downstream artifact
+consumers.
+
 Important fields:
 
-- `schema_version`: Serving metadata schema version.
+- `schema_version`: Metadata schema version.
 - `processed_run_id`: Processed run identifier.
 - `created_at_utc`: Metadata creation time.
 - `language_count`: Number of language values represented.
 - `languages`: Objects with `lang` and `rows`.
 - `pos`: Objects with `pos` and `rows`.
 
-The web service uses Qdrant as serving truth at startup, but this metadata is
-the offline contract for expected filter values and row counts.
+This metadata is the offline contract for expected language/POS values and row
+counts. Qdrant payloads remain the source of truth for the collection that gets
+snapshotted.
 
 ## Language Taxonomy
 
@@ -230,12 +233,12 @@ Current schema: `v1`
 `language_taxonomy.json` stores:
 
 - `source`: Processed run and Glottolog source metadata.
-- `tree`: UI-ready `family -> branch -> languages` browse hierarchy.
+- `tree`: `family -> branch -> languages` hierarchy for downstream consumers.
 - `languages`: Flat enriched language records; this remains the complete
-  language universe for search, select-all, and audit/debugging.
+  language universe for search, filtering, and audit/debugging.
 
-Glottolog paths may contain arbitrary-depth family/group ancestors. The serving
-UI reduces those paths to stable display buckets:
+Glottolog paths may contain arbitrary-depth family/group ancestors. The taxonomy
+builder reduces those paths to stable display buckets:
 
 ```text
 Family = Glottolog root family or isolate bucket
@@ -245,13 +248,9 @@ Language = Wiktionary language label
 
 Unmatched, unclassifiable, artificial, bookkeeping, speech-register, and other
 non-language labels are retained in the flat records but excluded from the
-filter tree. Strict line-shaped families with one branch and one language are
-also pruned from the visible tree. These pruned languages remain searchable in
-the language filter and participate in select-all.
-
-With no language filter, all Qdrant records remain eligible. Once any language
-filter is selected, the API receives an explicit language allowlist assembled
-from the full flat language set, not only the visible browse tree.
+tree. Strict line-shaped families with one branch and one language are also
+pruned from the visible tree. These pruned languages remain in the flat language
+records.
 
 `language_taxonomy_unmatched.json` stores high-priority unmatched and
 review-needed labels, sorted by row count. `language_taxonomy_report.json`
@@ -311,38 +310,21 @@ Important fields:
 - `snapshot_path`: Local snapshot path.
 - `snapshot_size_bytes`: Downloaded snapshot size.
 
-## Serving-Ready Qdrant Indexes
+## Qdrant Payload Indexes
 
 Producer: `scripts/qdrant/create_payload_indexes.sh`
 
 Verifier: `scripts/qdrant/check_payload_indexes.sh`
 
-The serving collection must have keyword payload indexes for:
+The snapshotted collection should have keyword payload indexes for:
 
 ```text
 lang
 pos
 ```
 
-These indexes support filtered vector search for the stable public API and web
-UI. Serving snapshots should be created after the indexes exist.
-
-## Web Smoke Benchmark Artifacts
-
-Producer: `scripts/web/benchmark_search.py`
-
-Remote smoke runners upload durable benchmark records to:
-
-```text
-logs/web_smoke/<run_id>/benchmark.json
-logs/web_smoke/<run_id>/benchmark_samples.json
-logs/web_smoke/<run_id>/web.log
-```
-
-`benchmark.json` stores the aggregate report, including route set, language/POS
-filters, concurrency, throughput, latency percentiles, error counts, and API
-timing fields. `benchmark_samples.json` stores one record per request for
-later inspection.
+These indexes support filtered vector search after restore. They are created as
+part of offline artifact preparation before the Qdrant snapshot is written.
 
 ## Azure VM Job Status
 

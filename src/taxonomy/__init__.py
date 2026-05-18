@@ -1,1 +1,1 @@
-"""Language taxonomy tools for serving metadata."""
+"""Language taxonomy tools for processed metadata."""

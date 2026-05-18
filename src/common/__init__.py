@@ -2,7 +2,7 @@
 Shared utilities for the Reverse Wiktionary pipeline.
 
 The common package contains small helpers used by preprocessing, embedding
-generation, indexing, and deployment scripts.
+generation, indexing, and offline run scripts.
 
 Modules:
     jsonl: JSONL streaming, writing, byte counting, and batching helpers.

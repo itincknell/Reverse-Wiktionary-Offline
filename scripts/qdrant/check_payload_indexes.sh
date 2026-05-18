@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Verify the payload indexes required by the serving layer.
+# Verify the payload indexes expected in the offline Qdrant snapshot.
 
 QDRANT_URL="${QDRANT_URL:-http://localhost:6333}"
 COLLECTION_NAME=""
@@ -53,4 +53,3 @@ for field_name in lang pos; do
 
   echo "payload index verified: $field_name"
 done
-

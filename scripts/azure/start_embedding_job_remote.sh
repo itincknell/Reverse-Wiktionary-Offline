@@ -72,8 +72,8 @@ echo "code archive: $container/$codeArchiveBlob"
 
 archive_path="$(mktemp).tar.gz"
 
-if [ -f "$repoDir/deploy/compose/qdrant.yml" ]; then
-  docker compose -f "$repoDir/deploy/compose/qdrant.yml" down || true
+if [ -f "$repoDir/compose/qdrant.yml" ]; then
+  docker compose -f "$repoDir/compose/qdrant.yml" down || true
 fi
 
 rm -rf "$repoDir"

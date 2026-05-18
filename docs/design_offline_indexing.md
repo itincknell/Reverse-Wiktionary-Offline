@@ -127,9 +127,9 @@ processed/<run_id>/serving_metadata.json
 ```
 
 This artifact records available language values and part-of-speech counts for
-the processed run. The web service fetches language values from Qdrant at
-startup for serving truth, but the offline metadata remains the deterministic
-pipeline contract and fallback.
+the processed run. The filename is historical, but in this repository the file
+is an offline contract used for audit, taxonomy generation, and downstream
+artifact consumers.
 
 ## Embedding Generation
 
@@ -186,21 +186,21 @@ glosses
 expansion
 ```
 
-The serving layer supports filters on `lang` and `pos`.
-
-Serving-ready Qdrant state requires payload indexes:
+Downstream query systems commonly filter on `lang` and `pos`. The offline
+snapshot should therefore include payload indexes:
 
 ```text
 lang: keyword
 pos: keyword
 ```
 
-These indexes are created offline before web deployment so filtered search does
-not pay the index build cost during first public startup.
+These indexes are part of the Qdrant artifact build, not application
+deployment. Creating them before snapshotting lets any consumer restore a
+collection that is already ready for filtered vector search.
 
 ## Snapshot Recovery
 
-Qdrant snapshots are the deployable output of the offline pipeline.
+Qdrant snapshots are the handoff output of the offline pipeline.
 
 The original production wrapper timed out during snapshot creation with a 600
 second HTTP timeout. The completed Qdrant collection was recovered manually by
@@ -225,11 +225,11 @@ runs/offline_embedding/20260512T204458Z/artifacts/index_manifest.json
 - Scripts must expose enough state to support manual recovery.
 - Root-created VM artifacts can interfere with SSH recovery; VM jobs must
   converge on a single runtime user before the next production run.
-- Serving deployment must use Qdrant storage outside the repository path.
+- Local and VM Qdrant storage must remain under ignored `data/` paths, never in
+  the Git repository.
 
 ## Deferred Work
 
 - Global deduplication across duplicate `(lang, word, pos)` records.
 - Quantization and on-disk vector evaluation.
 - Automated restore test from `indexes/latest.json`.
-- Final cost/performance report after web serving benchmarks.

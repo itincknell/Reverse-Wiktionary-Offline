@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-COMPOSE_FILE="deploy/compose/qdrant.yml"
+COMPOSE_FILE="compose/qdrant.yml"
 
 docker compose -f "$COMPOSE_FILE" up -d
 
@@ -17,4 +17,4 @@ done
 echo
 echo "Qdrant is healthy."
 echo "HTTP: http://localhost:6333"
-echo "Storage: ./qdrant_storage"
+echo "Storage: ./data/qdrant/storage"

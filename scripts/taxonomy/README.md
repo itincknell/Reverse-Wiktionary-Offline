@@ -1,9 +1,9 @@
 # Taxonomy Scripts
 
-These scripts build optional serving metadata for the language filter tree.
-They are deliberately separate from the core embedding path: embeddings and
-Qdrant indexing only require processed shards, while the web UI can use the
-taxonomy artifacts when they are available.
+These scripts build optional language metadata for downstream filter trees and
+audit reports. They are deliberately separate from the core embedding path:
+embeddings and Qdrant indexing only require processed shards, while downstream
+consumers can use the taxonomy artifacts when they are available.
 
 Inputs:
 

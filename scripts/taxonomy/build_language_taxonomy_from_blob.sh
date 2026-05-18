@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Build taxonomy artifacts from the processed serving metadata stored in Blob.
+# Build taxonomy artifacts from the processed metadata stored in Blob.
 
 STORAGE_ACCOUNT=""
 CONTAINER=""
@@ -13,7 +13,7 @@ UPLOAD=false
 
 usage() {
   cat <<'EOF'
-Build taxonomy artifacts from Blob processed serving metadata.
+Build taxonomy artifacts from Blob processed metadata.
 
 Required:
   --storage-account NAME

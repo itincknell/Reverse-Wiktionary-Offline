@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Create the payload indexes required by the serving layer.
+# Create the payload indexes expected in the offline Qdrant snapshot.
 
 QDRANT_URL="${QDRANT_URL:-http://localhost:6333}"
 COLLECTION_NAME=""
@@ -51,4 +51,3 @@ create_index() {
 
 create_index "lang"
 create_index "pos"
-

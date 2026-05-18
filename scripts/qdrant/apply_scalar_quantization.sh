@@ -3,9 +3,10 @@ set -euo pipefail
 
 # Enable scalar int8 quantization for an existing Qdrant collection.
 #
-# This is intended for serving-size experiments. The default mode keeps
-# quantized vectors in RAM and moves original float vectors to disk, which is
-# the first configuration to test when reducing RAM without changing embeddings.
+# This is intended for offline artifact-size experiments. The default mode
+# keeps quantized vectors in RAM and moves original float vectors to disk, which
+# is the first configuration to test when reducing RAM without changing
+# embeddings.
 
 QDRANT_URL="${QDRANT_URL:-http://localhost:6333}"
 COLLECTION_NAME=""

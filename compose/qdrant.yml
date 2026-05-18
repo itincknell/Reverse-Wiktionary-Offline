@@ -8,7 +8,7 @@ services:
       - "6334:6334"
 
     volumes:
-      - ../../data/qdrant/storage:/qdrant/storage
+      - ../data/qdrant/storage:/qdrant/storage
 
     environment:
       QDRANT__SERVICE__HTTP_PORT: 6333
