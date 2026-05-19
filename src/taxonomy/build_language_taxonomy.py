@@ -148,8 +148,10 @@ def build_taxonomy(
             "glottolog_version": glottolog_version,
         },
         "tree": tree,
-        "languages": sorted(enriched_languages, key=lambda item: item["label"].casefold()),
     }
+    all_languages = sorted(enriched_languages, key=lambda item: item["label"].casefold())
+    taxonomy["all_languages"] = all_languages
+    taxonomy["languages"] = all_languages
 
     return {
         "taxonomy": taxonomy,

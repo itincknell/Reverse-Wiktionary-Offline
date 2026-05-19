@@ -255,8 +255,9 @@ Current schema: `v1`
 
 - `source`: Processed run and Glottolog source metadata.
 - `tree`: `family -> branch -> languages` hierarchy for downstream consumers.
-- `languages`: Flat enriched language records; this remains the complete
-  language universe for search, filtering, and audit/debugging.
+- `all_languages`: Flat enriched language records; this remains the complete
+  language universe for search, filtering, select-all, and audit/debugging.
+- `languages`: Compatibility alias for `all_languages`.
 
 Glottolog paths may contain arbitrary-depth family/group ancestors. The taxonomy
 builder reduces those paths to stable display buckets:
