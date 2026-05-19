@@ -80,13 +80,17 @@ curl -fsS "$QDRANT_URL/collections/$COLLECTION_NAME" \
 
 echo
 echo "=== Applying Scalar Quantization ==="
+if [ "$ON_DISK" = true ]; then
+  vectors_config='{"": {"on_disk": true}}'
+else
+  vectors_config='{"": {"on_disk": false}}'
+fi
+
 curl -fsS -X PATCH \
   "$QDRANT_URL/collections/$COLLECTION_NAME?timeout=$TIMEOUT_SECONDS" \
   -H "Content-Type: application/json" \
   --data "{
-    \"vectors\": {
-      \"on_disk\": $ON_DISK
-    },
+    \"vectors\": $vectors_config,
     \"quantization_config\": {
       \"scalar\": {
         \"type\": \"int8\",
