@@ -391,6 +391,12 @@
     "path": ["Indo-European", "Armenian"],
     "reason": "Historical Armenian label kept with Armenian languages for browsing."
   },
+  "Middle Hungarian": {
+    "family": "Uralic",
+    "branch": "Hungaric",
+    "path": ["Uralic", "Hungaric"],
+    "reason": "Historical Hungarian label kept with Hungarian languages for browsing."
+  },
   "Middle Persian": {
     "glottocode": "pahl1241",
     "branch": "Iranian",
@@ -530,6 +536,12 @@
     "glottocode": "guja1252",
     "branch": "Indic",
     "reason": "Historical Gujarati label kept with Glottolog Gujarati for browsing."
+  },
+  "Old Hungarian": {
+    "family": "Uralic",
+    "branch": "Hungaric",
+    "path": ["Uralic", "Hungaric"],
+    "reason": "Historical Hungarian label kept with Hungarian languages for browsing."
   },
   "Old Occitan": {
     "glottocode": "occi1239",
