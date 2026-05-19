@@ -10,6 +10,7 @@ CONTAINER=""
 PROCESSED_RUN_ID="latest"
 COLLECTION_NAME="reverse_wiktionary_v2"
 MODEL_NAME="sentence-transformers/distiluse-base-multilingual-cased-v2"
+EXPECTED_VECTOR_SIZE="512"
 VM_REPO_DIR="/opt/reverse-wiktionary"
 JOB_RUN_ID="$(date -u +%Y%m%dT%H%M%SZ)"
 CODE_ARCHIVE_BLOB="code/$JOB_RUN_ID/repo.tar.gz"
@@ -36,6 +37,8 @@ Optional:
       Defaults to reverse_wiktionary_v2.
   --model-name NAME
       Defaults to sentence-transformers/distiluse-base-multilingual-cased-v2.
+  --expected-vector-size N
+      Expected embedding dimension. Defaults to 512.
   --vm-repo-dir PATH
       Defaults to /opt/reverse-wiktionary.
   --prepare-processed-if-missing
@@ -77,6 +80,10 @@ while [ "$#" -gt 0 ]; do
       ;;
     --model-name)
       MODEL_NAME="$2"
+      shift 2
+      ;;
+    --expected-vector-size)
+      EXPECTED_VECTOR_SIZE="$2"
       shift 2
       ;;
     --vm-repo-dir)
@@ -171,6 +178,7 @@ az vm run-command invoke \
     processedRunId="$PROCESSED_RUN_ID" \
     collectionName="$COLLECTION_NAME" \
     modelName="$MODEL_NAME" \
+    expectedVectorSize="$EXPECTED_VECTOR_SIZE" \
     repoDir="$VM_REPO_DIR" \
     codeArchiveBlob="$CODE_ARCHIVE_BLOB" \
     cloudRunId="$JOB_RUN_ID" \

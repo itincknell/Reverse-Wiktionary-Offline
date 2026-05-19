@@ -8,6 +8,7 @@ container="${container:-}"
 processedRunId="${processedRunId:-latest}"
 collectionName="${collectionName:-reverse_wiktionary_v2}"
 modelName="${modelName:-sentence-transformers/distiluse-base-multilingual-cased-v2}"
+expectedVectorSize="${expectedVectorSize:-512}"
 repoDir="${repoDir:-/opt/reverse-wiktionary}"
 codeArchiveBlob="${codeArchiveBlob:-}"
 cloudRunId="${cloudRunId:-$(date -u +%Y%m%dT%H%M%SZ)}"
@@ -43,6 +44,9 @@ for parameter in "$@"; do
       ;;
     modelName=*)
       modelName="${parameter#modelName=}"
+      ;;
+    expectedVectorSize=*)
+      expectedVectorSize="${parameter#expectedVectorSize=}"
       ;;
     repoDir=*)
       repoDir="${parameter#repoDir=}"
@@ -147,6 +151,7 @@ upload_run_artifacts() {
     --arg processed_run_id "$processedRunId" \
     --arg collection_name "$collectionName" \
     --arg model_name "$modelName" \
+    --arg expected_vector_size "$expectedVectorSize" \
     --arg code_archive_blob "$codeArchiveBlob" \
     --arg repo_dir "$repoDir" \
     --arg systemd_unit "$systemdUnit" \
@@ -174,6 +179,7 @@ upload_run_artifacts() {
       processed_run_id: $processed_run_id,
       collection_name: $collection_name,
       model_name: $model_name,
+      expected_vector_size: ($expected_vector_size | tonumber),
       code_archive_blob: $code_archive_blob,
       repo_dir: $repo_dir,
       systemd_unit: (if $systemd_unit == "" then null else $systemd_unit end),
@@ -266,6 +272,7 @@ echo "container: $container"
 echo "processed run id: $processedRunId"
 echo "collection: $collectionName"
 echo "model: $modelName"
+echo "expected vector size: $expectedVectorSize"
 echo "code archive: $codeArchiveBlob"
 echo "cloud run id: $cloudRunId"
 echo "repo prepared: $repoPrepared"
@@ -343,7 +350,7 @@ set_stage "embedding"
   --recreate-collection \
   --vectors-on-disk \
   --on-disk-payload \
-  --expected-vector-size 512 \
+  --expected-vector-size "$expectedVectorSize" \
   --run-id "$embeddingRunId" \
   --progress-every 100000
 

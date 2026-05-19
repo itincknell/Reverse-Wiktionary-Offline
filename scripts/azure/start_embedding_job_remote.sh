@@ -8,6 +8,7 @@ container="${container:-}"
 processedRunId="${processedRunId:-latest}"
 collectionName="${collectionName:-reverse_wiktionary_v2}"
 modelName="${modelName:-sentence-transformers/distiluse-base-multilingual-cased-v2}"
+expectedVectorSize="${expectedVectorSize:-512}"
 repoDir="${repoDir:-/opt/reverse-wiktionary}"
 codeArchiveBlob="${codeArchiveBlob:-}"
 cloudRunId="${cloudRunId:-$(date -u +%Y%m%dT%H%M%SZ)}"
@@ -31,6 +32,9 @@ for parameter in "$@"; do
       ;;
     modelName=*)
       modelName="${parameter#modelName=}"
+      ;;
+    expectedVectorSize=*)
+      expectedVectorSize="${parameter#expectedVectorSize=}"
       ;;
     repoDir=*)
       repoDir="${parameter#repoDir=}"
@@ -106,6 +110,7 @@ systemd-run \
     processedRunId="$processedRunId" \
     collectionName="$collectionName" \
     modelName="$modelName" \
+    expectedVectorSize="$expectedVectorSize" \
     repoDir="$repoDir" \
     codeArchiveBlob="$codeArchiveBlob" \
     cloudRunId="$cloudRunId" \
