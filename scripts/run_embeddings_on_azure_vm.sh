@@ -18,6 +18,7 @@ LOCAL_ARCHIVE=""
 PREPARE_PROCESSED_IF_MISSING=false
 PREPARE_PROCESSED_FROM_RAW=false
 ALLOW_RAW_DOWNLOAD=false
+RESUME_EMBEDDING_RUN_ID=""
 
 usage() {
   cat <<'EOF'
@@ -47,6 +48,8 @@ Optional:
       Always create a fresh processed run from raw Blob data.
   --allow-raw-download
       Allow Kaikki download if both processed and raw Blob artifacts are missing.
+  --resume-embedding-run-id RUN_ID
+      Resume an existing embedding run and existing Qdrant collection.
   --leave-running
       Accepted for compatibility; the background job always requires the VM to stay running.
 EOF
@@ -105,6 +108,10 @@ while [ "$#" -gt 0 ]; do
     --allow-raw-download)
       ALLOW_RAW_DOWNLOAD=true
       shift
+      ;;
+    --resume-embedding-run-id)
+      RESUME_EMBEDDING_RUN_ID="$2"
+      shift 2
       ;;
     --help|-h)
       usage
@@ -184,7 +191,8 @@ az vm run-command invoke \
     cloudRunId="$JOB_RUN_ID" \
     prepareProcessedIfMissing="$PREPARE_PROCESSED_IF_MISSING" \
     prepareProcessedFromRaw="$PREPARE_PROCESSED_FROM_RAW" \
-    allowRawDownload="$ALLOW_RAW_DOWNLOAD"
+    allowRawDownload="$ALLOW_RAW_DOWNLOAD" \
+    resumeEmbeddingRunId="$RESUME_EMBEDDING_RUN_ID"
 
 echo
 echo "=== Cloud Run Artifacts ==="

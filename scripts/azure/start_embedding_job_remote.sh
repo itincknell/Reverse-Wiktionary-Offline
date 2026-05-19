@@ -15,6 +15,7 @@ cloudRunId="${cloudRunId:-$(date -u +%Y%m%dT%H%M%SZ)}"
 prepareProcessedIfMissing="${prepareProcessedIfMissing:-false}"
 prepareProcessedFromRaw="${prepareProcessedFromRaw:-false}"
 allowRawDownload="${allowRawDownload:-false}"
+resumeEmbeddingRunId="${resumeEmbeddingRunId:-}"
 
 for parameter in "$@"; do
   case "$parameter" in
@@ -53,6 +54,9 @@ for parameter in "$@"; do
       ;;
     allowRawDownload=*)
       allowRawDownload="${parameter#allowRawDownload=}"
+      ;;
+    resumeEmbeddingRunId=*)
+      resumeEmbeddingRunId="${parameter#resumeEmbeddingRunId=}"
       ;;
   esac
 done
@@ -118,7 +122,8 @@ systemd-run \
     repoPrepared=true \
     prepareProcessedIfMissing="$prepareProcessedIfMissing" \
     prepareProcessedFromRaw="$prepareProcessedFromRaw" \
-    allowRawDownload="$allowRawDownload"
+    allowRawDownload="$allowRawDownload" \
+    resumeEmbeddingRunId="$resumeEmbeddingRunId"
 
 echo
 echo "Job submitted."

@@ -17,6 +17,7 @@ repoPrepared="${repoPrepared:-false}"
 prepareProcessedIfMissing="${prepareProcessedIfMissing:-false}"
 prepareProcessedFromRaw="${prepareProcessedFromRaw:-false}"
 allowRawDownload="${allowRawDownload:-false}"
+resumeEmbeddingRunId="${resumeEmbeddingRunId:-}"
 startedAtUtc="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
 embeddingRunId=""
 logFile="/tmp/reverse-wiktionary-$cloudRunId.log"
@@ -74,6 +75,9 @@ for parameter in "$@"; do
       ;;
     allowRawDownload=*)
       allowRawDownload="${parameter#allowRawDownload=}"
+      ;;
+    resumeEmbeddingRunId=*)
+      resumeEmbeddingRunId="${parameter#resumeEmbeddingRunId=}"
       ;;
   esac
 done
@@ -279,6 +283,7 @@ echo "repo prepared: $repoPrepared"
 echo "prepare processed if missing: $prepareProcessedIfMissing"
 echo "prepare processed from raw: $prepareProcessedFromRaw"
 echo "allow raw download: $allowRawDownload"
+echo "resume embedding run id: ${resumeEmbeddingRunId:-<none>}"
 
 if [ "$repoPrepared" != true ] && [ -n "$codeArchiveBlob" ]; then
   set_stage "preparing_repo"
@@ -334,25 +339,43 @@ set_stage "starting_qdrant"
 ./scripts/start_qdrant.sh
 qdrantStarted=true
 
-embeddingRunId="$(date -u +%Y%m%dT%H%M%SZ)"
+if [ -n "$resumeEmbeddingRunId" ]; then
+  embeddingRunId="$resumeEmbeddingRunId"
+else
+  embeddingRunId="$(date -u +%Y%m%dT%H%M%SZ)"
+fi
 write_state
 
-set_stage "embedding"
-"$pythonBin" -u ./src/embeddings/generate_embeddings.py \
-  --processed-dir data/processed/latest \
-  --output-root data/embeddings \
-  --collection-name "$collectionName" \
-  --model-name "$modelName" \
-  --device auto \
-  --batch-size 128 \
-  --queue-size 4 \
-  --point-id-shard-size 50000 \
-  --recreate-collection \
-  --vectors-on-disk \
-  --on-disk-payload \
-  --expected-vector-size "$expectedVectorSize" \
-  --run-id "$embeddingRunId" \
+embedding_args=(
+  --processed-dir data/processed/latest
+  --output-root data/embeddings
+  --collection-name "$collectionName"
+  --model-name "$modelName"
+  --device auto
+  --batch-size 128
+  --queue-size 4
+  --point-id-shard-size 50000
+  --on-disk-payload
+  --expected-vector-size "$expectedVectorSize"
+  --run-id "$embeddingRunId"
   --progress-every 100000
+)
+
+if [ -n "$resumeEmbeddingRunId" ]; then
+  echo "=== Preparing Existing Collection for Resume ==="
+  curl -fsS -X PATCH \
+    "http://localhost:6333/collections/$collectionName?timeout=3600" \
+    -H "Content-Type: application/json" \
+    --data '{"vectors": {"": {"on_disk": false}}}' \
+    | jq .
+
+  embedding_args+=(--resume)
+else
+  embedding_args+=(--recreate-collection)
+fi
+
+set_stage "embedding"
+"$pythonBin" -u ./src/embeddings/generate_embeddings.py "${embedding_args[@]}"
 
 set_stage "creating_payload_indexes"
 REVWIK_STAGE_FILE="$stateFile" \

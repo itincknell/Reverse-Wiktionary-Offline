@@ -171,12 +171,21 @@ def process_shard(
     shard_id = shard_id_from_path(shard_path)
     shard_rows = 0
     shard_batches = 0
-    upsert_batches: list[UpsertBatch] = []
     vector_parts: list[np.ndarray] = []
     point_id_parts: list[np.ndarray] = []
     source_row_index_parts: list[np.ndarray] = []
 
     source_rows_iter = iter_source_rows([shard_path])
+
+    def enqueue_upsert(upsert_batch: UpsertBatch) -> None:
+        while True:
+            upsert_worker.raise_if_failed()
+
+            try:
+                upsert_queue.put(upsert_batch, timeout=0.1)
+                return
+            except Full:
+                time.sleep(0.1)
 
     for source_batch in batched(source_rows_iter, encode_batch_size):
         if limit_rows_remaining is not None:
@@ -205,7 +214,8 @@ def process_shard(
                 dtype=np.int32,
             )
         )
-        upsert_batches.append(
+
+        enqueue_upsert(
             UpsertBatch(
                 source_rows=source_batch,
                 vectors=vectors,
@@ -238,19 +248,6 @@ def process_shard(
     )
 
     print(f"[vectors-saved] shard_id={shard_id} path={artifact_path}")
-
-    for upsert_batch in upsert_batches:
-        # Preserve bounded-queue backpressure while still giving the producer a
-        # chance to notice if the background writer has failed.
-        while True:
-            upsert_worker.raise_if_failed()
-
-            try:
-                upsert_queue.put(upsert_batch, timeout=0.1)
-                break
-            except Full:
-                time.sleep(0.1)
-                continue
 
     return shard_rows, shard_batches, artifact_path, metadata_path
 
