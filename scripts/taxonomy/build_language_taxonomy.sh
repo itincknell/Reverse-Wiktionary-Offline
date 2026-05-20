@@ -8,6 +8,9 @@ OUTPUT_DIR=""
 GLOTTOLOG_VERSION="5.3"
 GLOTTOLOG_CSV=""
 OVERRIDES="src/taxonomy/language_taxonomy_overrides.json"
+AUTO_THRESHOLD="0.96"
+REVIEW_THRESHOLD="0.75"
+STREAM_REVIEWS=false
 PYTHON_BIN="${PYTHON:-python3}"
 
 usage() {
@@ -26,6 +29,14 @@ Optional:
       Defaults to data/reference/glottolog/<version>/glottolog_languoid.csv.
   --overrides PATH
       Defaults to src/taxonomy/language_taxonomy_overrides.json.
+  --auto-threshold FLOAT
+      Fuzzy match score required for automatic selectable matches.
+      Defaults to 0.96.
+  --review-threshold FLOAT
+      Fuzzy match score required to emit a non-selectable review candidate.
+      Defaults to 0.75.
+  --stream-reviews
+      Print JSONL review/unmatched candidates while matching.
 EOF
 }
 
@@ -50,6 +61,18 @@ while [ "$#" -gt 0 ]; do
     --overrides)
       OVERRIDES="$2"
       shift 2
+      ;;
+    --auto-threshold)
+      AUTO_THRESHOLD="$2"
+      shift 2
+      ;;
+    --review-threshold)
+      REVIEW_THRESHOLD="$2"
+      shift 2
+      ;;
+    --stream-reviews)
+      STREAM_REVIEWS=true
+      shift
       ;;
     --help|-h)
       usage
@@ -85,9 +108,19 @@ if [ ! -f "$GLOTTOLOG_CSV" ]; then
   scripts/taxonomy/download_glottolog.sh --version "$GLOTTOLOG_VERSION"
 fi
 
-"$PYTHON_BIN" -m src.taxonomy.build_language_taxonomy \
+ARGS=(
+  -m src.taxonomy.build_language_taxonomy
   --serving-metadata "$SERVING_METADATA" \
   --glottolog-csv "$GLOTTOLOG_CSV" \
   --output-dir "$OUTPUT_DIR" \
   --overrides "$OVERRIDES" \
-  --glottolog-version "$GLOTTOLOG_VERSION"
+  --glottolog-version "$GLOTTOLOG_VERSION" \
+  --auto-threshold "$AUTO_THRESHOLD" \
+  --review-threshold "$REVIEW_THRESHOLD"
+)
+
+if [ "$STREAM_REVIEWS" = true ]; then
+  ARGS+=(--stream-reviews)
+fi
+
+"$PYTHON_BIN" "${ARGS[@]}"

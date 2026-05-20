@@ -100,3 +100,26 @@ The web app should not do that check per request.
 - Build result links from `word` and `lang`; do not require new payload fields.
 - Restore the snapshot under `/opt/reverse-wiktionary/data`.
 - Delete the downloaded snapshot after restore.
+
+## Language Taxonomy Artifacts
+
+The web repo can consume optional taxonomy artifacts from the processed run:
+
+```text
+processed/<run_id>/language_taxonomy.json
+processed/<run_id>/language_taxonomy_unmatched.json
+processed/<run_id>/language_taxonomy_report.json
+```
+
+Use `language_taxonomy.json` for browse/filter UI. Read `all_languages` as the
+complete language list and `tree` as the selectable family/branch hierarchy.
+Languages with `selectable: false` should remain searchable by direct text
+query, but should not appear as selectable taxonomy filters.
+
+`language_taxonomy_unmatched.json` is an operations/audit artifact, not a UI
+filter source. It contains both unmatched labels and non-selectable
+`fuzzy_review` candidates.
+
+Current taxonomy policy keeps `Pidgin` as a top-level family bucket when source
+taxonomy says a language is a pidgin/contact language. Do not rewrite these
+labels into Indo-European or another lexifier family in the online repo.

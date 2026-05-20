@@ -259,6 +259,42 @@ Current schema: `v1`
   language universe for search, filtering, select-all, and audit/debugging.
 - `languages`: Compatibility alias for `all_languages`.
 
+Each enriched language record includes:
+
+- `label`: Display/source language label from processed rows.
+- `rows`: Row count for the language in the processed run.
+- `family`: Display taxonomy family.
+- `branch`: Display taxonomy branch.
+- `path`: Display taxonomy path.
+- `selectable`: Whether the language should appear in selectable browse/filter
+  UI.
+- `match_method`: Matching source, such as `exact_name`, `alias_name`,
+  `token_sort_name`, `compact_name`, `fuzzy_auto`, `fuzzy_review`, `override`,
+  or `unmatched`.
+- `match_confidence`: Matcher confidence score when applicable.
+- `candidate_name` and `glottocode`: Source Glottolog candidate details when
+  available.
+
+`language_taxonomy_unmatched.json` contains both truly unmatched labels and
+`fuzzy_review` labels. These are intentionally non-selectable until a future
+matcher or override pass promotes them.
+
+`language_taxonomy_report.json` contains build counts, method counts, top
+families, and top unmatched/review labels. It is the first artifact to inspect
+before shipping a taxonomy refresh.
+
+Taxonomy matching defaults:
+
+```text
+auto threshold: 0.96
+review threshold: 0.75
+```
+
+Contact-language policy: `Pidgin` is a top-level taxonomy family when Glottolog
+or an override classifies the language that way. Do not automatically move
+pidgins or creoles into a lexifier/source-language family during artifact
+generation.
+
 Glottolog paths may contain arbitrary-depth family/group ancestors. The taxonomy
 builder reduces those paths to stable display buckets:
 

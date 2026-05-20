@@ -44,6 +44,9 @@ def main() -> None:
         glottolog_version=args.glottolog_version,
         processed_run_id=serving_metadata.get("processed_run_id"),
         source_path=args.serving_metadata,
+        stream_reviews=args.stream_reviews,
+        auto_threshold=args.auto_threshold,
+        review_threshold=args.review_threshold,
     )
 
     args.output_dir.mkdir(parents=True, exist_ok=True)
@@ -65,6 +68,13 @@ def parse_args() -> argparse.Namespace:
         default=Path("src/taxonomy/language_taxonomy_overrides.json"),
     )
     parser.add_argument("--glottolog-version", default="5.3")
+    parser.add_argument("--auto-threshold", type=float, default=0.96)
+    parser.add_argument("--review-threshold", type=float, default=0.75)
+    parser.add_argument(
+        "--stream-reviews",
+        action="store_true",
+        help="Print one JSON line for each fuzzy-review or unmatched language while matching.",
+    )
     return parser.parse_args()
 
 
@@ -76,6 +86,9 @@ def build_taxonomy(
     glottolog_version: str,
     processed_run_id: str | None,
     source_path: Path,
+    stream_reviews: bool = False,
+    auto_threshold: float = 0.96,
+    review_threshold: float = 0.75,
 ) -> dict[str, Any]:
     enriched_languages: list[dict[str, Any]] = []
     unmatched: list[dict[str, Any]] = []
@@ -91,10 +104,18 @@ def build_taxonomy(
             enriched = enrich_match(label=label, rows=rows, match=match)
             enriched = apply_override_fields(enriched, override)
         elif override:
+            match = None
             enriched = apply_override(label=label, rows=rows, override=override)
         else:
-            match = lookup.match(label)
+            match = lookup.match(
+                label,
+                auto_threshold=auto_threshold,
+                review_threshold=review_threshold,
+            )
             enriched = enrich_match(label=label, rows=rows, match=match)
+
+        if stream_reviews and enriched["match_method"] in {"unmatched", "fuzzy_review"}:
+            print_review_candidate(label=label, rows=rows, enriched=enriched, match=match)
 
         method_counts[enriched["match_method"]] += 1
         enriched_languages.append(enriched)
@@ -254,6 +275,41 @@ def enrich_match(label: str, rows: int, match: MatchResult) -> dict[str, Any]:
         "languoid_level": match.languoid.level,
         "selectable": True,
     }
+
+
+def print_review_candidate(
+    *,
+    label: str,
+    rows: int,
+    enriched: dict[str, Any],
+    match: MatchResult | None,
+) -> None:
+    candidate = None
+    if match and match.languoid:
+        family = display_family(match.languoid)
+        candidate = {
+            "name": match.languoid.name,
+            "glottocode": match.languoid.glottocode,
+            "level": match.languoid.level,
+            "family": family,
+            "branch": display_branch(family, match.languoid.classification_names),
+            "path": match.languoid.classification_names,
+        }
+
+    print(
+        json.dumps(
+            {
+                "event": "taxonomy_review",
+                "label": label,
+                "rows": rows,
+                "match_method": enriched["match_method"],
+                "match_confidence": enriched["match_confidence"],
+                "candidate": candidate,
+            },
+            ensure_ascii=False,
+        ),
+        flush=True,
+    )
 
 
 def display_family(languoid: Any) -> str:

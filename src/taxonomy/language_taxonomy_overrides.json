@@ -32,7 +32,10 @@
   "Ashokan Prakrit": {
     "family": "Indo-European",
     "branch": "Indic",
-    "path": ["Indo-European", "Indic"],
+    "path": [
+      "Indo-European",
+      "Indic"
+    ],
     "reason": "Historical Prakrit label kept with Indo-Aryan/Indic languages for browsing."
   },
   "Alemannic German": {
@@ -74,7 +77,10 @@
     "glottocode": "boga1247",
     "family": "Nuclear Trans New Guinea",
     "branch": "Duna-Pogaya",
-    "path": ["Nuclear Trans New Guinea", "Duna-Pogaya"],
+    "path": [
+      "Nuclear Trans New Guinea",
+      "Duna-Pogaya"
+    ],
     "reason": "Manual review: Bogaya/Pogaya is commonly grouped with Duna in the proposed Duna-Pogaya branch of Trans-New Guinea."
   },
   "Bangi": {
@@ -90,7 +96,10 @@
   "Chinese": {
     "family": "Sino-Tibetan",
     "branch": "Sinitic",
-    "path": ["Sino-Tibetan", "Sinitic"],
+    "path": [
+      "Sino-Tibetan",
+      "Sinitic"
+    ],
     "reason": "Wiktionary Chinese is a macrolanguage label; Glottolog has named Sinitic varieties rather than a single Chinese language row."
   },
   "Central Bikol": {
@@ -126,20 +135,29 @@
   "Dacian": {
     "family": "Indo-European",
     "branch": "Hellenic",
-    "path": ["Indo-European", "Hellenic"],
+    "path": [
+      "Indo-European",
+      "Hellenic"
+    ],
     "reason": "Ancient Balkan Indo-European label placed with Hellenic-adjacent browse branch."
   },
   "Duna": {
     "glottocode": "duna1248",
     "family": "Nuclear Trans New Guinea",
     "branch": "Duna-Pogaya",
-    "path": ["Nuclear Trans New Guinea", "Duna-Pogaya"],
+    "path": [
+      "Nuclear Trans New Guinea",
+      "Duna-Pogaya"
+    ],
     "reason": "Manual review: Duna is commonly grouped with Bogaya/Pogaya in the proposed Duna-Pogaya branch of Trans-New Guinea."
   },
   "East Central German": {
     "family": "Indo-European",
     "branch": "Germanic",
-    "path": ["Indo-European", "Germanic"],
+    "path": [
+      "Indo-European",
+      "Germanic"
+    ],
     "reason": "Wiktionary regional German label kept with Germanic for browsing."
   },
   "East Circassian": {
@@ -161,7 +179,10 @@
     "glottocode": "fuyu1242",
     "family": "Nuclear Trans New Guinea",
     "branch": "Goilalan",
-    "path": ["Nuclear Trans New Guinea", "Goilalan"],
+    "path": [
+      "Nuclear Trans New Guinea",
+      "Goilalan"
+    ],
     "reason": "Manual review: Fuyug is commonly classified with the Goilalan languages of Papua New Guinea."
   },
   "Greenlandic": {
@@ -263,7 +284,10 @@
     "glottocode": "kari1254",
     "family": "Kariri",
     "branch": "Kariri",
-    "path": ["Kariri", "Kariri"],
+    "path": [
+      "Kariri",
+      "Kariri"
+    ],
     "reason": "Manual review: Kariri is better presented as its own small primary family/dialect cluster than inside the generic isolate bucket."
   },
   "Kamkata-viri": {
@@ -329,7 +353,10 @@
   "Latgalian": {
     "family": "Indo-European",
     "branch": "Baltic",
-    "path": ["Indo-European", "Baltic"],
+    "path": [
+      "Indo-European",
+      "Baltic"
+    ],
     "reason": "Wiktionary Latgalian is grouped with Baltic languages for browsing."
   },
   "Lindu": {
@@ -360,7 +387,10 @@
   "Lutuv": {
     "family": "Sino-Tibetan",
     "branch": "Kuki-Chin-Naga",
-    "path": ["Sino-Tibetan", "Kuki-Chin-Naga"],
+    "path": [
+      "Sino-Tibetan",
+      "Kuki-Chin-Naga"
+    ],
     "reason": "Manual review: Lutuv, also known as Lautu Chin, is a Kuki-Chin language."
   },
   "Livonian": {
@@ -381,20 +411,29 @@
   "Messapic": {
     "family": "Indo-European",
     "branch": "Unclassified Indo-European",
-    "path": ["Indo-European", "Unclassified Indo-European"],
+    "path": [
+      "Indo-European",
+      "Unclassified Indo-European"
+    ],
     "selectable": false,
     "reason": "Obscure ancient Indo-European language; excluded from the browse filter until a better display branch is chosen."
   },
   "Middle Armenian": {
     "family": "Indo-European",
     "branch": "Armenian",
-    "path": ["Indo-European", "Armenian"],
+    "path": [
+      "Indo-European",
+      "Armenian"
+    ],
     "reason": "Historical Armenian label kept with Armenian languages for browsing."
   },
   "Middle Hungarian": {
     "family": "Uralic",
     "branch": "Hungaric",
-    "path": ["Uralic", "Hungaric"],
+    "path": [
+      "Uralic",
+      "Hungaric"
+    ],
     "reason": "Historical Hungarian label kept with Hungarian languages for browsing."
   },
   "Middle Persian": {
@@ -420,7 +459,10 @@
   "Neapolitan": {
     "family": "Indo-European",
     "branch": "Italic / Romance",
-    "path": ["Indo-European", "Italic / Romance"],
+    "path": [
+      "Indo-European",
+      "Italic / Romance"
+    ],
     "reason": "Wiktionary Neapolitan is grouped with Romance languages for browsing."
   },
   "Nheengatu": {
@@ -506,7 +548,10 @@
   "Old Church Slavonic": {
     "family": "Indo-European",
     "branch": "Slavic",
-    "path": ["Indo-European", "Slavic"],
+    "path": [
+      "Indo-European",
+      "Slavic"
+    ],
     "reason": "Liturgical Slavic label kept with Slavic for browsing."
   },
   "Old East Slavic": {
@@ -517,19 +562,29 @@
   "Old Javanese": {
     "family": "Austronesian",
     "branch": "Malayo-Polynesian",
-    "path": ["Austronesian", "Malayo-Polynesian", "Javanesic"],
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian",
+      "Javanesic"
+    ],
     "reason": "Historical Javanese label kept with Javanesic languages for browsing."
   },
   "Old Novgorodian": {
     "family": "Indo-European",
     "branch": "Slavic",
-    "path": ["Indo-European", "Slavic"],
+    "path": [
+      "Indo-European",
+      "Slavic"
+    ],
     "reason": "Historical Novgorodian label kept with Slavic languages for browsing."
   },
   "Old Galician-Portuguese": {
     "family": "Indo-European",
     "branch": "Italic / Romance",
-    "path": ["Indo-European", "Italic / Romance"],
+    "path": [
+      "Indo-European",
+      "Italic / Romance"
+    ],
     "reason": "Historical Galician-Portuguese label kept with Romance languages for browsing."
   },
   "Old Gujarati": {
@@ -540,7 +595,10 @@
   "Old Hungarian": {
     "family": "Uralic",
     "branch": "Hungaric",
-    "path": ["Uralic", "Hungaric"],
+    "path": [
+      "Uralic",
+      "Hungaric"
+    ],
     "reason": "Historical Hungarian label kept with Hungarian languages for browsing."
   },
   "Old Occitan": {
@@ -556,7 +614,10 @@
   "Old Ruthenian": {
     "family": "Indo-European",
     "branch": "Slavic",
-    "path": ["Indo-European", "Slavic"],
+    "path": [
+      "Indo-European",
+      "Slavic"
+    ],
     "reason": "Historical Ruthenian label kept with Slavic languages for browsing."
   },
   "Old Slovak": {
@@ -587,14 +648,20 @@
   "Papiamentu": {
     "family": "Indo-European",
     "branch": "Creole",
-    "path": ["Indo-European", "Creole"],
+    "path": [
+      "Indo-European",
+      "Creole"
+    ],
     "reason": "Wiktionary Papiamentu kept with Indo-European-based creoles for browsing."
   },
   "Pawaia": {
     "glottocode": "pawa1255",
     "family": "Nuclear Trans New Guinea",
     "branch": "Teberan-Pawaian",
-    "path": ["Nuclear Trans New Guinea", "Teberan-Pawaian"],
+    "path": [
+      "Nuclear Trans New Guinea",
+      "Teberan-Pawaian"
+    ],
     "reason": "Manual review: Pawaia is often treated as a tentative independent branch associated with Trans-New Guinea."
   },
   "Persian": {
@@ -610,7 +677,10 @@
   "Prakrit": {
     "family": "Indo-European",
     "branch": "Indic",
-    "path": ["Indo-European", "Indic"],
+    "path": [
+      "Indo-European",
+      "Indic"
+    ],
     "reason": "Wiktionary Prakrit is a cover label for Middle Indo-Aryan Prakrits."
   },
   "Proto-Austronesian": {
@@ -646,7 +716,11 @@
   "Proto-Bantu": {
     "family": "Atlantic-Congo",
     "branch": "Volta-Congo",
-    "path": ["Atlantic-Congo", "Volta-Congo", "Bantu"],
+    "path": [
+      "Atlantic-Congo",
+      "Volta-Congo",
+      "Bantu"
+    ],
     "reason": "Proto-language label kept with Bantu languages for browsing."
   },
   "Proto-Brythonic": {
@@ -697,7 +771,10 @@
   "Proto-Hellenic": {
     "family": "Indo-European",
     "branch": "Hellenic",
-    "path": ["Indo-European", "Hellenic"],
+    "path": [
+      "Indo-European",
+      "Hellenic"
+    ],
     "reason": "Proto-language label kept with Hellenic languages for browsing."
   },
   "Proto-Italic": {
@@ -713,7 +790,10 @@
   "Proto-Malayo-Polynesian": {
     "family": "Austronesian",
     "branch": "Malayo-Polynesian",
-    "path": ["Austronesian", "Malayo-Polynesian"],
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
     "reason": "Proto-language label kept with Malayo-Polynesian languages for browsing."
   },
   "Proto-Malayic": {
@@ -749,13 +829,19 @@
   "Proto-Samic": {
     "family": "Uralic",
     "branch": "Saami",
-    "path": ["Uralic", "Saami"],
+    "path": [
+      "Uralic",
+      "Saami"
+    ],
     "reason": "Proto-language label kept with Saami languages for browsing."
   },
   "Proto-Samoyedic": {
     "family": "Uralic",
     "branch": "Samoyedic",
-    "path": ["Uralic", "Samoyedic"],
+    "path": [
+      "Uralic",
+      "Samoyedic"
+    ],
     "reason": "Proto-language label kept with Samoyedic languages for browsing."
   },
   "Proto-Semitic": {
@@ -782,14 +868,20 @@
     "glottocode": "turk1311",
     "family": "Turkic",
     "branch": "Common Turkic",
-    "path": ["Turkic", "Common Turkic"],
+    "path": [
+      "Turkic",
+      "Common Turkic"
+    ],
     "reason": "Proto-language label maps to the Glottolog Turkic family row."
   },
   "Pyu (Myanmar)": {
     "glottocode": "burm1262",
     "family": "Sino-Tibetan",
     "branch": "Pyu",
-    "path": ["Sino-Tibetan", "Pyu"],
+    "path": [
+      "Sino-Tibetan",
+      "Pyu"
+    ],
     "reason": "Manual review: parenthetical label disambiguates the ancient Burma Pyu language from the Papuan language named Pyu."
   },
   "Proto-Tungusic": {
@@ -825,7 +917,10 @@
   "Rwanda-Rundi": {
     "family": "Atlantic-Congo",
     "branch": "Volta-Congo",
-    "path": ["Atlantic-Congo", "Volta-Congo"],
+    "path": [
+      "Atlantic-Congo",
+      "Volta-Congo"
+    ],
     "reason": "Wiktionary Rwanda-Rundi kept with Bantu languages for browsing."
   },
   "Sambali": {
@@ -851,7 +946,10 @@
   "Serbo-Croatian": {
     "family": "Indo-European",
     "branch": "Slavic",
-    "path": ["Indo-European", "Slavic"],
+    "path": [
+      "Indo-European",
+      "Slavic"
+    ],
     "reason": "Wiktionary Serbo-Croatian is a standard/macro label for South Slavic varieties."
   },
   "Seychellois Creole": {
@@ -917,7 +1015,10 @@
   "Thracian": {
     "family": "Indo-European",
     "branch": "Hellenic",
-    "path": ["Indo-European", "Hellenic"],
+    "path": [
+      "Indo-European",
+      "Hellenic"
+    ],
     "reason": "Ancient Balkan Indo-European label placed with Hellenic-adjacent browse branch."
   },
   "Tarifit": {
@@ -933,7 +1034,10 @@
   "Tarantino": {
     "family": "Indo-European",
     "branch": "Italic / Romance",
-    "path": ["Indo-European", "Italic / Romance"],
+    "path": [
+      "Indo-European",
+      "Italic / Romance"
+    ],
     "reason": "Wiktionary Tarantino kept with Romance languages for browsing."
   },
   "Tocharian B": {
@@ -960,7 +1064,10 @@
     "glottocode": "taua1242",
     "family": "Nuclear Trans New Guinea",
     "branch": "Goilalan",
-    "path": ["Nuclear Trans New Guinea", "Goilalan"],
+    "path": [
+      "Nuclear Trans New Guinea",
+      "Goilalan"
+    ],
     "reason": "Manual review: Tauade is commonly classified with the Goilalan languages of Papua New Guinea."
   },
   "Tuvan": {
@@ -971,7 +1078,10 @@
   "Translingual": {
     "family": "Special",
     "branch": "Cross-language labels",
-    "path": ["Special", "Cross-language labels"],
+    "path": [
+      "Special",
+      "Cross-language labels"
+    ],
     "reason": "Wiktionary label for entries not tied to one natural language."
   },
   "Uyghur": {
@@ -992,14 +1102,20 @@
   "Waray-Waray": {
     "family": "Austronesian",
     "branch": "Malayo-Polynesian",
-    "path": ["Austronesian", "Malayo-Polynesian"],
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
     "reason": "Wiktionary Waray-Waray kept with Philippine Malayo-Polynesian languages for browsing."
   },
   "Wadjiginy": {
     "glottocode": "wadj1254",
     "family": "Wagaydyic",
     "branch": "Wagaydyic",
-    "path": ["Wagaydyic", "Wagaydyic"],
+    "path": [
+      "Wagaydyic",
+      "Wagaydyic"
+    ],
     "reason": "Manual review: Wadjiginy is better presented with the Wagaydyic/Anson Bay grouping than inside the generic isolate bucket."
   },
   "West Flemish": {
@@ -1050,7 +1166,10 @@
   "Zhuang": {
     "family": "Tai-Kadai",
     "branch": "Tai",
-    "path": ["Tai-Kadai", "Tai"],
+    "path": [
+      "Tai-Kadai",
+      "Tai"
+    ],
     "reason": "Wiktionary Zhuang is a macrolanguage label for several Tai varieties."
   },
   "Zazaki": {
@@ -1061,7 +1180,4158 @@
   "Undetermined": {
     "family": "Special",
     "branch": "Unclassified labels",
-    "path": ["Special", "Unclassified labels"],
+    "path": [
+      "Special",
+      "Unclassified labels"
+    ],
     "reason": "Wiktionary label for entries without a determined language."
+  },
+  "Acholi": {
+    "family": "Nilotic",
+    "branch": "Western Nilotic",
+    "path": [
+      "Nilotic",
+      "Western Nilotic"
+    ],
+    "reason": "Spelling variant; current candidate is acceptable."
+  },
+  "Alutiiq": {
+    "family": "Eskimo-Aleut",
+    "branch": "Eskimo",
+    "path": [
+      "Eskimo-Aleut",
+      "Eskimo"
+    ],
+    "reason": "Wikipedia identifies Alutiiq/Sugpiaq/Pacific Gulf Yupik as a Yupik language; local Glottolog has `Pacific Gulf Yupik`.",
+    "glottocode": "paci1278"
+  },
+  "Angloromani": {
+    "family": "Indo-European",
+    "branch": "Indic",
+    "path": [
+      "Indo-European",
+      "Indic"
+    ],
+    "reason": "Current candidate is plausible, but display should follow Romani/Indic branch rather than archaic row."
+  },
+  "Asi": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "Search evidence identifies Asi/Bantoanon as a regional Bisayan language in Romblon; current `Arsi` candidate is false."
+  },
+  "Aymara": {
+    "family": "Aymaran",
+    "branch": "Central-Southern Aymara",
+    "path": [
+      "Aymaran",
+      "Central-Southern Aymara"
+    ],
+    "reason": "Candidate is a narrower standard variety; branch is correct."
+  },
+  "Baha": {
+    "family": "Tai-Kadai",
+    "branch": "Kadaic",
+    "path": [
+      "Tai-Kadai",
+      "Kadaic"
+    ],
+    "reason": "Expanded-name candidate is acceptable."
+  },
+  "Bakung": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "Search evidence identifies Bakung as Mainstream Kenyah/Kayanic; current `Bakun` North Halmahera candidate is a lookalike. Local `Bakung Kenyah` is bookkeeping, so use branch override."
+  },
+  "Banjarese": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "Wikipedia says Banjarese is also Banjar and is Austronesian > Malayo-Polynesian > Malayic; Glottolog `Banjar` is `banj1239`.",
+    "glottocode": "banj1239"
+  },
+  "Barngarla": {
+    "family": "Pama-Nyungan",
+    "branch": "Arandic-Thura-Yura",
+    "path": [
+      "Pama-Nyungan",
+      "Arandic-Thura-Yura"
+    ],
+    "reason": "Search evidence gives Barngarla/Banggarla Glottolog `bang1339`; current candidate branch is acceptable."
+  },
+  "Bau Bidayuh": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "Candidate family is broad but branch is correct for Bidayuh."
+  },
+  "Binukid": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "Candidate grouping is branch-correct but not exact display."
+  },
+  "Blackfoot": {
+    "family": "Algic",
+    "branch": "Algonquian-Blackfoot",
+    "path": [
+      "Algic",
+      "Algonquian-Blackfoot"
+    ],
+    "reason": "Current candidate is wrong; should map to Blackfoot/Algic if present or manual display override."
+  },
+  "Bokar": {
+    "family": "Sino-Tibetan",
+    "branch": "Macro-Tani",
+    "path": [
+      "Sino-Tibetan",
+      "Macro-Tani"
+    ],
+    "reason": "Candidate grouping includes target; branch is correct."
+  },
+  "Bourbonnais-Berrichon": {
+    "family": "Indo-European",
+    "branch": "Italic / Romance",
+    "path": [
+      "Indo-European",
+      "Italic / Romance"
+    ],
+    "reason": "Local Glottolog has both `Bourbonnais` and `Berrichon` as Romance dialects; combined Wiktionary label should map to the Romance branch rather than one half."
+  },
+  "Buhi'non Bikol": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "Candidate is close but grouped; display branch should follow Bikol."
+  },
+  "Bulgar": {
+    "family": "Turkic",
+    "branch": "Common Turkic",
+    "path": [
+      "Turkic",
+      "Common Turkic"
+    ],
+    "reason": "Candidate is wrong/narrow but branch is correct for Bulgar Turkic display."
+  },
+  "Bulungan": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "Search evidence identifies Bulungan/Bolongan as an Austronesian language in North Kalimantan, though deeper classification is unclear."
+  },
+  "Carrier": {
+    "family": "Athabaskan-Eyak-Tlingit",
+    "branch": "Athabaskan-Eyak",
+    "path": [
+      "Athabaskan-Eyak-Tlingit",
+      "Athabaskan-Eyak"
+    ],
+    "reason": "Candidate is narrower; branch is correct."
+  },
+  "Chinook Jargon": {
+    "family": "Pidgin",
+    "branch": "Chinook-based pidgin",
+    "path": [
+      "Pidgin",
+      "Chinook-based pidgin"
+    ],
+    "reason": "Word-order/specific-name gap; strong candidate and should likely become an override.",
+    "glottocode": "pidg1254"
+  },
+  "Chong": {
+    "family": "Austroasiatic",
+    "branch": "Pearic",
+    "path": [
+      "Austroasiatic",
+      "Pearic"
+    ],
+    "reason": "Candidate is narrower, but branch is right for Chong display."
+  },
+  "Chuabo": {
+    "family": "Atlantic-Congo",
+    "branch": "Volta-Congo",
+    "path": [
+      "Atlantic-Congo",
+      "Volta-Congo"
+    ],
+    "reason": "Search evidence for Chuwabo/Chuabo identifies it as Bantu; local Glottolog has Chuwaboic under Atlantic-Congo/Volta-Congo."
+  },
+  "Church Slavonic": {
+    "family": "Indo-European",
+    "branch": "Slavic",
+    "path": [
+      "Indo-European",
+      "Slavic"
+    ],
+    "reason": "Spelling/name variant; current candidate is acceptable."
+  },
+  "Classical Mongolian": {
+    "family": "Mongolic-Khitan",
+    "branch": "Mongolic",
+    "path": [
+      "Mongolic-Khitan",
+      "Mongolic"
+    ],
+    "reason": "Historical/register label; branch policy override is preferable to modern Mongolian exact candidate."
+  },
+  "Cora": {
+    "family": "Uto-Aztecan",
+    "branch": "Southern Uto-Aztecan",
+    "path": [
+      "Uto-Aztecan",
+      "Southern Uto-Aztecan"
+    ],
+    "reason": "Candidate is a local variety; branch is correct."
+  },
+  "Cumbric": {
+    "family": "Indo-European",
+    "branch": "Celtic",
+    "path": [
+      "Indo-European",
+      "Celtic"
+    ],
+    "reason": "Wikipedia identifies Cumbric as extinct Brittonic/Celtic; current candidate is false."
+  },
+  "Cuyunon": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "Wikipedia gives Cuyonon as Austronesian > Malayo-Polynesian and Glottolog `cuyo1237`.",
+    "glottocode": "cuyo1237"
+  },
+  "Dargwa": {
+    "family": "Nakh-Daghestanian",
+    "branch": "Daghestanian",
+    "path": [
+      "Nakh-Daghestanian",
+      "Daghestanian"
+    ],
+    "reason": "Candidate is a subvariety; branch is correct."
+  },
+  "Darkinjung": {
+    "family": "Pama-Nyungan",
+    "branch": "Southeastern Pama-Nyungan",
+    "path": [
+      "Pama-Nyungan",
+      "Southeastern Pama-Nyungan"
+    ],
+    "reason": "Wikipedia gives Darkinjung as Pama-Nyungan > Yuin-Kuric/Yora with Glottolog `hawk1239`; local display should use top-level Pama-Nyungan branch.",
+    "glottocode": "hawk1239"
+  },
+  "Daur": {
+    "family": "Mongolic-Khitan",
+    "branch": "Mongolic",
+    "path": [
+      "Mongolic-Khitan",
+      "Mongolic"
+    ],
+    "reason": "Wikipedia gives Daur/Dagur as Mongolic and Glottolog `daur1238`; local Glottolog matches `Dagur`.",
+    "glottocode": "daur1238"
+  },
+  "Dharug": {
+    "family": "Pama-Nyungan",
+    "branch": "Southeastern Pama-Nyungan",
+    "path": [
+      "Pama-Nyungan",
+      "Southeastern Pama-Nyungan"
+    ],
+    "reason": "Search evidence identifies Dharug/Darug/Eora as an Australian Aboriginal Yuin-Kuric language around Sydney; current candidate is false."
+  },
+  "Drehu": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "Wikipedia lists Drehu/Dehu as Austronesian > Malayo-Polynesian and Glottolog `dehu1237`; local Glottolog matches `Dehu`.",
+    "glottocode": "dehu1237"
+  },
+  "Early Assamese": {
+    "family": "Indo-European",
+    "branch": "Indic",
+    "path": [
+      "Indo-European",
+      "Indic"
+    ],
+    "reason": "Historical-stage label; candidate branch is right, but display should be policy branch, not modern Assamese specifically."
+  },
+  "Early Modern Korean": {
+    "family": "Koreanic",
+    "branch": "Koreanic",
+    "path": [
+      "Koreanic",
+      "Koreanic"
+    ],
+    "reason": "Historical-stage label; branch policy override is preferable to modern Korean exact candidate."
+  },
+  "Early Old Oghuz": {
+    "family": "Turkic",
+    "branch": "Common Turkic",
+    "path": [
+      "Turkic",
+      "Common Turkic"
+    ],
+    "reason": "Historical-stage label; branch policy override."
+  },
+  "East Miraya Bikol": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "Current candidate is false. East Miraya is a Bikol variety; branch should follow Bikol under Austronesian/Malayo-Polynesian."
+  },
+  "Eastern Khanty": {
+    "family": "Uralic",
+    "branch": "Khanty",
+    "path": [
+      "Uralic",
+      "Khanty"
+    ],
+    "reason": "Clear false positive caused by diacritic/name similarity; needs override to Uralic/Khanty or unmatched policy."
+  },
+  "Eastern Pwo": {
+    "family": "Sino-Tibetan",
+    "branch": "Karenic",
+    "path": [
+      "Sino-Tibetan",
+      "Karenic"
+    ],
+    "reason": "Clear false positive Pwo/Pomo."
+  },
+  "Francisco León Zoque": {
+    "family": "Mixe-Zoque",
+    "branch": "Zoque",
+    "path": [
+      "Mixe-Zoque",
+      "Zoque"
+    ],
+    "reason": "Candidate spelling is close and branch-correct, but exact label spelling differs; use branch or glottocode after final check."
+  },
+  "Gallurese": {
+    "family": "Indo-European",
+    "branch": "Italic / Romance",
+    "path": [
+      "Indo-European",
+      "Italic / Romance"
+    ],
+    "reason": "Candidate is exact-enough; Romance branch is correct."
+  },
+  "Gaulish": {
+    "family": "Indo-European",
+    "branch": "Celtic",
+    "path": [
+      "Indo-European",
+      "Celtic"
+    ],
+    "reason": "Historical Celtic label; strong branch policy override."
+  },
+  "Gojri": {
+    "family": "Indo-European",
+    "branch": "Indic",
+    "path": [
+      "Indo-European",
+      "Indic"
+    ],
+    "reason": "Candidate grouping includes target; branch is correct."
+  },
+  "Gong": {
+    "family": "Sino-Tibetan",
+    "branch": "Burmo-Qiangic",
+    "path": [
+      "Sino-Tibetan",
+      "Burmo-Qiangic"
+    ],
+    "reason": "Wikipedia identifies Gong/Ugong as endangered Tibeto-Burman, with uncertain placement around Lolo-Burmese; local `Gonge` is an unrelated Atlantic-Congo dialect and should be rejected."
+  },
+  "Gottscheerish": {
+    "family": "Indo-European",
+    "branch": "Germanic",
+    "path": [
+      "Indo-European",
+      "Germanic"
+    ],
+    "reason": "Spelling variant; local Glottolog has `Gottscheerisch`."
+  },
+  "Green Hmong": {
+    "family": "Hmong-Mien",
+    "branch": "Hmongic",
+    "path": [
+      "Hmong-Mien",
+      "Hmongic"
+    ],
+    "reason": "Candidate color variety is wrong, but branch is correct."
+  },
+  "Guerrero Nahuatl": {
+    "family": "Uto-Aztecan",
+    "branch": "Southern Uto-Aztecan",
+    "path": [
+      "Uto-Aztecan",
+      "Southern Uto-Aztecan"
+    ],
+    "reason": "Candidate is exact-enough regional Nahuatl."
+  },
+  "Gunwinggu": {
+    "family": "Gunwinyguan",
+    "branch": "Gunwinyguan",
+    "path": [
+      "Gunwinyguan",
+      "Gunwinyguan"
+    ],
+    "reason": "Current candidate is a family row and branch is appropriate; Wiktionary spelling should map to Gunwinyguan/Bininj Kun-Wok area by branch override unless exact Glottolog row is found."
+  },
+  "Gutnish": {
+    "family": "Indo-European",
+    "branch": "Germanic",
+    "path": [
+      "Indo-European",
+      "Germanic"
+    ],
+    "reason": "Candidate is historical/narrow but branch is correct."
+  },
+  "Hokkien": {
+    "family": "Sino-Tibetan",
+    "branch": "Sinitic",
+    "path": [
+      "Sino-Tibetan",
+      "Sinitic"
+    ],
+    "reason": "Sinitic label; current candidate is wrong."
+  },
+  "Huave": {
+    "family": "Huavean",
+    "branch": "San Dionisio-San Mateo Huave",
+    "path": [
+      "Huavean",
+      "San Dionisio-San Mateo Huave"
+    ],
+    "reason": "Candidate is a local variety; search evidence identifies Huave as a language isolate/Huavean."
+  },
+  "Indo-Portuguese": {
+    "family": "Indo-European",
+    "branch": "Italic / Romance",
+    "path": [
+      "Indo-European",
+      "Italic / Romance"
+    ],
+    "reason": "Portuguese-based creole family; source-family policy keeps it under Romance."
+  },
+  "Iraqi Arabic": {
+    "family": "Afro-Asiatic",
+    "branch": "Semitic",
+    "path": [
+      "Afro-Asiatic",
+      "Semitic"
+    ],
+    "reason": "Arabic variety; candidate branch is right, but exact regional Arabic row is not selected."
+  },
+  "Irula": {
+    "family": "Dravidian",
+    "branch": "South Dravidian",
+    "path": [
+      "Dravidian",
+      "South Dravidian"
+    ],
+    "reason": "Candidate grouping is acceptable for branch but too specific for display."
+  },
+  "Italiot Greek": {
+    "family": "Indo-European",
+    "branch": "Hellenic",
+    "path": [
+      "Indo-European",
+      "Hellenic"
+    ],
+    "reason": "Greek variety should be Hellenic; exact candidate may be too narrow."
+  },
+  "Itsekiri": {
+    "family": "Atlantic-Congo",
+    "branch": "Volta-Congo",
+    "path": [
+      "Atlantic-Congo",
+      "Volta-Congo"
+    ],
+    "reason": "Spelling variant; current candidate is acceptable."
+  },
+  "Ivatan": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "Candidate is a narrower variety; branch is correct for Ivatan display."
+  },
+  "Jakaltek": {
+    "family": "Mayan",
+    "branch": "Core Mayan",
+    "path": [
+      "Mayan",
+      "Core Mayan"
+    ],
+    "reason": "Wikipedia identifies Jakaltek/Jacalteco/Popti' as a Mayan language. Local `Jakalteko, Western` is bookkeeping, so use family/branch override rather than glottocode unless a better Glottolog row is found."
+  },
+  "Jamamadí": {
+    "family": "Arawan",
+    "branch": "Madi-Madiha",
+    "path": [
+      "Arawan",
+      "Madi-Madiha"
+    ],
+    "reason": "Candidate is a narrower variety; branch is correct."
+  },
+  "Jamtish": {
+    "family": "Indo-European",
+    "branch": "Germanic",
+    "path": [
+      "Indo-European",
+      "Germanic"
+    ],
+    "reason": "Search evidence identifies Jamtish/Jamska/Jamtlandic as related to Old Norse / North Scandinavian; use Germanic branch. Candidate `Jutish` is only a lookalike."
+  },
+  "Jersey Dutch": {
+    "family": "Indo-European",
+    "branch": "Germanic",
+    "path": [
+      "Indo-European",
+      "Germanic"
+    ],
+    "reason": "Dutch ethnolect label; fuzzy candidates vary among Dutch rows."
+  },
+  "Jicarilla": {
+    "family": "Athabaskan-Eyak-Tlingit",
+    "branch": "Athabaskan-Eyak",
+    "path": [
+      "Athabaskan-Eyak-Tlingit",
+      "Athabaskan-Eyak"
+    ],
+    "reason": "Candidate is exact-enough expanded name."
+  },
+  "Juba Arabic": {
+    "family": "Afro-Asiatic",
+    "branch": "Semitic",
+    "path": [
+      "Afro-Asiatic",
+      "Semitic"
+    ],
+    "reason": "Arabic variety; candidate is wrong region."
+  },
+  "Kaitag": {
+    "family": "Nakh-Daghestanian",
+    "branch": "Daghestanian",
+    "path": [
+      "Nakh-Daghestanian",
+      "Daghestanian"
+    ],
+    "reason": "Search evidence identifies Kaitag as a Northeast Caucasian language of Dagestan; current candidate is false."
+  },
+  "Kalami": {
+    "family": "Indo-European",
+    "branch": "Indic",
+    "path": [
+      "Indo-European",
+      "Indic"
+    ],
+    "reason": "Likely Wiktionary spelling/alternate name for Kalam/Kalami."
+  },
+  "Kanuri": {
+    "family": "Saharan",
+    "branch": "Western Saharan",
+    "path": [
+      "Saharan",
+      "Western Saharan"
+    ],
+    "reason": "Candidate is a narrower standard variety; branch is correct."
+  },
+  "Kayan": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "Kayan is ambiguous, but the high-row Wiktionary label is likely Borneo Kayan/Kayanic; current candidate branch is acceptable but should be explicit."
+  },
+  "Khitan": {
+    "family": "Mongolic-Khitan",
+    "branch": "Mongolic-Khitan",
+    "path": [
+      "Mongolic-Khitan",
+      "Mongolic-Khitan"
+    ],
+    "reason": "Candidate family captures branch; display as Mongolic-Khitan."
+  },
+  "Khorezmian Turkic": {
+    "family": "Turkic",
+    "branch": "Common Turkic",
+    "path": [
+      "Turkic",
+      "Common Turkic"
+    ],
+    "reason": "Turkic label; candidate may be wrong regional Turkic but branch likely right."
+  },
+  "Khvarshi": {
+    "family": "Nakh-Daghestanian",
+    "branch": "Daghestanian",
+    "path": [
+      "Nakh-Daghestanian",
+      "Daghestanian"
+    ],
+    "reason": "Search evidence identifies Khvarshi/Khwarshi as Northeast Caucasian; local Glottolog has `Khwarshi-Inkhoqwari`.",
+    "glottocode": "khva1239"
+  },
+  "Klallam": {
+    "family": "Salishan",
+    "branch": "Coast Salish",
+    "path": [
+      "Salishan",
+      "Coast Salish"
+    ],
+    "reason": "Candidate is a narrower dialect; branch is correct for Klallam display."
+  },
+  "Kolami": {
+    "family": "Dravidian",
+    "branch": "Central Dravidian",
+    "path": [
+      "Dravidian",
+      "Central Dravidian"
+    ],
+    "reason": "Kolami is a Central Dravidian language; prior Indic ledger target was stale."
+  },
+  "Koyraboro Senni": {
+    "family": "Songhay",
+    "branch": "Eastern Songhay",
+    "path": [
+      "Songhay",
+      "Eastern Songhay"
+    ],
+    "reason": "Expanded-name candidate is acceptable."
+  },
+  "Krisa": {
+    "family": "Skou",
+    "branch": "Skou",
+    "path": [
+      "Skou",
+      "Skou"
+    ],
+    "reason": "Search evidence identifies Krisa as I'saka; Glottolog result gives I'saka/Krisa `kris1246`. Current Kisa candidate is false.",
+    "glottocode": "kris1246"
+  },
+  "Kristang": {
+    "family": "Indo-European",
+    "branch": "Italic / Romance",
+    "path": [
+      "Indo-European",
+      "Italic / Romance"
+    ],
+    "reason": "Manual review: Kristang is a Portuguese-based creole; keep with Romance display branch pending a finer contact-language taxonomy."
+  },
+  "Ktunaxa": {
+    "family": "Kutenai",
+    "branch": "Kutenai",
+    "path": [
+      "Kutenai",
+      "Kutenai"
+    ],
+    "reason": "Wikipedia/search evidence identifies Ktunaxa/Kutenai as a language isolate; local taxonomy should use Kutenai if present, otherwise explicit family/branch override."
+  },
+  "Kven": {
+    "family": "Uralic",
+    "branch": "Finnic",
+    "path": [
+      "Uralic",
+      "Finnic"
+    ],
+    "reason": "Kven is Finnic; current candidate wrong."
+  },
+  "Kwama": {
+    "family": "Koman",
+    "branch": "Koman",
+    "path": [
+      "Koman",
+      "Koman"
+    ],
+    "reason": "Wikipedia/search evidence identifies Kwama as a Koman language in Ethiopia/Sudan border area; local `Kama` candidate is not enough and should not be used."
+  },
+  "Kwanyama": {
+    "family": "Atlantic-Congo",
+    "branch": "Volta-Congo",
+    "path": [
+      "Atlantic-Congo",
+      "Volta-Congo"
+    ],
+    "reason": "Local Glottolog has `Kuanyama`; search evidence identifies Kwanyama as a national language of Angola/Namibia.",
+    "glottocode": "kuan1247"
+  },
+  "Ladakhi": {
+    "family": "Sino-Tibetan",
+    "branch": "Bodic",
+    "path": [
+      "Sino-Tibetan",
+      "Bodic"
+    ],
+    "reason": "Candidate is a regional variety; branch is correct for Ladakhi."
+  },
+  "Lhao Vo": {
+    "family": "Sino-Tibetan",
+    "branch": "Burmo-Qiangic",
+    "path": [
+      "Sino-Tibetan",
+      "Burmo-Qiangic"
+    ],
+    "reason": "Search evidence identifies Lhao Vo/Lhaovo/Maru as Burmish; local Glottolog has `Maru` under Sino-Tibetan/Burmo-Qiangic.",
+    "glottocode": "maru1249"
+  },
+  "Libon Bikol": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "Local Glottolog has `Libon` under Austronesian/Malayo-Polynesian; search evidence identifies Libon Bikol as a Philippine Bikol language.",
+    "glottocode": "libo1242"
+  },
+  "Loloda": {
+    "family": "North Halmahera",
+    "branch": "Northern North Halmahera",
+    "path": [
+      "North Halmahera",
+      "Northern North Halmahera"
+    ],
+    "reason": "Candidate grouping includes target; branch is correct."
+  },
+  "Lorrain": {
+    "family": "Indo-European",
+    "branch": "Italic / Romance",
+    "path": [
+      "Indo-European",
+      "Italic / Romance"
+    ],
+    "reason": "Expanded-name candidate is acceptable."
+  },
+  "Luba-Kasai": {
+    "family": "Atlantic-Congo",
+    "branch": "Volta-Congo",
+    "path": [
+      "Atlantic-Congo",
+      "Volta-Congo"
+    ],
+    "reason": "Wikipedia maps Luba-Kasai/Tshiluba/Ciluba to Glottolog `luba1249`; local Glottolog name is `Luba-Lulua`.",
+    "glottocode": "luba1249"
+  },
+  "Luganda": {
+    "family": "Atlantic-Congo",
+    "branch": "Volta-Congo",
+    "path": [
+      "Atlantic-Congo",
+      "Volta-Congo"
+    ],
+    "reason": "False positive; Luganda should be Ganda/Bantu"
+  },
+  "Luhya": {
+    "family": "Atlantic-Congo",
+    "branch": "Volta-Congo",
+    "path": [
+      "Atlantic-Congo",
+      "Volta-Congo"
+    ],
+    "reason": "Short label but likely Bantu; candidate family wrong."
+  },
+  "Luwian": {
+    "family": "Indo-European",
+    "branch": "Anatolian",
+    "path": [
+      "Indo-European",
+      "Anatolian"
+    ],
+    "reason": "Clear wrong-family candidate; needs Anatolian override if kept."
+  },
+  "Matlatzinca": {
+    "family": "Otomanguean",
+    "branch": "Western Otomanguean",
+    "path": [
+      "Otomanguean",
+      "Western Otomanguean"
+    ],
+    "reason": "Candidate is a local variety; branch is correct."
+  },
+  "Maung": {
+    "family": "Iwaidjan",
+    "branch": "Iwaidjan",
+    "path": [
+      "Iwaidjan",
+      "Iwaidjan"
+    ],
+    "reason": "Search evidence identifies Maung/Mawung as a non-Pama-Nyungan language of the Goulburn Islands; current `Malung` candidate is false."
+  },
+  "Middle Bengali": {
+    "family": "Indo-European",
+    "branch": "Indic",
+    "path": [
+      "Indo-European",
+      "Indic"
+    ],
+    "reason": "Historical Bengali label; token review finds Bengali but should remain review-only pending historical-language policy."
+  },
+  "Middle Scots": {
+    "family": "Indo-European",
+    "branch": "Germanic",
+    "path": [
+      "Indo-European",
+      "Germanic"
+    ],
+    "reason": "Historical Scots label; branch right but candidate too narrow."
+  },
+  "Middle Vietnamese": {
+    "family": "Austroasiatic",
+    "branch": "Vietic",
+    "path": [
+      "Austroasiatic",
+      "Vietic"
+    ],
+    "reason": "Historical Vietic label; policy override."
+  },
+  "Miriwoong": {
+    "family": "Jarrakan",
+    "branch": "Miriwunic",
+    "path": [
+      "Jarrakan",
+      "Miriwunic"
+    ],
+    "reason": "Current candidate is false. Local Glottolog has spoken `Miriwung`; sign-language row should not be used.",
+    "glottocode": "miri1266"
+  },
+  "Montana Salish": {
+    "family": "Salishan",
+    "branch": "Interior Salish",
+    "path": [
+      "Salishan",
+      "Interior Salish"
+    ],
+    "reason": "Search evidence identifies Montana Salish as Salish/Kalispel-Spokane-Flathead and Interior Salish; current Montagnais candidate is false."
+  },
+  "Mopan Maya": {
+    "family": "Mayan",
+    "branch": "Core Mayan",
+    "path": [
+      "Mayan",
+      "Core Mayan"
+    ],
+    "reason": "Wikipedia says Mopan/Mopan Maya belongs to the Yucatecan branch of Mayan; local Glottolog has `Mopan` under Mayan/Core Mayan.",
+    "glottocode": "mopa1243"
+  },
+  "Moroccan Amazigh": {
+    "family": "Afro-Asiatic",
+    "branch": "Berber",
+    "path": [
+      "Afro-Asiatic",
+      "Berber"
+    ],
+    "reason": "Current candidate is false. Local Glottolog has Moroccan Tamazight/Berber rows; use Berber branch."
+  },
+  "Muak Sa-aak": {
+    "family": "Austroasiatic",
+    "branch": "Khasi-Palaung",
+    "path": [
+      "Austroasiatic",
+      "Khasi-Palaung"
+    ],
+    "reason": "Search evidence identifies Muak Sa-aak as Angkuic/Palaungic Austroasiatic; current candidate branch is useful."
+  },
+  "Nafaanra": {
+    "family": "Atlantic-Congo",
+    "branch": "Volta-Congo",
+    "path": [
+      "Atlantic-Congo",
+      "Volta-Congo"
+    ],
+    "reason": "Wikipedia gives Nafaanra/Nafanan as Senufo with Glottolog `nafa1258`; local Glottolog has `Nafanan`.",
+    "glottocode": "nafa1258"
+  },
+  "Narragansett": {
+    "family": "Algic",
+    "branch": "Algonquian-Blackfoot",
+    "path": [
+      "Algic",
+      "Algonquian-Blackfoot"
+    ],
+    "reason": "Candidate grouping includes target; branch is correct."
+  },
+  "Nauruan": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "False candidate but known Austronesian language."
+  },
+  "Ngarrindjeri": {
+    "family": "Pama-Nyungan",
+    "branch": "Southeastern Pama-Nyungan",
+    "path": [
+      "Pama-Nyungan",
+      "Southeastern Pama-Nyungan"
+    ],
+    "reason": "Likely spelling variant; candidate appears plausible.",
+    "glottocode": "narr1259"
+  },
+  "Niya Prakrit": {
+    "family": "Indo-European",
+    "branch": "Indic",
+    "path": [
+      "Indo-European",
+      "Indic"
+    ],
+    "reason": "Historical Prakrit label; candidate is related but exact mapping should be branch policy."
+  },
+  "Norn": {
+    "family": "Indo-European",
+    "branch": "Germanic",
+    "path": [
+      "Indo-European",
+      "Germanic"
+    ],
+    "reason": "Short label but candidate is plausible Germanic/Norse."
+  },
+  "Nyishi": {
+    "family": "Sino-Tibetan",
+    "branch": "Macro-Tani",
+    "path": [
+      "Sino-Tibetan",
+      "Macro-Tani"
+    ],
+    "reason": "Candidate grouping includes target; branch is correct."
+  },
+  "O'odham": {
+    "family": "Uto-Aztecan",
+    "branch": "Southern Uto-Aztecan",
+    "path": [
+      "Uto-Aztecan",
+      "Southern Uto-Aztecan"
+    ],
+    "reason": "Current fuzzy candidate is wrong; needs reviewed O'odham/Piman mapping."
+  },
+  "Old Awadhi": {
+    "family": "Indo-European",
+    "branch": "Indic",
+    "path": [
+      "Indo-European",
+      "Indic"
+    ],
+    "reason": "Historical Indic label; policy override."
+  },
+  "Old Hindi": {
+    "family": "Indo-European",
+    "branch": "Indic",
+    "path": [
+      "Indo-European",
+      "Indic"
+    ],
+    "reason": "Historical-stage label; branch policy override."
+  },
+  "Old Korean": {
+    "family": "Koreanic",
+    "branch": "Koreanic",
+    "path": [
+      "Koreanic",
+      "Koreanic"
+    ],
+    "reason": "Historical-stage label; branch policy override is preferable to modern Korean exact candidate."
+  },
+  "Old Median": {
+    "family": "Indo-European",
+    "branch": "Iranian",
+    "path": [
+      "Indo-European",
+      "Iranian"
+    ],
+    "reason": "Current candidate is a related but wrong historical Iranian language. Median/Old Median should be branch-policy override to Iranian."
+  },
+  "Old Navarro-Aragonese": {
+    "family": "Indo-European",
+    "branch": "Italic / Romance",
+    "path": [
+      "Indo-European",
+      "Italic / Romance"
+    ],
+    "reason": "Current candidate is false. Search evidence identifies Navarro-Aragonese as medieval Romance; local Glottolog has Aragonese under Romance."
+  },
+  "Old Punjabi": {
+    "family": "Indo-European",
+    "branch": "Indic",
+    "path": [
+      "Indo-European",
+      "Indic"
+    ],
+    "reason": "Historical Indic label; current fuzzy candidate is wrong."
+  },
+  "Old South Arabian": {
+    "family": "Afro-Asiatic",
+    "branch": "Semitic",
+    "path": [
+      "Afro-Asiatic",
+      "Semitic"
+    ],
+    "reason": "Historical Semitic label; policy override."
+  },
+  "Olukumi": {
+    "family": "Atlantic-Congo",
+    "branch": "Volta-Congo",
+    "path": [
+      "Atlantic-Congo",
+      "Volta-Congo"
+    ],
+    "reason": "Search evidence identifies Olukumi/Ulukwumi as Yoruboid; branch should be Atlantic-Congo/Volta-Congo pending exact source check."
+  },
+  "Omok": {
+    "family": "Yukaghir",
+    "branch": "Yukaghir",
+    "path": [
+      "Yukaghir",
+      "Yukaghir"
+    ],
+    "reason": "Search evidence identifies Omok as an extinct Yukaghir language; candidate branch is acceptable."
+  },
+  "Parauk": {
+    "family": "Austroasiatic",
+    "branch": "Khasi-Palaung",
+    "path": [
+      "Austroasiatic",
+      "Khasi-Palaung"
+    ],
+    "reason": "Search evidence identifies Parauk/Wa as Austroasiatic/Mon-Khmer. Current candidate is false."
+  },
+  "Pontic Greek": {
+    "family": "Indo-European",
+    "branch": "Hellenic",
+    "path": [
+      "Indo-European",
+      "Hellenic"
+    ],
+    "reason": "Candidate is a narrower variety; branch is correct."
+  },
+  "Prasuni": {
+    "family": "Indo-European",
+    "branch": "Iranian",
+    "path": [
+      "Indo-European",
+      "Iranian"
+    ],
+    "reason": "Current candidate is the expected language row; branch is acceptable under current display taxonomy."
+  },
+  "Proto-Abkhaz-Abaza": {
+    "family": "Abkhaz-Adyge",
+    "branch": "Abkhaz-Adyge",
+    "path": [
+      "Abkhaz-Adyge",
+      "Abkhaz-Adyge"
+    ],
+    "reason": "Proto subgroup label maps cleanly to Abkhaz-Abaza."
+  },
+  "Proto-Algic": {
+    "family": "Algic",
+    "branch": "Algic",
+    "path": [
+      "Algic",
+      "Algic"
+    ],
+    "reason": "Proto-family label maps cleanly to Algic."
+  },
+  "Proto-Arawak": {
+    "family": "Arawakan",
+    "branch": "Arawakan",
+    "path": [
+      "Arawakan",
+      "Arawakan"
+    ],
+    "reason": "Proto-family label maps cleanly to Arawakan."
+  },
+  "Proto-Atayalic": {
+    "family": "Austronesian",
+    "branch": "Austronesian",
+    "path": [
+      "Austronesian",
+      "Austronesian"
+    ],
+    "reason": "Proto-family label maps to Atayalic/Formosan branch."
+  },
+  "Proto-Athabaskan": {
+    "family": "Athabaskan-Eyak-Tlingit",
+    "branch": "Athabaskan-Eyak",
+    "path": [
+      "Athabaskan-Eyak-Tlingit",
+      "Athabaskan-Eyak"
+    ],
+    "reason": "Proto label should map to family branch by policy rather than arbitrary fuzzy child/parent candidate."
+  },
+  "Proto-Bahnaric": {
+    "family": "Austroasiatic",
+    "branch": "Austroasiatic",
+    "path": [
+      "Austroasiatic",
+      "Austroasiatic"
+    ],
+    "reason": "Proto subgroup label maps cleanly to Bahnaric."
+  },
+  "Proto-Berber": {
+    "family": "Afro-Asiatic",
+    "branch": "Afro-Asiatic",
+    "path": [
+      "Afro-Asiatic",
+      "Afro-Asiatic"
+    ],
+    "reason": "Proto-family label maps to Berber under Afro-Asiatic."
+  },
+  "Proto-Cariban": {
+    "family": "Cariban",
+    "branch": "Cariban",
+    "path": [
+      "Cariban",
+      "Cariban"
+    ],
+    "reason": "Proto-family label maps cleanly to Cariban."
+  },
+  "Proto-Chamic": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "Proto-family label maps cleanly to Chamic."
+  },
+  "Proto-Chatino": {
+    "family": "Otomanguean",
+    "branch": "Eastern Otomanguean",
+    "path": [
+      "Otomanguean",
+      "Eastern Otomanguean"
+    ],
+    "reason": "Proto subgroup label maps cleanly to Chatino."
+  },
+  "Proto-Circassian": {
+    "family": "Abkhaz-Adyge",
+    "branch": "Abkhaz-Adyge",
+    "path": [
+      "Abkhaz-Adyge",
+      "Abkhaz-Adyge"
+    ],
+    "reason": "Proto-family label maps cleanly to Circassian."
+  },
+  "Proto-Eskimo": {
+    "family": "Eskimo-Aleut",
+    "branch": "Eskimo-Aleut",
+    "path": [
+      "Eskimo-Aleut",
+      "Eskimo-Aleut"
+    ],
+    "reason": "Proto subgroup label maps to Eskimo under Eskimo-Aleut."
+  },
+  "Proto-Georgian-Zan": {
+    "family": "Kartvelian",
+    "branch": "Kartvelian",
+    "path": [
+      "Kartvelian",
+      "Kartvelian"
+    ],
+    "reason": "Proto subgroup label maps cleanly to Georgian-Zan/Kartvelian branch."
+  },
+  "Proto-Hmong-Mien": {
+    "family": "Hmong-Mien",
+    "branch": "Hmong-Mien",
+    "path": [
+      "Hmong-Mien",
+      "Hmong-Mien"
+    ],
+    "reason": "Proto-family label maps cleanly to Hmong-Mien."
+  },
+  "Proto-Iroquoian": {
+    "family": "Iroquoian",
+    "branch": "Iroquoian",
+    "path": [
+      "Iroquoian",
+      "Iroquoian"
+    ],
+    "reason": "Proto-family label maps cleanly to Iroquoian."
+  },
+  "Proto-Kartvelian": {
+    "family": "Kartvelian",
+    "branch": "Kartvelian",
+    "path": [
+      "Kartvelian",
+      "Kartvelian"
+    ],
+    "reason": "Proto-family label maps cleanly to the Kartvelian family row."
+  },
+  "Proto-Khanty": {
+    "family": "Uralic",
+    "branch": "Khanty",
+    "path": [
+      "Uralic",
+      "Khanty"
+    ],
+    "reason": "Proto language label; fuzzy child candidate is too narrow."
+  },
+  "Proto-Kra": {
+    "family": "Tai-Kadai",
+    "branch": "Kadaic",
+    "path": [
+      "Tai-Kadai",
+      "Kadaic"
+    ],
+    "reason": "Current candidate is false. Local Glottolog has Eastern/Western Kra under Tai-Kadai/Kadaic; proto label should map to that branch."
+  },
+  "Proto-Mari": {
+    "family": "Uralic",
+    "branch": "Uralic",
+    "path": [
+      "Uralic",
+      "Uralic"
+    ],
+    "reason": "Proto-family label maps to Mari under Uralic."
+  },
+  "Proto-Mayan": {
+    "family": "Mayan",
+    "branch": "Mayan",
+    "path": [
+      "Mayan",
+      "Mayan"
+    ],
+    "reason": "Proto-family label maps cleanly to Mayan."
+  },
+  "Proto-Micronesian": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "Proto-family label maps cleanly to Micronesian."
+  },
+  "Proto-Mon-Khmer": {
+    "family": "Austroasiatic",
+    "branch": "Austroasiatic",
+    "path": [
+      "Austroasiatic",
+      "Austroasiatic"
+    ],
+    "reason": "Current candidate is false. Proto-Mon-Khmer should be a proto-family display override under Austroasiatic."
+  },
+  "Proto-Mongolic": {
+    "family": "Mongolic-Khitan",
+    "branch": "Mongolic-Khitan",
+    "path": [
+      "Mongolic-Khitan",
+      "Mongolic-Khitan"
+    ],
+    "reason": "Proto-family label maps to Mongolic family."
+  },
+  "Proto-Mordvinic": {
+    "family": "Uralic",
+    "branch": "Uralic",
+    "path": [
+      "Uralic",
+      "Uralic"
+    ],
+    "reason": "Proto-family label maps to Mordvin under Uralic."
+  },
+  "Proto-Muskogean": {
+    "family": "Muskogean",
+    "branch": "Muskogean",
+    "path": [
+      "Muskogean",
+      "Muskogean"
+    ],
+    "reason": "Proto family label; current candidate is useful but should be explicit policy override."
+  },
+  "Proto-Nahuan": {
+    "family": "Uto-Aztecan",
+    "branch": "Southern Uto-Aztecan",
+    "path": [
+      "Uto-Aztecan",
+      "Southern Uto-Aztecan"
+    ],
+    "reason": "Current candidate is false. Proto-Nahuan should map by branch policy to Nahuan/Nahuatl under Southern Uto-Aztecan."
+  },
+  "Proto-Nguni": {
+    "family": "Atlantic-Congo",
+    "branch": "Volta-Congo",
+    "path": [
+      "Atlantic-Congo",
+      "Volta-Congo"
+    ],
+    "reason": "Proto subgroup label maps to Nguni/Bantu under Volta-Congo."
+  },
+  "Proto-Norse": {
+    "family": "Indo-European",
+    "branch": "Germanic",
+    "path": [
+      "Indo-European",
+      "Germanic"
+    ],
+    "reason": "Proto-language label; should map to Germanic/Norse by reviewed override rather than fuzzy candidate."
+  },
+  "Proto-North Iroquoian": {
+    "family": "Iroquoian",
+    "branch": "Iroquoian",
+    "path": [
+      "Iroquoian",
+      "Iroquoian"
+    ],
+    "reason": "Candidate is broad but family/branch target is clear."
+  },
+  "Proto-Nuristani": {
+    "family": "Indo-European",
+    "branch": "Indo-Iranian",
+    "path": [
+      "Indo-European",
+      "Indo-Iranian"
+    ],
+    "reason": "Current display branch says Iranian; policy should avoid treating Nuristani as Iranian. Use Indo-Iranian/Nuristani display if supported."
+  },
+  "Proto-Oceanic": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "Proto family label; should be explicit."
+  },
+  "Proto-Philippine": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "Current candidate is false. Proto-Philippine should be a proto-family display override under Austronesian/Malayo-Polynesian."
+  },
+  "Proto-Polynesian": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "Proto family label; should be explicit."
+  },
+  "Proto-Rukai": {
+    "family": "Austronesian",
+    "branch": "Austronesian",
+    "path": [
+      "Austronesian",
+      "Austronesian"
+    ],
+    "reason": "Proto-family label maps cleanly to Rukai/Formosan branch."
+  },
+  "Proto-Sabaki": {
+    "family": "Atlantic-Congo",
+    "branch": "Volta-Congo",
+    "path": [
+      "Atlantic-Congo",
+      "Volta-Congo"
+    ],
+    "reason": "Current candidate is false. Local Glottolog has `Sabaki-Swahili` under Atlantic-Congo/Volta-Congo; proto label should be a display-policy override."
+  },
+  "Proto-Scythian": {
+    "family": "Indo-European",
+    "branch": "Iranian",
+    "path": [
+      "Indo-European",
+      "Iranian"
+    ],
+    "reason": "Current candidate is false. Search evidence identifies Scythian languages as Iranian/Iranic; proto label should map to Iranian branch."
+  },
+  "Proto-South Dravidian": {
+    "family": "Dravidian",
+    "branch": "Dravidian",
+    "path": [
+      "Dravidian",
+      "Dravidian"
+    ],
+    "reason": "Proto subgroup label maps cleanly to South Dravidian."
+  },
+  "Proto-Tai": {
+    "family": "Tai-Kadai",
+    "branch": "Kam-Tai",
+    "path": [
+      "Tai-Kadai",
+      "Kam-Tai"
+    ],
+    "reason": "Proto family label; current candidate wrong."
+  },
+  "Proto-Tocharian": {
+    "family": "Indo-European",
+    "branch": "Tocharian",
+    "path": [
+      "Indo-European",
+      "Tocharian"
+    ],
+    "reason": "Proto label; current candidate wrong."
+  },
+  "Proto-Trans-New Guinea": {
+    "family": "Nuclear Trans New Guinea",
+    "branch": "Nuclear Trans New Guinea",
+    "path": [
+      "Nuclear Trans New Guinea",
+      "Nuclear Trans New Guinea"
+    ],
+    "reason": "Proto macrofamily label; useful candidate under threshold."
+  },
+  "Proto-Tupi-Guarani": {
+    "family": "Tupian",
+    "branch": "Eastern Tupian",
+    "path": [
+      "Tupian",
+      "Eastern Tupian"
+    ],
+    "reason": "Proto subgroup label; candidate may be too narrow but branch is useful."
+  },
+  "Proto-Tupian": {
+    "family": "Tupian",
+    "branch": "Tupian",
+    "path": [
+      "Tupian",
+      "Tupian"
+    ],
+    "reason": "Proto-family label maps cleanly to Tupian."
+  },
+  "Proto-Uto-Aztecan": {
+    "family": "Uto-Aztecan",
+    "branch": "Uto-Aztecan",
+    "path": [
+      "Uto-Aztecan",
+      "Uto-Aztecan"
+    ],
+    "reason": "Proto-family label maps cleanly to Uto-Aztecan."
+  },
+  "Proto-Vietic": {
+    "family": "Austroasiatic",
+    "branch": "Austroasiatic",
+    "path": [
+      "Austroasiatic",
+      "Austroasiatic"
+    ],
+    "reason": "Proto-family label maps cleanly to Vietic under Austroasiatic."
+  },
+  "Proto-West Semitic": {
+    "family": "Afro-Asiatic",
+    "branch": "Semitic",
+    "path": [
+      "Afro-Asiatic",
+      "Semitic"
+    ],
+    "reason": "Proto Semitic branch label; policy override."
+  },
+  "Proto-Yeniseian": {
+    "family": "Yeniseian",
+    "branch": "Yeniseian",
+    "path": [
+      "Yeniseian",
+      "Yeniseian"
+    ],
+    "reason": "Proto family label; should be explicit."
+  },
+  "Proto-Yoruboid": {
+    "family": "Atlantic-Congo",
+    "branch": "Volta-Congo",
+    "path": [
+      "Atlantic-Congo",
+      "Volta-Congo"
+    ],
+    "reason": "Proto-family label maps to Yoruboid under Volta-Congo."
+  },
+  "Proto-Zapotec": {
+    "family": "Otomanguean",
+    "branch": "Eastern Otomanguean",
+    "path": [
+      "Otomanguean",
+      "Eastern Otomanguean"
+    ],
+    "reason": "Proto subgroup label maps cleanly to Zapotec."
+  },
+  "Pukapukan": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "Spelling/name variant; current candidate is acceptable."
+  },
+  "Rarotongan": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "Rarotongan/Rarotonga spelling variant; current candidate is acceptable."
+  },
+  "Rayón Zoque": {
+    "family": "Mixe-Zoque",
+    "branch": "Zoque",
+    "path": [
+      "Mixe-Zoque",
+      "Zoque"
+    ],
+    "reason": "Candidate is related regional Zoque; branch is correct."
+  },
+  "Remontado Agta": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "Search result for Remontado/Hatang Kayi gives Austronesian > Malayo-Polynesian > Philippine and Glottolog `remo1247`; current Rembong candidate is false.",
+    "glottocode": "remo1247"
+  },
+  "Rinconada Bikol": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "Search evidence gives Rinconada Bikol Glottolog `irig1242` and Central Philippine/Inland Bikol classification; current candidate is false.",
+    "glottocode": "irig1242"
+  },
+  "Sabaean": {
+    "family": "Afro-Asiatic",
+    "branch": "Semitic",
+    "path": [
+      "Afro-Asiatic",
+      "Semitic"
+    ],
+    "reason": "Ancient South Arabian label; current candidate wrong."
+  },
+  "Scanian": {
+    "family": "Indo-European",
+    "branch": "Germanic",
+    "path": [
+      "Indo-European",
+      "Germanic"
+    ],
+    "reason": "Scandinavian/Germanic variety; current candidate wrong."
+  },
+  "Sherpa": {
+    "family": "Sino-Tibetan",
+    "branch": "Bodic",
+    "path": [
+      "Sino-Tibetan",
+      "Bodic"
+    ],
+    "reason": "Candidate is a related family row but too broad/narrow for display; use branch override unless exact `Solu-Khumbu Sherpa` is preferred."
+  },
+  "Southern Catanduanes Bikol": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "Candidate has wrong direction token; branch is still correct for Catanduanes Bikol."
+  },
+  "Southern Ohlone": {
+    "family": "Miwok-Costanoan",
+    "branch": "Costanoan",
+    "path": [
+      "Miwok-Costanoan",
+      "Costanoan"
+    ],
+    "reason": "Ohlone/Costanoan is Miwok-Costanoan, not Uto-Aztecan; prior ledger target was stale."
+  },
+  "Southwestern Fars": {
+    "family": "Indo-European",
+    "branch": "Iranian",
+    "path": [
+      "Indo-European",
+      "Iranian"
+    ],
+    "reason": "Candidate is bookkeeping; likely Iranian but needs manual review."
+  },
+  "Taroko": {
+    "family": "Austronesian",
+    "branch": "Atayalic",
+    "path": [
+      "Austronesian",
+      "Atayalic"
+    ],
+    "reason": "Current candidate is false. Local Glottolog has Seediq under Austronesian/Atayalic; Wiktionary Taroko points to Seediq/Truku.",
+    "glottocode": "taro1264"
+  },
+  "Tat": {
+    "family": "Indo-European",
+    "branch": "Iranian",
+    "path": [
+      "Indo-European",
+      "Iranian"
+    ],
+    "reason": "Wiktionary points to Tat language of the Caucasus; Britannica/Wikipedia classify Tat as Iranian. Current `Tait` candidate is false."
+  },
+  "Teposcolula Mixtec": {
+    "family": "Otomanguean",
+    "branch": "Eastern Otomanguean",
+    "path": [
+      "Otomanguean",
+      "Eastern Otomanguean"
+    ],
+    "reason": "Possible Mixtec branch but current candidate may be wrong variety."
+  },
+  "Torricelli": {
+    "family": "Nuclear Torricelli",
+    "branch": "Nuclear Torricelli",
+    "path": [
+      "Nuclear Torricelli",
+      "Nuclear Torricelli"
+    ],
+    "reason": "Candidate is narrower than label; use family/branch display override."
+  },
+  "Tuvaluan": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "Candidate is a narrower regional variety; branch is correct."
+  },
+  "Urum": {
+    "family": "Turkic",
+    "branch": "Common Turkic",
+    "path": [
+      "Turkic",
+      "Common Turkic"
+    ],
+    "reason": "Search evidence identifies Urum as Turkic. Current candidate is related but too narrow/region-specific for display."
+  },
+  "Vandalic": {
+    "family": "Indo-European",
+    "branch": "Germanic",
+    "path": [
+      "Indo-European",
+      "Germanic"
+    ],
+    "reason": "Historical East Germanic label; current candidate wrong."
+  },
+  "Varhadi": {
+    "family": "Indo-European",
+    "branch": "Indic",
+    "path": [
+      "Indo-European",
+      "Indic"
+    ],
+    "reason": "Expanded-name candidate is acceptable."
+  },
+  "Waigali": {
+    "family": "Indo-European",
+    "branch": "Indo-Iranian",
+    "path": [
+      "Indo-European",
+      "Indo-Iranian"
+    ],
+    "reason": "Likely Nuristani/Waigali; current candidate is wrong family."
+  },
+  "Wallisian": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "Clear false positive; should map to Wallis/Futunan/Polynesian if possible."
+  },
+  "Wastek": {
+    "family": "Mayan",
+    "branch": "Huastecan Mayan",
+    "path": [
+      "Mayan",
+      "Huastecan Mayan"
+    ],
+    "reason": "Search evidence identifies Wastek/Huastec as Mayan; local Glottolog has `Huastec` under Mayan/Huastecan Mayan. Current candidate is false.",
+    "glottocode": "huas1242"
+  },
+  "Wathaurong": {
+    "family": "Pama-Nyungan",
+    "branch": "Southeastern Pama-Nyungan",
+    "path": [
+      "Pama-Nyungan",
+      "Southeastern Pama-Nyungan"
+    ],
+    "reason": "Local Glottolog has `Wathawurrung`; search evidence lists Wathaurong as an alternate form.",
+    "glottocode": "wath1238"
+  },
+  "Wauja": {
+    "family": "Arawakan",
+    "branch": "Central-Eastern Maipuran",
+    "path": [
+      "Arawakan",
+      "Central-Eastern Maipuran"
+    ],
+    "reason": "Wikipedia identifies Waurá/Wauja as Arawakan and gives Glottolog `waur1244`; local Glottolog has `Waurá` with same branch.",
+    "glottocode": "waur1244"
+  },
+  "West Miraya Bikol": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "Current candidate is false. Miraya Bikol is an Inland/Albay Bikol variety; branch should follow Bikol under Austronesian/Malayo-Polynesian."
+  },
+  "Western Yugur": {
+    "family": "Turkic",
+    "branch": "Common Turkic",
+    "path": [
+      "Turkic",
+      "Common Turkic"
+    ],
+    "reason": "Spelling/name variant; current candidate is acceptable."
+  },
+  "Wiradjuri": {
+    "family": "Pama-Nyungan",
+    "branch": "Southeastern Pama-Nyungan",
+    "path": [
+      "Pama-Nyungan",
+      "Southeastern Pama-Nyungan"
+    ],
+    "reason": "Likely alternate spelling."
+  },
+  "Written Oirat": {
+    "family": "Mongolic-Khitan",
+    "branch": "Mongolic",
+    "path": [
+      "Mongolic-Khitan",
+      "Mongolic"
+    ],
+    "reason": "Search evidence identifies Written Oirat as historical Oirat/Clear Script material; Oirat is Mongolic."
+  },
+  "Yilan Creole": {
+    "family": "Japonic",
+    "branch": "Japanesic",
+    "path": [
+      "Japonic",
+      "Japanesic"
+    ],
+    "reason": "Japanese/Atayal contact language; use Japanese-source branch pending a finer contact-language policy."
+  },
+  "Zaghawa": {
+    "family": "Nilo-Saharan",
+    "branch": "Saharan",
+    "path": [
+      "Nilo-Saharan",
+      "Saharan"
+    ],
+    "reason": "Current candidate wrong family; needs reviewed Saharan mapping."
+  },
+  "Zarma": {
+    "family": "Songhay",
+    "branch": "Eastern Songhay",
+    "path": [
+      "Songhay",
+      "Eastern Songhay"
+    ],
+    "reason": "Candidate grouping includes target; branch is correct."
+  },
+  "Zealandic": {
+    "family": "Indo-European",
+    "branch": "Germanic",
+    "path": [
+      "Indo-European",
+      "Germanic"
+    ],
+    "reason": "Dutch/Germanic variety; current candidate wrong."
+  },
+  "Middle Norwegian": {
+    "family": "Indo-European",
+    "branch": "Germanic",
+    "path": [
+      "Indo-European",
+      "Germanic"
+    ],
+    "reason": "Historical Norwegian label; policy override."
+  },
+  "Sathmar Swabian": {
+    "family": "Indo-European",
+    "branch": "Germanic",
+    "path": [
+      "Indo-European",
+      "Germanic"
+    ],
+    "reason": "German dialect label; current candidate is wrong."
+  },
+  "Sinte Romani": {
+    "family": "Indo-European",
+    "branch": "Indic",
+    "path": [
+      "Indo-European",
+      "Indic"
+    ],
+    "reason": "Romani variety; candidate plausible but branch policy needed."
+  },
+  "Tapayuna": {
+    "family": "Nuclear-Macro-Je",
+    "branch": "Je",
+    "path": [
+      "Nuclear-Macro-Je",
+      "Je"
+    ],
+    "reason": "Current candidate wrong family."
+  },
+  "Michif": {
+    "family": "Mixed Language",
+    "branch": "Mixed Language",
+    "path": [
+      "Mixed Language",
+      "Mixed Language"
+    ],
+    "reason": "Current candidate wrong; needs mixed-language treatment or special branch."
+  },
+  "Old Gutnish": {
+    "family": "Indo-European",
+    "branch": "Germanic",
+    "path": [
+      "Indo-European",
+      "Germanic"
+    ],
+    "reason": "Historical North Germanic label; candidate related but too broad."
+  },
+  "East Franconian": {
+    "family": "Indo-European",
+    "branch": "Germanic",
+    "path": [
+      "Indo-European",
+      "Germanic"
+    ],
+    "reason": "Regional Franconian label; review stream catches Germanic candidates but exact Glottolog choice is ambiguous."
+  },
+  "Volga German": {
+    "family": "Indo-European",
+    "branch": "Germanic",
+    "path": [
+      "Indo-European",
+      "Germanic"
+    ],
+    "reason": "German ethnolect/dialect label; fuzzy candidates vary among German rows and need manual display override."
+  },
+  "Zipser German": {
+    "family": "Indo-European",
+    "branch": "Germanic",
+    "path": [
+      "Indo-European",
+      "Germanic"
+    ],
+    "reason": "German dialect label; review stream catches it but exact target should be manual display override."
+  },
+  "Mandarin": {
+    "family": "Sino-Tibetan",
+    "branch": "Sinitic",
+    "path": [
+      "Sino-Tibetan",
+      "Sinitic"
+    ],
+    "reason": "Manual display override for Mandarin Chinese; prevents near-name matches such as Mandari or arbitrary Mandarin varieties from deciding the selectable taxonomy."
+  },
+  "Alanic": {
+    "family": "Indo-European",
+    "branch": "Iranian",
+    "path": [
+      "Indo-European",
+      "Iranian"
+    ],
+    "reason": "Extinct Iranian language; current candidate is a false positive."
+  },
+  "South Efate": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "South Efate is Nafsan in local Glottolog; keep Austronesian/Malayo-Polynesian.",
+    "glottocode": "sout2856"
+  },
+  "Casiguran Dumagat Agta": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "Label variant of Casiguran-Nagtipunan Agta; local Glottolog candidate is acceptable.",
+    "glottocode": "casi1235"
+  },
+  "Proto-Yukaghir": {
+    "family": "Yukaghir",
+    "branch": "Yukaghir",
+    "path": [
+      "Yukaghir",
+      "Yukaghir"
+    ],
+    "reason": "Proto-family display label; candidate family direction is correct."
+  },
+  "Proto-Tsezian": {
+    "family": "Nakh-Daghestanian",
+    "branch": "Daghestanian",
+    "path": [
+      "Nakh-Daghestanian",
+      "Daghestanian"
+    ],
+    "reason": "Proto label for Tsezic/Nakh-Daghestanian; current candidate is false."
+  },
+  "Proto-Western Kho-Bwa": {
+    "family": "Sino-Tibetan",
+    "branch": "Kho-Bwa",
+    "path": [
+      "Sino-Tibetan",
+      "Kho-Bwa"
+    ],
+    "reason": "Proto label for Western Kho-Bwa; current candidate is false."
+  },
+  "Kyakala": {
+    "family": "Tungusic",
+    "branch": "Tungusic",
+    "path": [
+      "Tungusic",
+      "Tungusic"
+    ],
+    "reason": "Ambiguous Kyakala labels refer to Tungusic varieties; current Kakkala candidate is false."
+  },
+  "Proto-Inuit": {
+    "family": "Eskimo-Aleut",
+    "branch": "Eskimo",
+    "path": [
+      "Eskimo-Aleut",
+      "Eskimo"
+    ],
+    "reason": "Proto-family display label; candidate family direction is correct."
+  },
+  "Proto-Mansi": {
+    "family": "Uralic",
+    "branch": "Mansic",
+    "path": [
+      "Uralic",
+      "Mansic"
+    ],
+    "reason": "Proto-Mansi display label; use Uralic/Mansic instead of unrelated fuzzy candidates."
+  },
+  "Ancient Macedonian": {
+    "family": "Indo-European",
+    "branch": "Hellenic",
+    "path": [
+      "Indo-European",
+      "Hellenic"
+    ],
+    "reason": "Ancient Macedonian is treated as Hellenic/Greek-adjacent for browsing; modern Slavic Macedonian candidate is a false positive."
+  },
+  "Hinukh": {
+    "family": "Nakh-Daghestanian",
+    "branch": "Daghestanian",
+    "path": [
+      "Nakh-Daghestanian",
+      "Daghestanian"
+    ],
+    "reason": "Hinukh is Hinuq in Glottolog, a Tsezic Nakh-Daghestanian language.",
+    "glottocode": "hinu1240"
+  },
+  "Proto-Edoid": {
+    "family": "Atlantic-Congo",
+    "branch": "Volta-Congo",
+    "path": [
+      "Atlantic-Congo",
+      "Volta-Congo"
+    ],
+    "reason": "Proto-family display label; candidate family direction is correct."
+  },
+  "Proto-Selkup": {
+    "family": "Uralic",
+    "branch": "Samoyedic",
+    "path": [
+      "Uralic",
+      "Samoyedic"
+    ],
+    "reason": "Proto-family display label; candidate family direction is correct."
+  },
+  "Shoshone": {
+    "family": "Uto-Aztecan",
+    "branch": "Northern Uto-Aztecan",
+    "path": [
+      "Uto-Aztecan",
+      "Northern Uto-Aztecan"
+    ],
+    "reason": "Spelling variant of Shoshoni; local Glottolog candidate is correct but below auto threshold.",
+    "glottocode": "shos1248"
+  },
+  "Blin": {
+    "family": "Afro-Asiatic",
+    "branch": "Cushitic",
+    "path": [
+      "Afro-Asiatic",
+      "Cushitic"
+    ],
+    "reason": "Spelling variant of Bilin.",
+    "glottocode": "bili1260"
+  },
+  "Carpathian Romani": {
+    "family": "Indo-European",
+    "branch": "Indic",
+    "path": [
+      "Indo-European",
+      "Indic"
+    ],
+    "reason": "Romani variety kept under Indic."
+  },
+  "Kayapó": {
+    "family": "Nuclear-Macro-Je",
+    "branch": "Je",
+    "path": [
+      "Nuclear-Macro-Je",
+      "Je"
+    ],
+    "reason": "Label variant of the local Glottolog Kayapo entry.",
+    "glottocode": "kara1501"
+  },
+  "Proto-Batak": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "Proto-Batak should browse under Austronesian but not inherit the unrelated Palawan Batak glottocode."
+  },
+  "Proto-Chukotko-Kamchatkan": {
+    "family": "Chukotko-Kamchatkan",
+    "branch": "Chukotko-Kamchatkan",
+    "path": [
+      "Chukotko-Kamchatkan",
+      "Chukotko-Kamchatkan"
+    ],
+    "reason": "Proto-family display label."
+  },
+  "Tachawit": {
+    "family": "Afro-Asiatic",
+    "branch": "Berber",
+    "path": [
+      "Afro-Asiatic",
+      "Berber"
+    ],
+    "reason": "Label variant of Eastern Tachawit.",
+    "glottocode": "east2908"
+  },
+  "Teke-Tege": {
+    "family": "Atlantic-Congo",
+    "branch": "Volta-Congo",
+    "path": [
+      "Atlantic-Congo",
+      "Volta-Congo"
+    ],
+    "reason": "Current candidate has the right broad Bantu family direction for browsing."
+  },
+  "Akatek": {
+    "family": "Mayan",
+    "branch": "Core Mayan",
+    "path": [
+      "Mayan",
+      "Core Mayan"
+    ],
+    "reason": "Common spelling variant of Akateko.",
+    "glottocode": "west2635"
+  },
+  "Baduy": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "Baduy maps to local Glottolog Badui.",
+    "glottocode": "badu1237"
+  },
+  "Bailang": {
+    "family": "Sino-Tibetan",
+    "branch": "Burmo-Qiangic",
+    "path": [
+      "Sino-Tibetan",
+      "Burmo-Qiangic"
+    ],
+    "reason": "Bailang maps to local Glottolog Pai-lang not Blang.",
+    "glottocode": "pail1244"
+  },
+  "Proto-Anatolian": {
+    "family": "Indo-European",
+    "branch": "Anatolian",
+    "path": [
+      "Indo-European",
+      "Anatolian"
+    ],
+    "reason": "Proto-family label should use the Anatolian branch instead of Unclassified Indo-European."
+  },
+  "Puoc": {
+    "family": "Austroasiatic",
+    "branch": "Khmuic",
+    "path": [
+      "Austroasiatic",
+      "Khmuic"
+    ],
+    "reason": "Puoc maps to local Glottolog Ksingmul.",
+    "glottocode": "puoc1238"
+  },
+  "Canela": {
+    "family": "Nuclear-Macro-Je",
+    "branch": "Je",
+    "path": [
+      "Nuclear-Macro-Je",
+      "Je"
+    ],
+    "reason": "Label variant of Canela-Kraho.",
+    "glottocode": "cane1243"
+  },
+  "Jumaytepeque": {
+    "family": "Xincan",
+    "branch": "Xinca Shared Grammatical Traits",
+    "path": [
+      "Xincan",
+      "Xinca Shared Grammatical Traits"
+    ],
+    "reason": "Label variant of Xinka-Jumaytepeque.",
+    "glottocode": "xink1235"
+  },
+  "Mator": {
+    "family": "Uralic",
+    "branch": "Samoyedic",
+    "path": [
+      "Uralic",
+      "Samoyedic"
+    ],
+    "reason": "Extinct Samoyedic language label."
+  },
+  "Northern Selkup": {
+    "family": "Uralic",
+    "branch": "Samoyedic",
+    "path": [
+      "Uralic",
+      "Samoyedic"
+    ],
+    "reason": "Selkup variety kept under Samoyedic without forcing broad Selkup glottocode."
+  },
+  "Proto-Great Andamanese": {
+    "family": "Great Andamanese",
+    "branch": "Great Andamanese",
+    "path": [
+      "Great Andamanese",
+      "Great Andamanese"
+    ],
+    "reason": "Proto-family display label."
+  },
+  "Proto-North Halmahera": {
+    "family": "North Halmahera",
+    "branch": "North Halmahera",
+    "path": [
+      "North Halmahera",
+      "North Halmahera"
+    ],
+    "reason": "Proto-family display label."
+  },
+  "Proto-Otomi": {
+    "family": "Otomanguean",
+    "branch": "Western Otomanguean",
+    "path": [
+      "Otomanguean",
+      "Western Otomanguean"
+    ],
+    "reason": "Proto-family display label."
+  },
+  "Proto-Salish": {
+    "family": "Salishan",
+    "branch": "Salishan",
+    "path": [
+      "Salishan",
+      "Salishan"
+    ],
+    "reason": "Proto-family label for Salishan."
+  },
+  "Proto-South Dravidian I": {
+    "family": "Dravidian",
+    "branch": "South Dravidian",
+    "path": [
+      "Dravidian",
+      "South Dravidian"
+    ],
+    "reason": "Proto-family display label."
+  },
+  "Proto-Triqui": {
+    "family": "Otomanguean",
+    "branch": "Eastern Otomanguean",
+    "path": [
+      "Otomanguean",
+      "Eastern Otomanguean"
+    ],
+    "reason": "Proto-family label for Triqui."
+  },
+  "Southern Kam": {
+    "family": "Tai-Kadai",
+    "branch": "Kam-Tai",
+    "path": [
+      "Tai-Kadai",
+      "Kam-Tai"
+    ],
+    "reason": "Kam-Sui direction is clear but Southern Kra candidate is false."
+  },
+  "Chachi": {
+    "family": "Barbacoan",
+    "branch": "Awa-Southern Barbacoan",
+    "path": [
+      "Barbacoan",
+      "Awa-Southern Barbacoan"
+    ],
+    "reason": "Chachi is Cha'palaa and the Chahi candidate is false.",
+    "glottocode": "chac1249"
+  },
+  "Gabrielino-Fernandeño": {
+    "family": "Uto-Aztecan",
+    "branch": "Northern Uto-Aztecan",
+    "path": [
+      "Uto-Aztecan",
+      "Northern Uto-Aztecan"
+    ],
+    "reason": "Gabrielino-Fernandeno maps to Tongva.",
+    "glottocode": "tong1329"
+  },
+  "Mangarevan": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "Common spelling variant of Mangareva.",
+    "glottocode": "mang1401"
+  },
+  "Nukunu": {
+    "family": "Pama-Nyungan",
+    "branch": "Arandic-Thura-Yura",
+    "path": [
+      "Pama-Nyungan",
+      "Arandic-Thura-Yura"
+    ],
+    "reason": "Nukunu is a Thura-Yura Pama-Nyungan language."
+  },
+  "Old Komi": {
+    "family": "Uralic",
+    "branch": "Permian",
+    "path": [
+      "Uralic",
+      "Permian"
+    ],
+    "reason": "Historical Komi label kept under Permian."
+  },
+  "Penrhyn": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "Penrhyn maps to local Glottolog Mangarongaro.",
+    "glottocode": "penr1237"
+  },
+  "Proto-Atlantic-Congo": {
+    "family": "Atlantic-Congo",
+    "branch": "Atlantic-Congo",
+    "path": [
+      "Atlantic-Congo",
+      "Atlantic-Congo"
+    ],
+    "reason": "Proto-family display label."
+  },
+  "Proto-Siouan": {
+    "family": "Siouan",
+    "branch": "Siouan",
+    "path": [
+      "Siouan",
+      "Siouan"
+    ],
+    "reason": "Proto-family display label."
+  },
+  "Proto-Zapotecan": {
+    "family": "Otomanguean",
+    "branch": "Eastern Otomanguean",
+    "path": [
+      "Otomanguean",
+      "Eastern Otomanguean"
+    ],
+    "reason": "Proto-family display label."
+  },
+  "Tolai": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "Tolai belongs in the Minigir-Tolai Oceanic grouping."
+  },
+  "Banyumasan": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "Label variant of Banyumas Javanese.",
+    "glottocode": "bany1247"
+  },
+  "Juǀ'hoan": {
+    "family": "Kxa",
+    "branch": "Ju-Kung",
+    "path": [
+      "Kxa",
+      "Ju-Kung"
+    ],
+    "reason": "Ju|'hoan maps to local Glottolog South-Eastern Ju.",
+    "glottocode": "juho1239"
+  },
+  "Panyjima": {
+    "family": "Pama-Nyungan",
+    "branch": "South-West Pama-Nyungan",
+    "path": [
+      "Pama-Nyungan",
+      "South-West Pama-Nyungan"
+    ],
+    "reason": "Spelling variant of Panytyima.",
+    "glottocode": "pany1241"
+  },
+  "Proto-Northwest Caucasian": {
+    "family": "Abkhaz-Adyge",
+    "branch": "Abkhaz-Adyge",
+    "path": [
+      "Abkhaz-Adyge",
+      "Abkhaz-Adyge"
+    ],
+    "reason": "Proto-family label for Northwest Caucasian."
+  },
+  "Proto-Sarmatian": {
+    "family": "Indo-European",
+    "branch": "Iranian",
+    "path": [
+      "Indo-European",
+      "Iranian"
+    ],
+    "reason": "Sarmatian is an Iranian historical label."
+  },
+  "Samaritan Hebrew": {
+    "family": "Afro-Asiatic",
+    "branch": "Semitic",
+    "path": [
+      "Afro-Asiatic",
+      "Semitic"
+    ],
+    "reason": "Samaritan Hebrew maps to local Glottolog Samaritan.",
+    "glottocode": "sama1313"
+  },
+  "Serer": {
+    "family": "Atlantic-Congo",
+    "branch": "North-Central Atlantic",
+    "path": [
+      "Atlantic-Congo",
+      "North-Central Atlantic"
+    ],
+    "reason": "Spelling variant of Sereer.",
+    "glottocode": "sere1260"
+  },
+  "Yemeni Arabic": {
+    "family": "Afro-Asiatic",
+    "branch": "Semitic",
+    "path": [
+      "Afro-Asiatic",
+      "Semitic"
+    ],
+    "reason": "Arabic variety kept under Semitic."
+  },
+  "Yenish": {
+    "family": "Mixed Language",
+    "branch": "German-Yiddish-Romani-Rotwelsch",
+    "path": [
+      "Mixed Language",
+      "German-Yiddish-Romani-Rotwelsch"
+    ],
+    "reason": "Yenish maps to local Glottolog Yeniche.",
+    "glottocode": "yeni1236"
+  },
+  "Classical Gaelic": {
+    "family": "Indo-European",
+    "branch": "Celtic",
+    "path": [
+      "Indo-European",
+      "Celtic"
+    ],
+    "reason": "Historical Gaelic label kept under Celtic."
+  },
+  "Djadjawurrung": {
+    "family": "Pama-Nyungan",
+    "branch": "Southeastern Pama-Nyungan",
+    "path": [
+      "Pama-Nyungan",
+      "Southeastern Pama-Nyungan"
+    ],
+    "reason": "Label matches Djadjawurrungic family direction.",
+    "glottocode": "djad1246"
+  },
+  "Gabadi": {
+    "family": "Kru",
+    "branch": "Eastern Kru",
+    "path": [
+      "Kru",
+      "Eastern Kru"
+    ],
+    "reason": "Spelling variant of Gbadi.",
+    "glottocode": "gbad1242"
+  },
+  "Jemez": {
+    "family": "Kiowa-Tanoan",
+    "branch": "Kiowa-Tanoan",
+    "path": [
+      "Kiowa-Tanoan",
+      "Kiowa-Tanoan"
+    ],
+    "reason": "Jemez maps to local Glottolog Towa.",
+    "glottocode": "jeme1245"
+  },
+  "Knaanic": {
+    "family": "Indo-European",
+    "branch": "Slavic",
+    "path": [
+      "Indo-European",
+      "Slavic"
+    ],
+    "reason": "Extinct West Slavic Jewish language."
+  },
+  "Massachusett": {
+    "family": "Algic",
+    "branch": "Algonquian-Blackfoot",
+    "path": [
+      "Algic",
+      "Algonquian-Blackfoot"
+    ],
+    "reason": "Massachusett maps to Wampanoag in local Glottolog.",
+    "glottocode": "wamp1249"
+  },
+  "Proto-Central New South Wales": {
+    "family": "Pama-Nyungan",
+    "branch": "Southeastern Pama-Nyungan",
+    "path": [
+      "Pama-Nyungan",
+      "Southeastern Pama-Nyungan"
+    ],
+    "reason": "Proto label for Central New South Wales languages."
+  },
+  "Proto-Mixe-Zoque": {
+    "family": "Mixe-Zoque",
+    "branch": "Mixe-Zoque",
+    "path": [
+      "Mixe-Zoque",
+      "Mixe-Zoque"
+    ],
+    "reason": "Proto-family display label."
+  },
+  "Proto-Northeast Caucasian": {
+    "family": "Nakh-Daghestanian",
+    "branch": "Daghestanian",
+    "path": [
+      "Nakh-Daghestanian",
+      "Daghestanian"
+    ],
+    "reason": "Proto-family label for Northeast Caucasian."
+  },
+  "Chulym": {
+    "family": "Turkic",
+    "branch": "Common Turkic",
+    "path": [
+      "Turkic",
+      "Common Turkic"
+    ],
+    "reason": "Chulym Turkic label variant.",
+    "glottocode": "chul1246"
+  },
+  "Enxet": {
+    "family": "Lengua-Mascoy",
+    "branch": "Lengua",
+    "path": [
+      "Lengua-Mascoy",
+      "Lengua"
+    ],
+    "reason": "Enxet label maps to Enxet Sur.",
+    "glottocode": "sout2989"
+  },
+  "Proto-Kra-Dai": {
+    "family": "Tai-Kadai",
+    "branch": "Tai-Kadai",
+    "path": [
+      "Tai-Kadai",
+      "Tai-Kadai"
+    ],
+    "reason": "Proto-family label for Kra-Dai."
+  },
+  "Sabir": {
+    "family": "Pidgin",
+    "branch": "Italian-based pidgin",
+    "path": [
+      "Pidgin",
+      "Italian-based pidgin"
+    ],
+    "reason": "Sabir maps to Mediterranean Lingua Franca in local Glottolog.",
+    "glottocode": "ling1242"
+  },
+  "Tlahuica": {
+    "family": "Otomanguean",
+    "branch": "Western Otomanguean",
+    "path": [
+      "Otomanguean",
+      "Western Otomanguean"
+    ],
+    "reason": "Tlahuica maps to Ocuiltec or Atzingo Matlatzinca.",
+    "glottocode": "atzi1235"
+  },
+  "Warungu": {
+    "family": "Pama-Nyungan",
+    "branch": "Greater Maric",
+    "path": [
+      "Pama-Nyungan",
+      "Greater Maric"
+    ],
+    "reason": "Warungu label matches local candidate family.",
+    "glottocode": "waru1263"
+  },
+  "Chiwere": {
+    "family": "Siouan",
+    "branch": "Mississippi Valley",
+    "path": [
+      "Siouan",
+      "Mississippi Valley"
+    ],
+    "reason": "Chiwere is covered by Winnebago-Chiwere.",
+    "glottocode": "winn1245"
+  },
+  "Hoyahoya": {
+    "family": "Anim",
+    "branch": "Inland Gulf of Papua",
+    "path": [
+      "Anim",
+      "Inland Gulf of Papua"
+    ],
+    "reason": "Label variant of Hoyahoya-Matakaia.",
+    "glottocode": "hoya1235"
+  },
+  "Jutiapa": {
+    "family": "Xincan",
+    "branch": "Xinca Shared Grammatical Traits",
+    "path": [
+      "Xincan",
+      "Xinca Shared Grammatical Traits"
+    ],
+    "reason": "Jutiapa Xinca region label kept under Xincan."
+  },
+  "Kendayan": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "Label variant of Kendayan-Belangin.",
+    "glottocode": "kend1254"
+  },
+  "Middle Assamese": {
+    "family": "Indo-European",
+    "branch": "Indic",
+    "path": [
+      "Indo-European",
+      "Indic"
+    ],
+    "reason": "Historical Assamese label kept under Indic."
+  },
+  "Proto-Malayo-Chamic": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "Proto-family display label."
+  },
+  "Proto-Yoruba": {
+    "family": "Atlantic-Congo",
+    "branch": "Volta-Congo",
+    "path": [
+      "Atlantic-Congo",
+      "Volta-Congo"
+    ],
+    "reason": "Proto-family display label."
+  },
+  "Savi": {
+    "family": "Atlantic-Congo",
+    "branch": "Volta-Congo",
+    "path": [
+      "Atlantic-Congo",
+      "Volta-Congo"
+    ],
+    "reason": "Savi is treated as Sanvi for browsing.",
+    "glottocode": "sanv1241"
+  },
+  "Sinacantán": {
+    "family": "Xincan",
+    "branch": "Yupiltepequic",
+    "path": [
+      "Xincan",
+      "Yupiltepequic"
+    ],
+    "reason": "Label variant of Xinca-Sinacantan.",
+    "glottocode": "xinc1245"
+  },
+  "Yidiny": {
+    "family": "Pama-Nyungan",
+    "branch": "Yimidhirr-Yalanji-Yidinic",
+    "path": [
+      "Pama-Nyungan",
+      "Yimidhirr-Yalanji-Yidinic"
+    ],
+    "reason": "Label variant of Nuclear Yidiny.",
+    "glottocode": "nucl1337"
+  },
+  "A-Hmao": {
+    "family": "Hmong-Mien",
+    "branch": "Hmongic",
+    "path": [
+      "Hmong-Mien",
+      "Hmongic"
+    ],
+    "reason": "A-Hmao is an Hmongic language label."
+  },
+  "Djimini": {
+    "family": "Atlantic-Congo",
+    "branch": "Volta-Congo",
+    "path": [
+      "Atlantic-Congo",
+      "Volta-Congo"
+    ],
+    "reason": "Label variant of Djimini Senoufo.",
+    "glottocode": "djim1235"
+  },
+  "Kermanic": {
+    "family": "Indo-European",
+    "branch": "Iranian",
+    "path": [
+      "Indo-European",
+      "Iranian"
+    ],
+    "reason": "Kermanic Iranian label.",
+    "glottocode": "cent2264"
+  },
+  "Lomwe": {
+    "family": "Atlantic-Congo",
+    "branch": "Volta-Congo",
+    "path": [
+      "Atlantic-Congo",
+      "Volta-Congo"
+    ],
+    "reason": "Label variant of Mozambique Lomwe.",
+    "glottocode": "lomw1241"
+  },
+  "Proto-Eastern Malayo-Polynesian": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "Proto-family display label."
+  },
+  "Proto-Malayo-Sumbawan": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "Proto-family label for Malayo-Sumbawan."
+  },
+  "Proto-Shughni-Yazghulami-Munji": {
+    "family": "Indo-European",
+    "branch": "Iranian",
+    "path": [
+      "Indo-European",
+      "Iranian"
+    ],
+    "reason": "Proto-Iranian subgroup label."
+  },
+  "Singpho": {
+    "family": "Sino-Tibetan",
+    "branch": "Brahmaputran",
+    "path": [
+      "Sino-Tibetan",
+      "Brahmaputran"
+    ],
+    "reason": "Singpho is a Jingpho dialect label.",
+    "glottocode": "jing1260"
+  },
+  "Barunggam": {
+    "family": "Pama-Nyungan",
+    "branch": "Waka-Kabic",
+    "path": [
+      "Pama-Nyungan",
+      "Waka-Kabic"
+    ],
+    "reason": "Barunggam is a Pama-Nyungan language related to Waka-Kabic neighbors."
+  },
+  "Lycian": {
+    "family": "Indo-European",
+    "branch": "Anatolian",
+    "path": [
+      "Indo-European",
+      "Anatolian"
+    ],
+    "reason": "Historical Anatolian label.",
+    "glottocode": "lyci1241"
+  },
+  "Mamanwa": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "Mamanwa maps to local Glottolog Minamanwa.",
+    "glottocode": "mama1275"
+  },
+  "Old Bengali": {
+    "family": "Indo-European",
+    "branch": "Indic",
+    "path": [
+      "Indo-European",
+      "Indic"
+    ],
+    "reason": "Historical Bengali label kept under Indic."
+  },
+  "Proto-Avaro-Andian": {
+    "family": "Nakh-Daghestanian",
+    "branch": "Daghestanian",
+    "path": [
+      "Nakh-Daghestanian",
+      "Daghestanian"
+    ],
+    "reason": "Proto-family label for Avaro-Andian."
+  },
+  "Proto-Nyulnyulan": {
+    "family": "Nyulnyulan",
+    "branch": "Nyulnyulan",
+    "path": [
+      "Nyulnyulan",
+      "Nyulnyulan"
+    ],
+    "reason": "Proto-family display label."
+  },
+  "Proto-Oto-Manguean": {
+    "family": "Otomanguean",
+    "branch": "Eastern Otomanguean",
+    "path": [
+      "Otomanguean",
+      "Eastern Otomanguean"
+    ],
+    "reason": "Proto-family label uses local Oto-Manguean display branch."
+  },
+  "Proto-Otomian": {
+    "family": "Otomanguean",
+    "branch": "Western Otomanguean",
+    "path": [
+      "Otomanguean",
+      "Western Otomanguean"
+    ],
+    "reason": "Proto-family display label."
+  },
+  "Proto-Shughni-Roshani": {
+    "family": "Indo-European",
+    "branch": "Iranian",
+    "path": [
+      "Indo-European",
+      "Iranian"
+    ],
+    "reason": "Proto-Iranian subgroup label."
+  },
+  "Proto-South Sulawesi": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "Proto-family display label."
+  },
+  "Proto-Ta-Arawak": {
+    "family": "Arawakan",
+    "branch": "Arawakan",
+    "path": [
+      "Arawakan",
+      "Arawakan"
+    ],
+    "reason": "Proto-family display label."
+  },
+  "Puluwat": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "Puluwat maps to local Glottolog Puluwatese.",
+    "glottocode": "pulu1242"
+  },
+  "Yupiltepeque": {
+    "family": "Xincan",
+    "branch": "Yupiltepequic",
+    "path": [
+      "Xincan",
+      "Yupiltepequic"
+    ],
+    "reason": "Label variant of Xinca-Yupiltepeque.",
+    "glottocode": "xinc1243"
+  },
+  "Akhvakh": {
+    "family": "Nakh-Daghestanian",
+    "branch": "Daghestanian",
+    "path": [
+      "Nakh-Daghestanian",
+      "Daghestanian"
+    ],
+    "reason": "Label variant of Northern Akhvakh.",
+    "glottocode": "akhv1239"
+  },
+  "Arára (Pará)": {
+    "family": "Pano-Tacanan",
+    "branch": "Panoan",
+    "path": [
+      "Pano-Tacanan",
+      "Panoan"
+    ],
+    "reason": "Arara Para label follows local Panoan candidate.",
+    "glottocode": "arar1265"
+  },
+  "Chontal Maya": {
+    "family": "Mayan",
+    "branch": "Core Mayan",
+    "path": [
+      "Mayan",
+      "Core Mayan"
+    ],
+    "reason": "Chontal Maya maps to Tabasco Chontal family direction.",
+    "glottocode": "taba1266"
+  },
+  "Dhundhari": {
+    "family": "Indo-European",
+    "branch": "Indic",
+    "path": [
+      "Indo-European",
+      "Indic"
+    ],
+    "reason": "Spelling variant of Dhundari.",
+    "glottocode": "dhun1238"
+  },
+  "Huaorani": {
+    "family": "Isolates",
+    "branch": "Language isolate",
+    "path": [
+      "Isolates",
+      "Language isolate"
+    ],
+    "reason": "Huaorani maps to Waorani language isolate.",
+    "glottocode": "waor1240"
+  },
+  "Hutterisch": {
+    "family": "Indo-European",
+    "branch": "Germanic",
+    "path": [
+      "Indo-European",
+      "Germanic"
+    ],
+    "reason": "Hutterisch maps to Hutterite German.",
+    "glottocode": "hutt1235"
+  },
+  "Kichwa": {
+    "family": "Quechuan",
+    "branch": "Quechuan",
+    "path": [
+      "Quechuan",
+      "Quechuan"
+    ],
+    "reason": "Kichwa is a Quechuan label."
+  },
+  "Proto-Afroasiatic": {
+    "family": "Afro-Asiatic",
+    "branch": "Afro-Asiatic",
+    "path": [
+      "Afro-Asiatic",
+      "Afro-Asiatic"
+    ],
+    "reason": "Proto-family display label."
+  },
+  "Proto-Central-Eastern Malayo-Polynesian": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "Proto-family display label."
+  },
+  "Proto-Lezghian": {
+    "family": "Nakh-Daghestanian",
+    "branch": "Daghestanian",
+    "path": [
+      "Nakh-Daghestanian",
+      "Daghestanian"
+    ],
+    "reason": "Proto-family label for Lezghian."
+  },
+  "Proto-Shughni-Yazghulami": {
+    "family": "Indo-European",
+    "branch": "Iranian",
+    "path": [
+      "Indo-European",
+      "Iranian"
+    ],
+    "reason": "Proto-Iranian subgroup label."
+  },
+  "Proto-Sogdic": {
+    "family": "Indo-European",
+    "branch": "Iranian",
+    "path": [
+      "Indo-European",
+      "Iranian"
+    ],
+    "reason": "Proto-Iranian subgroup label."
+  },
+  "Shaozhou Tuhua": {
+    "family": "Sino-Tibetan",
+    "branch": "Sinitic",
+    "path": [
+      "Sino-Tibetan",
+      "Sinitic"
+    ],
+    "reason": "Shaozhou Tuhua maps to local Shaoguan Tuhua Sinitic entry.",
+    "glottocode": "quji1234"
+  },
+  "Chilcotin": {
+    "family": "Athabaskan-Eyak-Tlingit",
+    "branch": "Athabaskan-Eyak",
+    "path": [
+      "Athabaskan-Eyak-Tlingit",
+      "Athabaskan-Eyak"
+    ],
+    "reason": "Label variant of Chilcotin-Nicola.",
+    "glottocode": "chil1280"
+  },
+  "Chiricahua": {
+    "family": "Athabaskan-Eyak-Tlingit",
+    "branch": "Athabaskan-Eyak",
+    "path": [
+      "Athabaskan-Eyak-Tlingit",
+      "Athabaskan-Eyak"
+    ],
+    "reason": "Chiricahua is covered by Mescalero-Chiricahua Apache.",
+    "glottocode": "mesc1238"
+  },
+  "Deccani": {
+    "family": "Indo-European",
+    "branch": "Indic",
+    "path": [
+      "Indo-European",
+      "Indic"
+    ],
+    "reason": "Deccani maps to local Glottolog Dakhini.",
+    "glottocode": "dakh1243"
+  },
+  "Gallo-Italic of Sicily": {
+    "family": "Indo-European",
+    "branch": "Italic / Romance",
+    "path": [
+      "Indo-European",
+      "Italic / Romance"
+    ],
+    "reason": "Gallo-Italic of Sicily belongs under Gallo-Italian Romance.",
+    "glottocode": "gall1279"
+  },
+  "Galoli": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "Label variant of Galoli-Talur.",
+    "glottocode": "galo1243"
+  },
+  "Hupdë": {
+    "family": "Naduhup",
+    "branch": "Eastern Naduhup",
+    "path": [
+      "Naduhup",
+      "Eastern Naduhup"
+    ],
+    "reason": "Hupde maps to local Glottolog Hup.",
+    "glottocode": "hupd1244"
+  },
+  "Malinaltepec Tlapanec": {
+    "family": "Otomanguean",
+    "branch": "Western Otomanguean",
+    "path": [
+      "Otomanguean",
+      "Western Otomanguean"
+    ],
+    "reason": "Tlapanec label maps to Malinaltepec Me'phaa.",
+    "glottocode": "mali1285"
+  },
+  "Middle Gujarati": {
+    "family": "Indo-European",
+    "branch": "Indic",
+    "path": [
+      "Indo-European",
+      "Indic"
+    ],
+    "reason": "Historical Gujarati label kept under Indic."
+  },
+  "Proto-Arawa": {
+    "family": "Arawan",
+    "branch": "Arawan",
+    "path": [
+      "Arawan",
+      "Arawan"
+    ],
+    "reason": "Proto-family display label."
+  },
+  "Proto-Halmahera-Cenderawasih": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "Proto-family label for Halmahera-Cenderawasih."
+  },
+  "Winnebago": {
+    "family": "Siouan",
+    "branch": "Mississippi Valley",
+    "path": [
+      "Siouan",
+      "Mississippi Valley"
+    ],
+    "reason": "Winnebago is covered by Winnebago-Chiwere.",
+    "glottocode": "winn1245"
+  },
+  "Arára (Mato Grosso)": {
+    "family": "Pano-Tacanan",
+    "branch": "Panoan",
+    "path": [
+      "Pano-Tacanan",
+      "Panoan"
+    ],
+    "reason": "Arara Mato Grosso label follows local Panoan candidate.",
+    "glottocode": "arar1265"
+  },
+  "Gagadu": {
+    "family": "Isolates",
+    "branch": "Language isolate",
+    "path": [
+      "Isolates",
+      "Language isolate"
+    ],
+    "reason": "Gagadu maps to Gaagudju language isolate.",
+    "glottocode": "gaga1251"
+  },
+  "Isubu": {
+    "family": "Atlantic-Congo",
+    "branch": "Volta-Congo",
+    "path": [
+      "Atlantic-Congo",
+      "Volta-Congo"
+    ],
+    "reason": "Isubu covered by Kole-Isubu.",
+    "glottocode": "kole1239"
+  },
+  "Middle Kannada": {
+    "family": "Dravidian",
+    "branch": "South Dravidian",
+    "path": [
+      "Dravidian",
+      "South Dravidian"
+    ],
+    "reason": "Historical Kannada label kept under South Dravidian."
+  },
+  "Northern Pwo": {
+    "family": "Sino-Tibetan",
+    "branch": "Karenic",
+    "path": [
+      "Sino-Tibetan",
+      "Karenic"
+    ],
+    "reason": "Northern Pwo maps to Pwo Northern Karen.",
+    "glottocode": "pwon1235"
+  },
+  "Proto-Kuki-Chin": {
+    "family": "Sino-Tibetan",
+    "branch": "Kuki-Chin-Naga",
+    "path": [
+      "Sino-Tibetan",
+      "Kuki-Chin-Naga"
+    ],
+    "reason": "Proto-family display label."
+  },
+  "Proto-Maidun": {
+    "family": "Maiduan",
+    "branch": "Maiduan",
+    "path": [
+      "Maiduan",
+      "Maiduan"
+    ],
+    "reason": "Proto-family label for Maiduan."
+  },
+  "Proto-Somaloid": {
+    "family": "Afro-Asiatic",
+    "branch": "Cushitic",
+    "path": [
+      "Afro-Asiatic",
+      "Cushitic"
+    ],
+    "reason": "Proto-family label for Somali-related Cushitic."
+  },
+  "Aghu Tharrnggala": {
+    "family": "Pama-Nyungan",
+    "branch": "Paman",
+    "path": [
+      "Pama-Nyungan",
+      "Paman"
+    ],
+    "reason": "Spelling variant of Aghu Tharnggalu.",
+    "glottocode": "aghu1254"
+  },
+  "Barasana": {
+    "family": "Tucanoan",
+    "branch": "Eastern Tucanoan",
+    "path": [
+      "Tucanoan",
+      "Eastern Tucanoan"
+    ],
+    "reason": "Barasana covered by Barasana-Eduria.",
+    "glottocode": "bara1380"
+  },
+  "Classical Guarani": {
+    "family": "Tupian",
+    "branch": "Eastern Tupian",
+    "path": [
+      "Tupian",
+      "Eastern Tupian"
+    ],
+    "reason": "Historical Guarani label.",
+    "glottocode": "oldp1258"
+  },
+  "Hassaniya Arabic": {
+    "family": "Afro-Asiatic",
+    "branch": "Semitic",
+    "path": [
+      "Afro-Asiatic",
+      "Semitic"
+    ],
+    "reason": "Arabic variety kept under Semitic."
+  },
+  "Karok": {
+    "family": "Isolates",
+    "branch": "Language isolate",
+    "path": [
+      "Isolates",
+      "Language isolate"
+    ],
+    "reason": "Karok maps to Karuk language isolate.",
+    "glottocode": "karo1304"
+  },
+  "Kitembo": {
+    "family": "Atlantic-Congo",
+    "branch": "Volta-Congo",
+    "path": [
+      "Atlantic-Congo",
+      "Volta-Congo"
+    ],
+    "reason": "Kitembo maps to Tembo Kitembo.",
+    "glottocode": "temb1270"
+  },
+  "Mojave": {
+    "family": "Cochimi-Yuman",
+    "branch": "Yuman",
+    "path": [
+      "Cochimi-Yuman",
+      "Yuman"
+    ],
+    "reason": "Spelling variant of Mohave.",
+    "glottocode": "moha1256"
+  },
+  "Northern Valley Yokuts": {
+    "family": "Yokutsan",
+    "branch": "General Yokuts",
+    "path": [
+      "Yokutsan",
+      "General Yokuts"
+    ],
+    "reason": "Yokuts variety kept under General Yokuts without forcing Southern Valley glottocode."
+  },
+  "Palawan Batak": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "Palawan Batak matches the local Batak entry.",
+    "glottocode": "bata1301"
+  },
+  "Pileni": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "Label variant of Nuclear Pileni.",
+    "glottocode": "nucl1486"
+  },
+  "Proto-Karen": {
+    "family": "Sino-Tibetan",
+    "branch": "Karenic",
+    "path": [
+      "Sino-Tibetan",
+      "Karenic"
+    ],
+    "reason": "Current Karen candidate is the wrong family. Proto-Karen should be Sino-Tibetan Karenic."
+  },
+  "Proto-Numic": {
+    "family": "Uto-Aztecan",
+    "branch": "Northern Uto-Aztecan",
+    "path": [
+      "Uto-Aztecan",
+      "Northern Uto-Aztecan"
+    ],
+    "reason": "Proto-family display label."
+  },
+  "Proto-Puroik": {
+    "family": "Sino-Tibetan",
+    "branch": "Kho-Bwa",
+    "path": [
+      "Sino-Tibetan",
+      "Kho-Bwa"
+    ],
+    "reason": "Proto-family label for Puroikic."
+  },
+  "Wancho": {
+    "family": "Sino-Tibetan",
+    "branch": "Brahmaputran",
+    "path": [
+      "Sino-Tibetan",
+      "Brahmaputran"
+    ],
+    "reason": "Wancho maps to Wancho Naga rather than only Lower Wancho.",
+    "glottocode": "wanc1238"
+  },
+  "Warekena": {
+    "family": "Arawakan",
+    "branch": "Alto Orinoco",
+    "path": [
+      "Arawakan",
+      "Alto Orinoco"
+    ],
+    "reason": "Warekena label follows local Arawakan candidate.",
+    "glottocode": "ware1257"
+  },
+  "Abung": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "Abung is a Lampungic Austronesian label."
+  },
+  "Aguacateca": {
+    "family": "Mayan",
+    "branch": "Core Mayan",
+    "path": [
+      "Mayan",
+      "Core Mayan"
+    ],
+    "reason": "Spelling variant of Aguacateco.",
+    "glottocode": "agua1252"
+  },
+  "Alumu-Tesu": {
+    "family": "Atlantic-Congo",
+    "branch": "Volta-Congo",
+    "path": [
+      "Atlantic-Congo",
+      "Volta-Congo"
+    ],
+    "reason": "Composite Alumu and Tesu label in local Atlantic-Congo area."
+  },
+  "Banoni": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "Banoni covered by Banoni-Piva.",
+    "glottocode": "piva1237"
+  },
+  "Bukhari": {
+    "family": "Indo-European",
+    "branch": "Iranian",
+    "path": [
+      "Indo-European",
+      "Iranian"
+    ],
+    "reason": "Spelling variant of Bukharic.",
+    "glottocode": "bukh1238"
+  },
+  "Chaap Wuurong": {
+    "family": "Pama-Nyungan",
+    "branch": "Southeastern Pama-Nyungan",
+    "path": [
+      "Pama-Nyungan",
+      "Southeastern Pama-Nyungan"
+    ],
+    "reason": "Chaap Wuurong is treated with Djabwurrung family direction.",
+    "glottocode": "djab1234"
+  },
+  "Kelantan Peranakan Hokkien": {
+    "family": "Sino-Tibetan",
+    "branch": "Sinitic",
+    "path": [
+      "Sino-Tibetan",
+      "Sinitic"
+    ],
+    "reason": "Peranakan Hokkien is a Sinitic Hokkien label not Malay."
+  },
+  "Kuku-Thaypan": {
+    "family": "Pama-Nyungan",
+    "branch": "Paman",
+    "path": [
+      "Pama-Nyungan",
+      "Paman"
+    ],
+    "reason": "Kuku-Thaypan maps to Thaypan family direction.",
+    "glottocode": "thay1248"
+  },
+  "Maasai": {
+    "family": "Nilo-Saharan",
+    "branch": "Nilotic",
+    "path": [
+      "Nilo-Saharan",
+      "Nilotic"
+    ],
+    "reason": "Maasai maps to Masai and the Makasai candidate is false.",
+    "glottocode": "masa1300"
+  },
+  "Nyelâyu": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "Nyelayu maps to local Nyalayu family.",
+    "glottocode": "nyal1256"
+  },
+  "Proto-Na-Dene": {
+    "family": "Athabaskan-Eyak-Tlingit",
+    "branch": "Athabaskan-Eyak-Tlingit",
+    "path": [
+      "Athabaskan-Eyak-Tlingit",
+      "Athabaskan-Eyak-Tlingit"
+    ],
+    "reason": "Proto-family display label."
+  },
+  "Proto-Nubian": {
+    "family": "Nubian",
+    "branch": "Nubian",
+    "path": [
+      "Nubian",
+      "Nubian"
+    ],
+    "reason": "Proto-family display label."
+  },
+  "Proto-Nuclear Polynesian": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "Proto-family display label."
+  },
+  "Proto-Oto-Pamean": {
+    "family": "Otomanguean",
+    "branch": "Western Otomanguean",
+    "path": [
+      "Otomanguean",
+      "Western Otomanguean"
+    ],
+    "reason": "Proto-family display label."
+  },
+  "Proto-Saka": {
+    "family": "Indo-European",
+    "branch": "Iranian",
+    "path": [
+      "Indo-European",
+      "Iranian"
+    ],
+    "reason": "Proto-Iranian subgroup label."
+  },
+  "Raga": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "Raga maps to local Hano North Pentecost entry.",
+    "glottocode": "hano1246"
+  },
+  "Shehri": {
+    "family": "Afro-Asiatic",
+    "branch": "Semitic",
+    "path": [
+      "Afro-Asiatic",
+      "Semitic"
+    ],
+    "reason": "Shehri maps to Jibbali Modern South Arabian.",
+    "glottocode": "sheh1240"
+  },
+  "Varli": {
+    "family": "Indo-European",
+    "branch": "Indic",
+    "path": [
+      "Indo-European",
+      "Indic"
+    ],
+    "reason": "Varli label follows local candidate family.",
+    "glottocode": "dava1244"
+  },
+  "Axi": {
+    "family": "Sino-Tibetan",
+    "branch": "Burmo-Qiangic",
+    "path": [
+      "Sino-Tibetan",
+      "Burmo-Qiangic"
+    ],
+    "reason": "Axi maps to local Axi Yi.",
+    "glottocode": "axiy1235"
+  },
+  "Baagandji": {
+    "family": "Pama-Nyungan",
+    "branch": "Pama-Nyungan",
+    "path": [
+      "Pama-Nyungan",
+      "Pama-Nyungan"
+    ],
+    "reason": "Baagandji covered by Yarli-Baagandji.",
+    "glottocode": "yarl1237"
+  },
+  "Belait": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "Belait maps to local Lemeting.",
+    "glottocode": "bela1260"
+  },
+  "Bura Mabang": {
+    "family": "Maban",
+    "branch": "Maban",
+    "path": [
+      "Maban",
+      "Maban"
+    ],
+    "reason": "Mabang family direction is clear."
+  },
+  "Burgundian": {
+    "family": "Indo-European",
+    "branch": "Germanic",
+    "path": [
+      "Indo-European",
+      "Germanic"
+    ],
+    "reason": "Historical East Germanic label."
+  },
+  "Chapacura": {
+    "family": "Chapacuran",
+    "branch": "Chapacuran",
+    "path": [
+      "Chapacuran",
+      "Chapacuran"
+    ],
+    "reason": "Family label variant."
+  },
+  "Deg Xinag": {
+    "family": "Athabaskan-Eyak-Tlingit",
+    "branch": "Athabaskan-Eyak",
+    "path": [
+      "Athabaskan-Eyak-Tlingit",
+      "Athabaskan-Eyak"
+    ],
+    "reason": "Deg Xinag is an Athabaskan language label."
+  },
+  "Jeru": {
+    "family": "Great Andamanese",
+    "branch": "North Andamanese-Akakede",
+    "path": [
+      "Great Andamanese",
+      "North Andamanese-Akakede"
+    ],
+    "reason": "Jeru covered by Jeru-Kora.",
+    "glottocode": "jeru1239"
+  },
+  "Kamarupi Prakrit": {
+    "family": "Indo-European",
+    "branch": "Indic",
+    "path": [
+      "Indo-European",
+      "Indic"
+    ],
+    "reason": "Historical Prakrit label kept under Indic."
+  },
+  "Kaxuyana": {
+    "family": "Cariban",
+    "branch": "Parukotoan",
+    "path": [
+      "Cariban",
+      "Parukotoan"
+    ],
+    "reason": "Kaxuyana maps to local Kaxuiana.",
+    "glottocode": "kaxu1237"
+  },
+  "Khorasani Turkish": {
+    "family": "Turkic",
+    "branch": "Common Turkic",
+    "path": [
+      "Turkic",
+      "Common Turkic"
+    ],
+    "reason": "Khorasani Turkish maps to Khorasan Turkic.",
+    "glottocode": "khor1269"
+  },
+  "Kings River Yokuts": {
+    "family": "Yokutsan",
+    "branch": "General Yokuts",
+    "path": [
+      "Yokutsan",
+      "General Yokuts"
+    ],
+    "reason": "Kings River Yokuts local candidate is correct.",
+    "glottocode": "king1260"
+  },
+  "Koibal": {
+    "family": "Uralic",
+    "branch": "Samoyedic",
+    "path": [
+      "Uralic",
+      "Samoyedic"
+    ],
+    "reason": "Koibal covered by Kamas-Koibal.",
+    "glottocode": "kama1351"
+  },
+  "Mara Chin": {
+    "family": "Sino-Tibetan",
+    "branch": "Kuki-Chin-Naga",
+    "path": [
+      "Sino-Tibetan",
+      "Kuki-Chin-Naga"
+    ],
+    "reason": "Mara Chin maps to local Mara Kuki-Chin.",
+    "glottocode": "mara1382"
+  },
+  "Maranungku": {
+    "family": "Western Daly",
+    "branch": "Maranunggu-Ame-Manda",
+    "path": [
+      "Western Daly",
+      "Maranunggu-Ame-Manda"
+    ],
+    "reason": "Spelling variant of Maranunggu.",
+    "glottocode": "mara1386"
+  },
+  "Ontong Java": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "Ontong Java maps to Luangiua.",
+    "glottocode": "onto1237"
+  },
+  "Proto-Andian": {
+    "family": "Nakh-Daghestanian",
+    "branch": "Daghestanian",
+    "path": [
+      "Nakh-Daghestanian",
+      "Daghestanian"
+    ],
+    "reason": "Proto-family label for Andian."
+  },
+  "Proto-Aroid": {
+    "family": "South Omotic",
+    "branch": "South Omotic",
+    "path": [
+      "South Omotic",
+      "South Omotic"
+    ],
+    "reason": "Proto-family label for Aroid South Omotic."
+  },
+  "Proto-Cushitic": {
+    "family": "Afro-Asiatic",
+    "branch": "Cushitic",
+    "path": [
+      "Afro-Asiatic",
+      "Cushitic"
+    ],
+    "reason": "Proto-family display label."
+  },
+  "Proto-Dargwa": {
+    "family": "Nakh-Daghestanian",
+    "branch": "Daghestanian",
+    "path": [
+      "Nakh-Daghestanian",
+      "Daghestanian"
+    ],
+    "reason": "Proto-family label for Dargwa."
+  },
+  "Proto-Edekiri": {
+    "family": "Atlantic-Congo",
+    "branch": "Volta-Congo",
+    "path": [
+      "Atlantic-Congo",
+      "Volta-Congo"
+    ],
+    "reason": "Proto-family display label."
+  },
+  "Proto-Grassfields": {
+    "family": "Atlantic-Congo",
+    "branch": "Volta-Congo",
+    "path": [
+      "Atlantic-Congo",
+      "Volta-Congo"
+    ],
+    "reason": "Proto-family label for Grassfields."
+  },
+  "Proto-Koreanic": {
+    "family": "Koreanic",
+    "branch": "Koreanic",
+    "path": [
+      "Koreanic",
+      "Koreanic"
+    ],
+    "reason": "Proto-family display label."
+  },
+  "Proto-Northern Jê": {
+    "family": "Nuclear-Macro-Je",
+    "branch": "Je",
+    "path": [
+      "Nuclear-Macro-Je",
+      "Je"
+    ],
+    "reason": "Proto-family label for Northern Je."
+  },
+  "Proto-Pomo": {
+    "family": "Pomoan",
+    "branch": "Pomoan",
+    "path": [
+      "Pomoan",
+      "Pomoan"
+    ],
+    "reason": "The fuzzy Pomo candidate is Atlantic-Congo. Use Pomoan family instead."
+  },
+  "Proto-South Dravidian II": {
+    "family": "Dravidian",
+    "branch": "South Dravidian",
+    "path": [
+      "Dravidian",
+      "South Dravidian"
+    ],
+    "reason": "Proto-family display label."
+  },
+  "Western Arrernte": {
+    "family": "Pama-Nyungan",
+    "branch": "Arandic-Thura-Yura",
+    "path": [
+      "Pama-Nyungan",
+      "Arandic-Thura-Yura"
+    ],
+    "reason": "Spelling variant of Western Arrarnta.",
+    "glottocode": "west2441"
+  },
+  "Wusa": {
+    "family": "Sino-Tibetan",
+    "branch": "Burmo-Qiangic",
+    "path": [
+      "Sino-Tibetan",
+      "Burmo-Qiangic"
+    ],
+    "reason": "Wusa covered by Wusa Nasu.",
+    "glottocode": "wusa1235"
+  },
+  "Yug": {
+    "family": "Yeniseian",
+    "branch": "Northern Yeniseian",
+    "path": [
+      "Yeniseian",
+      "Northern Yeniseian"
+    ],
+    "reason": "Spelling variant of Yugh.",
+    "glottocode": "yugh1239"
+  },
+  "Äynu": {
+    "family": "Turkic",
+    "branch": "Common Turkic",
+    "path": [
+      "Turkic",
+      "Common Turkic"
+    ],
+    "reason": "Aynu maps to local Ainu China and not Ainu isolate.",
+    "glottocode": "ainu1251"
+  },
+  "Aborlan Tagbanwa": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "Tagbanwa label kept under Austronesian Malayo-Polynesian."
+  },
+  "Alaba": {
+    "family": "Afro-Asiatic",
+    "branch": "Cushitic",
+    "path": [
+      "Afro-Asiatic",
+      "Cushitic"
+    ],
+    "reason": "Alaba covered by Alaba-K'abeena.",
+    "glottocode": "alab1254"
+  },
+  "Amondawa": {
+    "family": "Tupian",
+    "branch": "Eastern Tupian",
+    "path": [
+      "Tupian",
+      "Eastern Tupian"
+    ],
+    "reason": "Amondawa is a Tupi-Guarani label."
+  },
+  "Amurdag": {
+    "family": "Iwaidjan",
+    "branch": "Iwaidjan",
+    "path": [
+      "Iwaidjan",
+      "Iwaidjan"
+    ],
+    "reason": "Amurdag maps to Amurdak family direction."
+  },
+  "Angami": {
+    "family": "Sino-Tibetan",
+    "branch": "Kuki-Chin-Naga",
+    "path": [
+      "Sino-Tibetan",
+      "Kuki-Chin-Naga"
+    ],
+    "reason": "Angami covered by Angami-Mao.",
+    "glottocode": "anga1244"
+  },
+  "Anus": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "Anus covered by Anus-Podena.",
+    "glottocode": "anus1238"
+  },
+  "Birgid": {
+    "family": "Nilo-Saharan",
+    "branch": "Taman",
+    "path": [
+      "Nilo-Saharan",
+      "Taman"
+    ],
+    "reason": "Birgid historical label kept under Taman direction."
+  },
+  "Chinook": {
+    "family": "Chinookan",
+    "branch": "Chinookan",
+    "path": [
+      "Chinookan",
+      "Chinookan"
+    ],
+    "reason": "Chinook covered by local Chinookan candidate.",
+    "glottocode": "wasc1239"
+  },
+  "Chiquimulilla": {
+    "family": "Xincan",
+    "branch": "Xinca Shared Grammatical Traits",
+    "path": [
+      "Xincan",
+      "Xinca Shared Grammatical Traits"
+    ],
+    "reason": "Label variant of Xinca-Chiquimulilla.",
+    "glottocode": "xinc1242"
+  },
+  "Chocangaca": {
+    "family": "Sino-Tibetan",
+    "branch": "Bodic",
+    "path": [
+      "Sino-Tibetan",
+      "Bodic"
+    ],
+    "reason": "Chocangaca maps to Chocangacakha direction."
+  },
+  "Chuvan": {
+    "family": "Turkic",
+    "branch": "Common Turkic",
+    "path": [
+      "Turkic",
+      "Common Turkic"
+    ],
+    "reason": "Chuvan historical Turkic label."
+  },
+  "Cosoleacaque Nahuatl": {
+    "family": "Uto-Aztecan",
+    "branch": "Southern Uto-Aztecan",
+    "path": [
+      "Uto-Aztecan",
+      "Southern Uto-Aztecan"
+    ],
+    "reason": "Label variant of Isthmus-Cosoleacaque Nahuatl.",
+    "glottocode": "isth1240"
+  },
+  "Dukhan": {
+    "family": "Turkic",
+    "branch": "Common Turkic",
+    "path": [
+      "Turkic",
+      "Common Turkic"
+    ],
+    "reason": "Dukhan covered by Dukha.",
+    "glottocode": "dukh1234"
+  },
+  "Emerillon": {
+    "family": "Tupian",
+    "branch": "Eastern Tupian",
+    "path": [
+      "Tupian",
+      "Eastern Tupian"
+    ],
+    "reason": "Emerillon covered by Zoe-Emerillon.",
+    "glottocode": "zoee1241"
+  },
+  "Guanano": {
+    "family": "Tucanoan",
+    "branch": "Eastern Tucanoan",
+    "path": [
+      "Tucanoan",
+      "Eastern Tucanoan"
+    ],
+    "reason": "Guanano is an Eastern Tucanoan label."
+  },
+  "Inuktun": {
+    "family": "Eskimo-Aleut",
+    "branch": "Eskimo",
+    "path": [
+      "Eskimo-Aleut",
+      "Eskimo"
+    ],
+    "reason": "Inuktun is an Inuit language label."
+  },
+  "Inuvialuktun": {
+    "family": "Eskimo-Aleut",
+    "branch": "Eskimo",
+    "path": [
+      "Eskimo-Aleut",
+      "Eskimo"
+    ],
+    "reason": "Inuvialuktun is an Inuit language label."
+  },
+  "Kanamari": {
+    "family": "Katukinan",
+    "branch": "Katukína-Kanamarí",
+    "path": [
+      "Katukinan",
+      "Katukína-Kanamarí"
+    ],
+    "reason": "Kanamari covered by local Kanamari candidate.",
+    "glottocode": "cuti1242"
+  },
+  "Karbi": {
+    "family": "Sino-Tibetan",
+    "branch": "Kuki-Chin-Naga",
+    "path": [
+      "Sino-Tibetan",
+      "Kuki-Chin-Naga"
+    ],
+    "reason": "Karbi kept under Kuki-Chin-Naga without forcing Amri-specific glottocode."
+  },
+  "Kibena": {
+    "family": "Atlantic-Congo",
+    "branch": "Volta-Congo",
+    "path": [
+      "Atlantic-Congo",
+      "Volta-Congo"
+    ],
+    "reason": "Kibena is a Bantu label."
+  },
+  "Laalaa": {
+    "family": "Atlantic-Congo",
+    "branch": "North-Central Atlantic",
+    "path": [
+      "Atlantic-Congo",
+      "North-Central Atlantic"
+    ],
+    "reason": "Laalaa is a Cangin/Senegambian label."
+  },
+  "Makasae": {
+    "family": "Timor-Alor-Pantar",
+    "branch": "East Timor",
+    "path": [
+      "Timor-Alor-Pantar",
+      "East Timor"
+    ],
+    "reason": "Makasae covered by Makasae-Makalero.",
+    "glottocode": "maka1316"
+  },
+  "Malas": {
+    "family": "Nuclear Trans New Guinea",
+    "branch": "Finisterre-Huon",
+    "path": [
+      "Nuclear Trans New Guinea",
+      "Finisterre-Huon"
+    ],
+    "reason": "Malas PNG label kept under Finisterre-Huon direction."
+  },
+  "Masaba": {
+    "family": "Atlantic-Congo",
+    "branch": "Volta-Congo",
+    "path": [
+      "Atlantic-Congo",
+      "Volta-Congo"
+    ],
+    "reason": "Spelling variant of Masaaba.",
+    "glottocode": "masa1299"
+  },
+  "Mfumte": {
+    "family": "Atlantic-Congo",
+    "branch": "Volta-Congo",
+    "path": [
+      "Atlantic-Congo",
+      "Volta-Congo"
+    ],
+    "reason": "Mfumte covered by Central Mfumte.",
+    "glottocode": "cent2312"
+  },
+  "Mountain Koiari": {
+    "family": "Koiarian",
+    "branch": "Koiaric",
+    "path": [
+      "Koiarian",
+      "Koiaric"
+    ],
+    "reason": "Label variant of Mountain Koiali.",
+    "glottocode": "moun1252"
+  },
+  "Ngadha": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "Spelling variant of Ngada.",
+    "glottocode": "ngad1267"
+  },
+  "Nuguria": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "Nuguria maps to Nukuria Polynesian direction."
+  },
+  "Paite": {
+    "family": "Sino-Tibetan",
+    "branch": "Kuki-Chin-Naga",
+    "path": [
+      "Sino-Tibetan",
+      "Kuki-Chin-Naga"
+    ],
+    "reason": "Paite covered by Paite Chin.",
+    "glottocode": "pait1244"
+  },
+  "Pareci": {
+    "family": "Arawakan",
+    "branch": "Central-Eastern Maipuran",
+    "path": [
+      "Arawakan",
+      "Central-Eastern Maipuran"
+    ],
+    "reason": "Spelling variant of Parecis.",
+    "glottocode": "pare1272"
+  },
+  "Proto-Benue-Congo": {
+    "family": "Atlantic-Congo",
+    "branch": "Volta-Congo",
+    "path": [
+      "Atlantic-Congo",
+      "Volta-Congo"
+    ],
+    "reason": "Proto-family display label."
+  },
+  "Proto-Central Naga": {
+    "family": "Sino-Tibetan",
+    "branch": "Kuki-Chin-Naga",
+    "path": [
+      "Sino-Tibetan",
+      "Kuki-Chin-Naga"
+    ],
+    "reason": "Proto-family display label."
+  },
+  "Proto-Eastern Polynesian": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "Proto-family display label."
+  },
+  "Proto-Highland East Cushitic": {
+    "family": "Afro-Asiatic",
+    "branch": "Cushitic",
+    "path": [
+      "Afro-Asiatic",
+      "Cushitic"
+    ],
+    "reason": "Proto-family display label."
+  },
+  "Proto-Pama-Nyungan": {
+    "family": "Pama-Nyungan",
+    "branch": "Pama-Nyungan",
+    "path": [
+      "Pama-Nyungan",
+      "Pama-Nyungan"
+    ],
+    "reason": "Proto-family display label."
+  },
+  "Proto-South Cushitic": {
+    "family": "Afro-Asiatic",
+    "branch": "Cushitic",
+    "path": [
+      "Afro-Asiatic",
+      "Cushitic"
+    ],
+    "reason": "Proto-family display label."
+  },
+  "Rennellese": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "path": [
+      "Austronesian",
+      "Malayo-Polynesian"
+    ],
+    "reason": "Rennellese is a Polynesian label."
+  },
+  "Sipakapense": {
+    "family": "Mayan",
+    "branch": "Core Mayan",
+    "path": [
+      "Mayan",
+      "Core Mayan"
+    ],
+    "reason": "Spelling variant of Sipacapense.",
+    "glottocode": "sipa1247"
+  },
+  "Southern Kissi": {
+    "family": "Atlantic-Congo",
+    "branch": "Mel",
+    "path": [
+      "Atlantic-Congo",
+      "Mel"
+    ],
+    "reason": "Kissi variety kept under Mel."
+  },
+  "Wanham": {
+    "family": "Chapacuran",
+    "branch": "Moreic-Waric",
+    "path": [
+      "Chapacuran",
+      "Moreic-Waric"
+    ],
+    "reason": "Wanham covered by local candidate.",
+    "glottocode": "wanh1234"
+  },
+  "Wobé": {
+    "family": "Kru",
+    "branch": "Greater Western Kru",
+    "path": [
+      "Kru",
+      "Greater Western Kru"
+    ],
+    "reason": "Wobe covered by local Wobe-We Northern candidate.",
+    "glottocode": "weno1238"
+  },
+  "Yakima": {
+    "family": "Sahaptian",
+    "branch": "Sahaptin",
+    "path": [
+      "Sahaptian",
+      "Sahaptin"
+    ],
+    "reason": "Yakima covered by Nuclear Yakima.",
+    "glottocode": "nucl1237"
   }
 }

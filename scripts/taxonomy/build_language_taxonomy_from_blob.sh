@@ -9,6 +9,9 @@ RUN_ID=""
 USE_LATEST=true
 WORK_ROOT="data/processed"
 GLOTTOLOG_VERSION="5.3"
+AUTO_THRESHOLD="0.96"
+REVIEW_THRESHOLD="0.75"
+STREAM_REVIEWS=false
 UPLOAD=false
 
 usage() {
@@ -28,6 +31,14 @@ Optional:
       Defaults to 5.3.
   --upload
       Upload taxonomy artifacts back to processed/<run_id>/.
+  --auto-threshold FLOAT
+      Fuzzy match score required for automatic selectable matches.
+      Defaults to 0.96.
+  --review-threshold FLOAT
+      Fuzzy match score required to emit a non-selectable review candidate.
+      Defaults to 0.75.
+  --stream-reviews
+      Print JSONL review/unmatched candidates while matching.
 EOF
 }
 
@@ -53,6 +64,18 @@ while [ "$#" -gt 0 ]; do
     --glottolog-version)
       GLOTTOLOG_VERSION="$2"
       shift 2
+      ;;
+    --auto-threshold)
+      AUTO_THRESHOLD="$2"
+      shift 2
+      ;;
+    --review-threshold)
+      REVIEW_THRESHOLD="$2"
+      shift 2
+      ;;
+    --stream-reviews)
+      STREAM_REVIEWS=true
+      shift
       ;;
     --upload)
       UPLOAD=true
@@ -128,10 +151,19 @@ then
     --upload
 fi
 
-scripts/taxonomy/build_language_taxonomy.sh \
+BUILD_ARGS=(
   --serving-metadata "$SERVING_METADATA" \
   --output-dir "$RUN_DIR" \
-  --glottolog-version "$GLOTTOLOG_VERSION"
+  --glottolog-version "$GLOTTOLOG_VERSION" \
+  --auto-threshold "$AUTO_THRESHOLD" \
+  --review-threshold "$REVIEW_THRESHOLD"
+)
+
+if [ "$STREAM_REVIEWS" = true ]; then
+  BUILD_ARGS+=(--stream-reviews)
+fi
+
+scripts/taxonomy/build_language_taxonomy.sh "${BUILD_ARGS[@]}"
 
 if [ "$UPLOAD" = true ]; then
   echo "=== Uploading Taxonomy Artifacts ==="
