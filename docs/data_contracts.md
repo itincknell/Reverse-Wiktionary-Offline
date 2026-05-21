@@ -275,48 +275,6 @@ Each enriched language record includes:
 - `candidate_name` and `glottocode`: Source Glottolog candidate details when
   available.
 
-`language_taxonomy_unmatched.json` contains both truly unmatched labels and
-`fuzzy_review` labels. These are intentionally non-selectable until a future
-matcher or override pass promotes them.
-
-`language_taxonomy_report.json` contains build counts, method counts, top
-families, and top unmatched/review labels. It is the first artifact to inspect
-before shipping a taxonomy refresh.
-
-Taxonomy matching defaults:
-
-```text
-auto threshold: 0.96
-review threshold: 0.75
-```
-
-Contact-language policy: `Pidgin` is a top-level taxonomy family when Glottolog
-or an override classifies the language that way. Do not automatically move
-pidgins or creoles into a lexifier/source-language family during artifact
-generation.
-
-Glottolog paths may contain arbitrary-depth family/group ancestors. The taxonomy
-builder reduces those paths to stable display buckets:
-
-```text
-Family = Glottolog root family or isolate bucket
-Branch = curated display branch, with second-ancestor fallback
-Language = Wiktionary language label
-```
-
-Unmatched, unclassifiable, artificial, bookkeeping, speech-register, and other
-non-language labels are retained in the flat records but excluded from the
-tree. Strict line-shaped families with one branch and one language are also
-pruned from the visible tree. These pruned languages remain in the flat language
-records.
-
-`language_taxonomy_unmatched.json` stores high-priority unmatched and
-review-needed labels, sorted by row count. `language_taxonomy_report.json`
-stores aggregate match counts, top families, and the top unmatched candidates.
-
-The override map is the audit trail for Wiktionary labels with reviewed
-taxonomy assignments, including pseudo-language labels such as `Translingual`.
-
 ## Embedding Manifest
 
 Producer: `src/embeddings/generate_embeddings.py`

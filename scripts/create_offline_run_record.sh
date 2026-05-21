@@ -117,7 +117,7 @@ duration() {
     return
   fi
 
-  python - "$started" "$finished" <<'PY'
+  python3 - "$started" "$finished" <<'PY'
 from __future__ import annotations
 
 import datetime as dt

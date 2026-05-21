@@ -13,7 +13,7 @@ from typing import Any
 
 
 DEFAULT_RUN_ROOT = Path("data/taxonomy_review/current")
-DEFAULT_CONFIG = "review080"
+DEFAULT_CONFIG = "review075"
 DEFAULT_LEDGER = Path("data/taxonomy_review/override_review_ledger.csv")
 DEFAULT_OUTPUT_DIR = DEFAULT_RUN_ROOT / "override_prep"
 HIGH_ROW_RESEARCH_THRESHOLD = 25

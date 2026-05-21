@@ -1,0 +1,819 @@
+{
+  "run_id": "20260518T195432Z",
+  "stage": "embedding",
+  "created_at_utc": "2026-05-18T19:54:48.708519+00:00",
+  "schema_version": "v2",
+  "processed_run_id": "20260518T191021Z",
+  "processed_dir": "/opt/reverse-wiktionary/data/processed/20260518T191021Z",
+  "output_dir": "data/embeddings/20260518T195432Z",
+  "model": {
+    "name": "sentence-transformers/distiluse-base-multilingual-cased-v2",
+    "vector_size": 512
+  },
+  "qdrant": {
+    "url": "http://localhost:6333",
+    "collection_name": "reverse_wiktionary_v2",
+    "vectors_on_disk": true,
+    "on_disk_payload": true
+  },
+  "config": {
+    "batch_size": 128,
+    "queue_size": 4,
+    "point_id_shard_size": 50000,
+    "distance": "Cosine",
+    "recreate_collection": true,
+    "normalized_embeddings": true,
+    "expected_vector_size": 512
+  },
+  "metrics": {
+    "rows_embedded": 3869247,
+    "batches_completed": 30258,
+    "shards_completed": 78
+  },
+  "shards": [
+    {
+      "shard_id": 0,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00000.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T19:57:57.359459+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00000.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00000.json"
+    },
+    {
+      "shard_id": 1,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00001.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T20:01:30.168082+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00001.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00001.json"
+    },
+    {
+      "shard_id": 2,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00002.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T20:05:02.230624+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00002.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00002.json"
+    },
+    {
+      "shard_id": 3,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00003.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T20:08:32.901065+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00003.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00003.json"
+    },
+    {
+      "shard_id": 4,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00004.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T20:11:52.509235+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00004.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00004.json"
+    },
+    {
+      "shard_id": 5,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00005.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T20:15:04.678648+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00005.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00005.json"
+    },
+    {
+      "shard_id": 6,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00006.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T20:18:11.465399+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00006.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00006.json"
+    },
+    {
+      "shard_id": 7,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00007.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T20:21:24.475844+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00007.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00007.json"
+    },
+    {
+      "shard_id": 8,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00008.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T20:24:27.337155+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00008.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00008.json"
+    },
+    {
+      "shard_id": 9,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00009.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T20:27:17.075939+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00009.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00009.json"
+    },
+    {
+      "shard_id": 10,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00010.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T20:30:05.584131+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00010.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00010.json"
+    },
+    {
+      "shard_id": 11,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00011.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T20:32:48.907809+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00011.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00011.json"
+    },
+    {
+      "shard_id": 12,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00012.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T20:35:40.665479+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00012.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00012.json"
+    },
+    {
+      "shard_id": 13,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00013.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T20:38:23.429952+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00013.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00013.json"
+    },
+    {
+      "shard_id": 14,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00014.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T20:41:07.043720+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00014.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00014.json"
+    },
+    {
+      "shard_id": 15,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00015.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T20:43:47.812787+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00015.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00015.json"
+    },
+    {
+      "shard_id": 16,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00016.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T20:46:25.761252+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00016.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00016.json"
+    },
+    {
+      "shard_id": 17,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00017.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T20:49:04.114907+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00017.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00017.json"
+    },
+    {
+      "shard_id": 18,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00018.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T20:51:44.558268+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00018.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00018.json"
+    },
+    {
+      "shard_id": 19,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00019.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T20:54:26.542126+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00019.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00019.json"
+    },
+    {
+      "shard_id": 20,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00020.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T20:56:55.455797+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00020.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00020.json"
+    },
+    {
+      "shard_id": 21,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00021.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T20:59:29.230347+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00021.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00021.json"
+    },
+    {
+      "shard_id": 22,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00022.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T21:02:08.306840+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00022.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00022.json"
+    },
+    {
+      "shard_id": 23,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00023.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T21:04:36.898421+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00023.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00023.json"
+    },
+    {
+      "shard_id": 24,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00024.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T21:07:11.215851+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00024.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00024.json"
+    },
+    {
+      "shard_id": 25,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00025.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T21:09:47.677030+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00025.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00025.json"
+    },
+    {
+      "shard_id": 26,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00026.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T21:12:14.125798+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00026.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00026.json"
+    },
+    {
+      "shard_id": 27,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00027.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T21:14:48.756531+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00027.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00027.json"
+    },
+    {
+      "shard_id": 28,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00028.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T21:17:35.003215+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00028.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00028.json"
+    },
+    {
+      "shard_id": 29,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00029.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T21:20:05.857710+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00029.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00029.json"
+    },
+    {
+      "shard_id": 30,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00030.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T21:22:39.671144+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00030.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00030.json"
+    },
+    {
+      "shard_id": 31,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00031.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T21:25:08.928609+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00031.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00031.json"
+    },
+    {
+      "shard_id": 32,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00032.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T21:27:37.770493+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00032.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00032.json"
+    },
+    {
+      "shard_id": 33,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00033.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T21:30:08.981433+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00033.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00033.json"
+    },
+    {
+      "shard_id": 34,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00034.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T21:32:40.111736+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00034.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00034.json"
+    },
+    {
+      "shard_id": 35,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00035.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T21:35:17.457686+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00035.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00035.json"
+    },
+    {
+      "shard_id": 36,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00036.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T21:37:48.777058+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00036.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00036.json"
+    },
+    {
+      "shard_id": 37,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00037.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T21:40:21.418953+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00037.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00037.json"
+    },
+    {
+      "shard_id": 38,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00038.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T21:42:56.231956+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00038.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00038.json"
+    },
+    {
+      "shard_id": 39,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00039.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T21:45:53.002421+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00039.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00039.json"
+    },
+    {
+      "shard_id": 40,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00040.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T21:48:44.469110+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00040.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00040.json"
+    },
+    {
+      "shard_id": 41,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00041.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T21:51:04.731217+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00041.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00041.json"
+    },
+    {
+      "shard_id": 42,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00042.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T21:53:28.189720+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00042.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00042.json"
+    },
+    {
+      "shard_id": 43,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00043.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T21:56:08.277820+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00043.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00043.json"
+    },
+    {
+      "shard_id": 44,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00044.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T21:58:39.790123+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00044.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00044.json"
+    },
+    {
+      "shard_id": 45,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00045.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T22:01:11.893238+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00045.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00045.json"
+    },
+    {
+      "shard_id": 46,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00046.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T22:03:37.272738+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00046.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00046.json"
+    },
+    {
+      "shard_id": 47,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00047.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T22:06:11.513130+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00047.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00047.json"
+    },
+    {
+      "shard_id": 48,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00048.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T22:08:44.861147+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00048.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00048.json"
+    },
+    {
+      "shard_id": 49,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00049.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T22:11:24.118829+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00049.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00049.json"
+    },
+    {
+      "shard_id": 50,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00050.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T22:14:22.189535+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00050.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00050.json"
+    },
+    {
+      "shard_id": 51,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00051.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T22:16:51.180511+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00051.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00051.json"
+    },
+    {
+      "shard_id": 52,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00052.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T22:19:18.734457+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00052.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00052.json"
+    },
+    {
+      "shard_id": 53,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00053.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T22:21:48.154058+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00053.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00053.json"
+    },
+    {
+      "shard_id": 54,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00054.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T22:24:08.592597+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00054.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00054.json"
+    },
+    {
+      "shard_id": 55,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00055.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T22:26:42.024213+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00055.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00055.json"
+    },
+    {
+      "shard_id": 56,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00056.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T22:29:14.421017+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00056.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00056.json"
+    },
+    {
+      "shard_id": 57,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00057.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T22:31:33.720315+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00057.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00057.json"
+    },
+    {
+      "shard_id": 58,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00058.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T22:34:00.439406+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00058.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00058.json"
+    },
+    {
+      "shard_id": 59,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00059.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T22:36:29.756416+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00059.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00059.json"
+    },
+    {
+      "shard_id": 60,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00060.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T22:38:57.779049+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00060.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00060.json"
+    },
+    {
+      "shard_id": 61,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00061.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T22:41:24.516717+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00061.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00061.json"
+    },
+    {
+      "shard_id": 62,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00062.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T22:43:47.001335+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00062.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00062.json"
+    },
+    {
+      "shard_id": 63,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00063.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T22:46:15.256937+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00063.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00063.json"
+    },
+    {
+      "shard_id": 64,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00064.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T22:48:47.859449+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00064.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00064.json"
+    },
+    {
+      "shard_id": 65,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00065.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T22:51:16.917349+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00065.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00065.json"
+    },
+    {
+      "shard_id": 66,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00066.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T22:53:42.471205+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00066.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00066.json"
+    },
+    {
+      "shard_id": 67,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00067.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T22:56:22.026645+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00067.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00067.json"
+    },
+    {
+      "shard_id": 68,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00068.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T22:59:02.367255+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00068.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00068.json"
+    },
+    {
+      "shard_id": 69,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00069.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T23:01:40.231316+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00069.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00069.json"
+    },
+    {
+      "shard_id": 70,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00070.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T23:04:09.477196+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00070.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00070.json"
+    },
+    {
+      "shard_id": 71,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00071.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T23:06:38.522407+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00071.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00071.json"
+    },
+    {
+      "shard_id": 72,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00072.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T23:09:08.618826+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00072.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00072.json"
+    },
+    {
+      "shard_id": 73,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00073.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T23:11:38.406222+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00073.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00073.json"
+    },
+    {
+      "shard_id": 74,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00074.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T23:14:09.081530+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00074.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00074.json"
+    },
+    {
+      "shard_id": 75,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00075.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T23:16:48.198860+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00075.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00075.json"
+    },
+    {
+      "shard_id": 76,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00076.jsonl",
+      "status": "complete",
+      "rows": 50000,
+      "batches": 391,
+      "completed_at_utc": "2026-05-18T23:19:20.245106+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00076.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00076.json"
+    },
+    {
+      "shard_id": 77,
+      "path": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/shard_00077.jsonl",
+      "status": "complete",
+      "rows": 19247,
+      "batches": 151,
+      "completed_at_utc": "2026-05-18T23:20:23.654202+00:00",
+      "vector_artifact_path": "data/embeddings/20260518T195432Z/vectors/shard_00077.npz",
+      "vector_metadata_path": "data/embeddings/20260518T195432Z/vectors/shard_00077.json"
+    }
+  ],
+  "inputs": {
+    "processed_manifest": "/opt/reverse-wiktionary/data/processed/20260518T191021Z/manifest.json",
+    "processed_manifest_found": true
+  }
+}

@@ -7,7 +7,7 @@ EMBEDDINGS_ROOT="data/embeddings"
 QDRANT_URL="${QDRANT_URL:-http://localhost:6333}"
 
 COLLECTION_NAME="reverse_wiktionary_test"
-MODEL_NAME="sentence-transformers/all-MiniLM-L6-v2"
+MODEL_NAME="sentence-transformers/distiluse-base-multilingual-cased-v2"
 
 RUN_ID="$(date -u +%Y%m%dT%H%M%SZ)"
 BATCH_SIZE=32
@@ -32,7 +32,7 @@ curl -fsS "$QDRANT_URL/healthz" || {
   echo
   echo "Qdrant is not reachable at $QDRANT_URL"
   echo "Start it with something like:"
-  echo "docker run -d --name qdrant -p 6333:6333 -v \"\$(pwd)/qdrant_storage:/qdrant/storage\" qdrant/qdrant"
+  echo "./scripts/start_qdrant.sh"
   exit 1
 }
 

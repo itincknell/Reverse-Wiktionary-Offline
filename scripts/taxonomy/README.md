@@ -5,6 +5,10 @@ audit reports. They are deliberately separate from the core embedding path:
 embeddings and Qdrant indexing only require processed shards, while downstream
 consumers can use the taxonomy artifacts when they are available.
 
+This directory is the operator/runbook layer. For package responsibilities,
+matcher policy, and override-source notes, see
+[src/taxonomy/README.md](../../src/taxonomy/README.md).
+
 ## Build Inputs
 
 ```text
@@ -83,7 +87,7 @@ minimize both false positives and false negatives before changing overrides.
    ```bash
    scripts/taxonomy/prepare_taxonomy_override_review.py \
      --run-root data/taxonomy_review/<review_run_id> \
-     --config review080
+     --config review075
    ```
 
 3. Inspect high-row review/unmatched cases first, then update the ledger only
