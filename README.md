@@ -40,6 +40,7 @@ indexes/latest.json
 ```
 
 Run-specific details live in [offline run records](runs/offline_embedding/).
+Snapshot validation notes live in [web serving run records](runs/web_serving/).
 
 ## Documentation
 
