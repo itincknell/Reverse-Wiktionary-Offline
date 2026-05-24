@@ -133,7 +133,7 @@ Consumers:
 - `src/embeddings/generate_embeddings.py`
 - `src/embeddings/utils/shard_reader.py`
 
-Current row schema: `v5`
+Current row schema: `v6`
 
 Each line in `shard_*.jsonl` is one JSON object.
 
@@ -148,6 +148,11 @@ Required fields:
 Optional fields:
 
 - `expansion`: Display text from Wiktionary head templates when available.
+- `ipa`: First non-empty IPA string encountered in raw `sounds[]` list order.
+- `audio_ogg_url`: First non-empty OGG audio URL encountered in raw `sounds[]`
+  list order.
+- `audio_mp3_url`: First non-empty MP3 audio URL encountered in raw `sounds[]`
+  list order.
 
 Compatibility:
 
@@ -155,6 +160,8 @@ Compatibility:
 - Producers bump `SCHEMA_VERSION` before removing or renaming fields.
 - `embedding_text` is the model input contract; presentation fields are stored
   separately.
+- Pronunciation fields are display metadata. They are selected greedily from the
+  raw Wiktextract `sounds[]` array and are not included in `embedding_text`.
 
 Wiktionary result links are computed by serving clients from existing payload
 fields. The offline collection does not store full URLs or URL-safe title

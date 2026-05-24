@@ -30,7 +30,7 @@ from src.common.manifest import write_manifest
 from src.common.run_id import utc_now_iso, utc_run_id
 
 
-SCHEMA_VERSION = "v5"
+SCHEMA_VERSION = "v6"
 SERVING_METADATA_SCHEMA_VERSION = "v1"
 
 
@@ -94,6 +94,45 @@ def clean_glosses(glosses: list[Any]) -> list[str]:
     return cleaned
 
 
+def extract_pronunciation_fields(sounds: Any) -> dict[str, str]:
+    """
+    Extract first-seen pronunciation display fields from raw Wiktextract sounds.
+    """
+    fields: dict[str, str] = {}
+
+    if not isinstance(sounds, list):
+        return fields
+
+    for sound in sounds:
+        if not isinstance(sound, dict):
+            continue
+
+        ipa = sound.get("ipa")
+        if "ipa" not in fields and isinstance(ipa, str) and ipa.strip():
+            fields["ipa"] = clean_text(ipa)
+
+        ogg_url = sound.get("ogg_url")
+        if (
+            "audio_ogg_url" not in fields
+            and isinstance(ogg_url, str)
+            and ogg_url.strip()
+        ):
+            fields["audio_ogg_url"] = clean_text(ogg_url)
+
+        mp3_url = sound.get("mp3_url")
+        if (
+            "audio_mp3_url" not in fields
+            and isinstance(mp3_url, str)
+            and mp3_url.strip()
+        ):
+            fields["audio_mp3_url"] = clean_text(mp3_url)
+
+        if len(fields) == 3:
+            break
+
+    return fields
+
+
 def make_grouped_row(
     *,
     lang: str,
@@ -101,6 +140,7 @@ def make_grouped_row(
     pos: str,
     glosses: list[Any],
     head_templates: Any = None,
+    pronunciation_fields: dict[str, str] | None = None,
 ) -> dict[str, Any] | None:
     """
     Construct one normalized row for a single language/word/POS group.
@@ -132,6 +172,9 @@ def make_grouped_row(
             if expansion is not None:
                 row["expansion"] = expansion
 
+    if pronunciation_fields:
+        row.update(pronunciation_fields)
+
     return row
 
 
@@ -153,6 +196,7 @@ def normalize_record(record: dict[str, Any]) -> list[dict[str, Any]]:
     pos = record.get("pos")
     senses = record.get("senses", [])
     head_templates = record.get("head_templates")
+    pronunciation_fields = extract_pronunciation_fields(record.get("sounds"))
 
     if not isinstance(lang, str) or not lang.strip():
         return []
@@ -197,6 +241,7 @@ def normalize_record(record: dict[str, Any]) -> list[dict[str, Any]]:
         pos=pos,
         glosses=all_glosses,
         head_templates=head_templates,
+        pronunciation_fields=pronunciation_fields,
     )
 
     if row is None:

@@ -71,7 +71,7 @@ usable semantic glosses. The row unit is:
 language + word + part of speech + aggregated semantic glosses
 ```
 
-Current processed row schema: `v5`
+Current processed row schema: `v6`
 
 Required fields:
 
@@ -87,11 +87,18 @@ Optional fields:
 
 ```text
 expansion
+ipa
+audio_ogg_url
+audio_mp3_url
 ```
 
 `embedding_text` is the joined gloss text. It does not include the word,
 language, or part of speech. Those fields are stored as metadata and used for
 display/filtering.
+
+Pronunciation display fields are selected greedily from the raw Wiktextract
+`sounds[]` array. The parser keeps the first non-empty IPA string, OGG URL, and
+MP3 URL encountered in list order. These fields are not embedded.
 
 Wiktionary result links are derived by the serving layer from `word` and `lang`.
 The offline artifact does not store full URLs or duplicate URL components that
@@ -176,6 +183,9 @@ word
 pos
 glosses
 expansion
+ipa
+audio_ogg_url
+audio_mp3_url
 ```
 
 Downstream query systems commonly filter on `lang` and `pos`. The offline

@@ -176,6 +176,10 @@ class QdrantWriter:
         if "expansion" in row:
             payload["expansion"] = row["expansion"]
 
+        for key in ("ipa", "audio_ogg_url", "audio_mp3_url"):
+            if key in row:
+                payload[key] = row[key]
+
         return payload
 
     def upsert_batch(self, source_rows: list[SourceRow], vectors: np.ndarray) -> None:
