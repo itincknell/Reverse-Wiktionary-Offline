@@ -165,6 +165,15 @@
     "branch": "Circassian",
     "reason": "Wiktionary East Circassian kept with Circassian pending finer Adyghe/Kabardian split."
   },
+  "Edo": {
+    "family": "Atlantic-Congo",
+    "branch": "Volta-Congo",
+    "path": [
+      "Atlantic-Congo",
+      "Volta-Congo"
+    ],
+    "reason": "Wiktionary Edo is the Nigerian Edo language; keep it with Volta-Congo rather than unrelated Edo historical/place senses."
+  },
   "Emilian": {
     "glottocode": "emil1241",
     "branch": "Italic / Romance",
