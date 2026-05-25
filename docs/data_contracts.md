@@ -29,6 +29,9 @@ data/embeddings/<run_id>/
     shard_00000.json
 data/embeddings/latest -> <run_id>
 
+data/splices/<run_id>/
+  manifest.json
+
 data/indexes/<run_id>/
 ```
 
@@ -54,6 +57,9 @@ embeddings/<run_id>/
   vectors/
     shard_00000.npz
     shard_00000.json
+
+splices/<run_id>/
+  manifest.json
 
 code/<run_id>/
 
@@ -333,6 +339,8 @@ those filenames into the embedding run's Blob vector prefix.
 ## Splice Manifest
 
 Producer: `src/embeddings/splice_embeddings.py`
+
+Current schema: `v1`
 
 Path:
 

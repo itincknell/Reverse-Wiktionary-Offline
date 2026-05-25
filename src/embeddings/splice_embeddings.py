@@ -29,7 +29,7 @@ from src.embeddings.utils.shard_reader import (
 )
 
 
-SCHEMA_VERSION = "v1"
+SPLICE_MANIFEST_SCHEMA_VERSION = "v1"
 DEFAULT_COLLECTION_NAME = "reverse_wiktionary_v5"
 DEFAULT_POINT_ID_SHARD_SIZE = 50_000
 
@@ -195,7 +195,7 @@ def splice_embeddings(
     manifest = base_manifest(
         run_id=run_id,
         stage="embedding_splice",
-        schema_version=SCHEMA_VERSION,
+        schema_version=SPLICE_MANIFEST_SCHEMA_VERSION,
         inputs={
             "processed_dir": str(processed_dir),
             "processed_manifest": str(processed_manifest_path),

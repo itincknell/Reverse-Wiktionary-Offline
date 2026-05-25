@@ -46,8 +46,8 @@ from src.embeddings.utils.shard_reader import (
 )
 
 
-DEFAULT_MODEL_NAME = "sentence-transformers/distiluse-base-multilingual-cased-v2"
-DEFAULT_COLLECTION_NAME = "reverse_wiktionary_v2"
+DEFAULT_MODEL_NAME = "sentence-transformers/all-mpnet-base-v2"
+DEFAULT_COLLECTION_NAME = "reverse_wiktionary_v5"
 DEFAULT_BATCH_SIZE = 128
 DEFAULT_QUEUE_SIZE = 4
 DEFAULT_POINT_ID_SHARD_SIZE = 50_000

@@ -7,7 +7,7 @@ EMBEDDINGS_ROOT="data/embeddings"
 QDRANT_URL="${QDRANT_URL:-http://localhost:6333}"
 
 COLLECTION_NAME="reverse_wiktionary_test"
-MODEL_NAME="sentence-transformers/distiluse-base-multilingual-cased-v2"
+MODEL_NAME="sentence-transformers/all-mpnet-base-v2"
 
 RUN_ID="$(date -u +%Y%m%dT%H%M%SZ)"
 BATCH_SIZE=32

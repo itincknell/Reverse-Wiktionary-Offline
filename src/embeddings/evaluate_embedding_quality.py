@@ -30,8 +30,8 @@ from src.common.run_id import utc_now_iso
 from src.embeddings.utils.embedding_model import EmbeddingModel, EmbeddingModelConfig
 
 
-DEFAULT_MODEL_NAME = "sentence-transformers/distiluse-base-multilingual-cased-v2"
-DEFAULT_COLLECTION_NAME = "reverse_wiktionary_v2"
+DEFAULT_MODEL_NAME = "sentence-transformers/all-mpnet-base-v2"
+DEFAULT_COLLECTION_NAME = "reverse_wiktionary_v5"
 
 
 @dataclass(frozen=True)

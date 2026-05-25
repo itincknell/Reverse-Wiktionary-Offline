@@ -4,7 +4,7 @@ set -euo pipefail
 
 QDRANT_URL="${QDRANT_URL:-http://localhost:6333}"
 COLLECTION_NAME="${COLLECTION_NAME:-reverse_wiktionary_test}"
-MODEL_NAME="${MODEL_NAME:-sentence-transformers/distiluse-base-multilingual-cased-v2}"
+MODEL_NAME="${MODEL_NAME:-sentence-transformers/all-mpnet-base-v2}"
 OUTPUT="data/embeddings/quality_report.json"
 
 echo "=== Qdrant Health Check ==="

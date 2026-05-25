@@ -8,9 +8,9 @@ VM_NAME=""
 STORAGE_ACCOUNT=""
 CONTAINER=""
 PROCESSED_RUN_ID="latest"
-COLLECTION_NAME="reverse_wiktionary_v2"
-MODEL_NAME="sentence-transformers/distiluse-base-multilingual-cased-v2"
-EXPECTED_VECTOR_SIZE="512"
+COLLECTION_NAME="reverse_wiktionary_v5"
+MODEL_NAME="sentence-transformers/all-mpnet-base-v2"
+EXPECTED_VECTOR_SIZE="768"
 VM_REPO_DIR="/opt/reverse-wiktionary"
 JOB_RUN_ID="$(date -u +%Y%m%dT%H%M%SZ)"
 CODE_ARCHIVE_BLOB="code/$JOB_RUN_ID/repo.tar.gz"
@@ -35,11 +35,11 @@ Optional:
   --processed-run-id RUN_ID
       Defaults to latest.
   --collection-name NAME
-      Defaults to reverse_wiktionary_v2.
+      Defaults to reverse_wiktionary_v5.
   --model-name NAME
-      Defaults to sentence-transformers/distiluse-base-multilingual-cased-v2.
+      Defaults to sentence-transformers/all-mpnet-base-v2.
   --expected-vector-size N
-      Expected embedding dimension. Defaults to 512.
+      Expected embedding dimension. Defaults to 768.
   --vm-repo-dir PATH
       Defaults to /opt/reverse-wiktionary.
   --prepare-processed-if-missing

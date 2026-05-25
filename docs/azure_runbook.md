@@ -18,8 +18,9 @@ ADMIN_USER="azureuser"
 ```
 
 ```bash
-PRODUCT_COLLECTION="reverse_wiktionary_v2"
-PRODUCT_MODEL="sentence-transformers/distiluse-base-multilingual-cased-v2"
+PRODUCT_COLLECTION="reverse_wiktionary_v5"
+PRODUCT_MODEL="sentence-transformers/all-mpnet-base-v2"
+PRODUCT_VECTOR_SIZE="768"
 ```
 
 ## Providers
@@ -230,6 +231,7 @@ az vm run-command invoke \
   --container "$CONTAINER" \
   --collection-name "$PRODUCT_COLLECTION" \
   --model-name "$PRODUCT_MODEL" \
+  --expected-vector-size "$PRODUCT_VECTOR_SIZE" \
   --prepare-processed-from-raw
 ```
 

@@ -34,6 +34,13 @@ processed/<run_id>/
 processed/<run_id>/serving_metadata.json
 processed/latest.json
 
+embeddings/<run_id>/
+embeddings/<run_id>/manifest.json
+embeddings/<run_id>/vectors/
+
+splices/<run_id>/
+splices/<run_id>/manifest.json
+
 code/<cloud_run_id>/
 
 logs/<cloud_run_id>/
@@ -147,9 +154,9 @@ processed shards
 The production index uses:
 
 ```text
-collection: reverse_wiktionary_v2
-model: sentence-transformers/distiluse-base-multilingual-cased-v2
-vector_size: 512
+collection: reverse_wiktionary_v5
+model: sentence-transformers/all-mpnet-base-v2
+vector_size: 768
 batch_size: 128
 queue_size: 4
 distance: cosine
@@ -230,7 +237,7 @@ One Qdrant collection stores all normalized rows.
 Vector configuration:
 
 ```text
-dimension: 512
+dimension: 768
 distance: cosine
 ```
 
