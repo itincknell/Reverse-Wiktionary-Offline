@@ -293,6 +293,8 @@ Path:
 ```text
 data/embeddings/<run_id>/manifest.json
 embeddings/<run_id>/manifest.json
+data/embeddings/<run_id>/vectors/shard_00000.npz
+embeddings/<run_id>/vectors/shard_00000.npz
 ```
 
 Important fields:
@@ -322,6 +324,41 @@ text.
 Resume behavior depends on the manifest's completed shard list and the vector
 artifact directory. When changing model, processed input, collection, or point
 ID stride, use a new embedding run.
+
+Full embedding jobs upload vector shard artifacts under
+`embeddings/<run_id>/vectors/`. The manifest may record local paths under
+`data/embeddings/<run_id>/vectors/`; consumers that need Blob paths should map
+those filenames into the embedding run's Blob vector prefix.
+
+## Splice Manifest
+
+Producer: `src/embeddings/splice_embeddings.py`
+
+Path:
+
+```text
+data/splices/<run_id>/manifest.json
+splices/<run_id>/manifest.json
+```
+
+Important fields:
+
+- `run_id`: Splice/index run identifier.
+- `stage`: `embedding_splice`.
+- `inputs.processed_dir`: New processed run used for payload fields.
+- `inputs.vector_dir`: Existing vector shard directory used for vectors.
+- `config.collection_name`: Qdrant collection rebuilt by the splice.
+- `config.point_id_shard_size`: Deterministic point ID stride.
+- `config.vector_size`: Saved vector dimension.
+- `metrics.rows_upserted`: Rows written into Qdrant.
+- `metrics.shards_completed`: Number of processed/vector shards spliced.
+- `shards`: Per-shard records linking processed shard paths to vector artifact
+  and sidecar paths.
+
+Splice runs are valid only when the new processed rows align with saved vector
+artifacts by shard, row count, source row index, and deterministic point ID.
+They update Qdrant payloads and reuse existing vectors; they do not create or
+upload new embedding vector shards.
 
 ## Qdrant Snapshot Manifest
 
@@ -375,7 +412,12 @@ part of offline artifact preparation before the Qdrant snapshot is written.
 
 ## Azure VM Job Status
 
-Producer: `scripts/azure/run_embedding_job_remote.sh`
+Producer:
+
+```text
+scripts/azure/run_embedding_job_remote.sh
+scripts/azure/run_splice_job_remote.sh
+```
 
 Path:
 
@@ -386,7 +428,11 @@ logs/<cloud_run_id>/status.json
 Important fields:
 
 - `cloud_run_id`: Azure launcher run identifier.
-- `embedding_run_id`: Embedding/index/snapshot run identifier, once allocated.
+- `embedding_run_id`: Embedding/index/snapshot run identifier, once allocated
+  for embedding jobs.
+- `splice_run_id`: Splice/index/snapshot run identifier for splice jobs.
+- `processed_run_id`: Processed input or reparse run identifier when available.
+- `vector_run_id`: Existing embedding vector run used by splice jobs.
 - `started_at_utc`: Job start time.
 - `updated_at_utc`: Last status write time.
 - `finished_at_utc`: Terminal completion time, or `null` while running.
@@ -400,7 +446,9 @@ Important fields:
 - `qdrant_indexed_vectors_count`: Current indexed-vector count when reachable.
 - `qdrant_update_queue_length`: Current Qdrant update queue length when reachable.
 - `log_path`: Blob path to the streamed remote job log.
-- `embedding_manifest_path`: Blob path to the embedding manifest, once known.
+- `embedding_manifest_path`: Blob path to the embedding manifest, once known
+  for embedding jobs.
+- `splice_manifest_path`: Blob path to the splice manifest for splice jobs.
 - `snapshot_prefix`: Blob prefix for uploaded Qdrant snapshot artifacts.
 
 Expected stage values include:
@@ -423,5 +471,9 @@ waiting_for_qdrant
 snapshotting
 uploading_snapshot
 uploading_embedding_manifest
+uploading_embedding_vectors
+parsing_raw
+splicing_vectors
+uploading_splice_manifest
 succeeded
 ```

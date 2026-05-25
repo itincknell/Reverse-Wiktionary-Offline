@@ -417,6 +417,17 @@ REVWIK_EMBEDDING_RUN_ID="$embeddingRunId" \
   --storage-account "$storageAccount" \
   --container "$container"
 
+set_stage "uploading_embedding_vectors"
+az storage blob upload-batch \
+  --account-name "$storageAccount" \
+  --destination "$container" \
+  --destination-path "embeddings/$embeddingRunId/vectors" \
+  --source "data/embeddings/$embeddingRunId/vectors" \
+  --pattern "*" \
+  --overwrite true \
+  --auth-mode login \
+  --output none
+
 set_stage "uploading_embedding_manifest"
 az storage blob upload \
   --account-name "$storageAccount" \

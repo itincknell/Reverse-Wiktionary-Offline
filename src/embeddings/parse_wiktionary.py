@@ -94,19 +94,52 @@ def clean_glosses(glosses: list[Any]) -> list[str]:
     return cleaned
 
 
-def extract_pronunciation_fields(sounds: Any) -> dict[str, str]:
+def has_general_american_tag(sound: dict[str, Any]) -> bool:
+    """
+    Return whether a raw sound object is tagged as General American.
+    """
+    tags = sound.get("tags")
+
+    if not isinstance(tags, list):
+        return False
+
+    for tag in tags:
+        if not isinstance(tag, str):
+            continue
+
+        normalized = tag.strip().casefold().replace("_", "-").replace(" ", "-")
+        if normalized == "general-american":
+            return True
+
+    return False
+
+
+def extract_pronunciation_fields(
+    sounds: Any,
+    *,
+    lang: str | None = None,
+) -> dict[str, str]:
     """
     Extract first-seen pronunciation display fields from raw Wiktextract sounds.
+
+    English entries prefer General American sound rows when available, then
+    fall back to first-seen values in raw sound order.
     """
     fields: dict[str, str] = {}
 
     if not isinstance(sounds, list):
         return fields
 
-    for sound in sounds:
-        if not isinstance(sound, dict):
-            continue
+    sound_rows = [sound for sound in sounds if isinstance(sound, dict)]
+    english = isinstance(lang, str) and lang.strip().casefold() == "english"
+    ordered_sounds = (
+        [sound for sound in sound_rows if has_general_american_tag(sound)]
+        + sound_rows
+        if english
+        else sound_rows
+    )
 
+    for sound in ordered_sounds:
         ipa = sound.get("ipa")
         if "ipa" not in fields and isinstance(ipa, str) and ipa.strip():
             fields["ipa"] = clean_text(ipa)
@@ -196,7 +229,6 @@ def normalize_record(record: dict[str, Any]) -> list[dict[str, Any]]:
     pos = record.get("pos")
     senses = record.get("senses", [])
     head_templates = record.get("head_templates")
-    pronunciation_fields = extract_pronunciation_fields(record.get("sounds"))
 
     if not isinstance(lang, str) or not lang.strip():
         return []
@@ -213,6 +245,10 @@ def normalize_record(record: dict[str, Any]) -> list[dict[str, Any]]:
     lang = clean_text(lang)
     word = clean_text(word)
     pos = clean_text(pos)
+    pronunciation_fields = extract_pronunciation_fields(
+        record.get("sounds"),
+        lang=lang,
+    )
 
     if pos not in ALLOWED_POS:
         return []

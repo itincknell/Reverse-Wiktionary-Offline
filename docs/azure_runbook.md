@@ -237,6 +237,41 @@ az vm run-command invoke \
 CLOUD_RUN_ID="<cloud_run_id_from_launcher_output>"
 ```
 
+## Splice Run
+
+Use a splice run when processed payload fields need to change but
+`embedding_text`, shard order, and row counts are expected to remain stable.
+The VM job reparses raw data, validates the new processed rows against saved
+vector shard metadata, rebuilds Qdrant, and uploads a new snapshot. It does not
+regenerate embeddings and does not upload vector shards.
+
+```bash
+VECTOR_RUN_ID="<existing_embedding_run_id>"
+```
+
+```bash
+SPLICE_COLLECTION="reverse_wiktionary_v5"
+```
+
+```bash
+./scripts/run_splice_on_azure_vm.sh \
+  --resource-group "$RESOURCE_GROUP" \
+  --vm-name "$VM_NAME" \
+  --storage-account "$STORAGE_ACCOUNT" \
+  --container "$CONTAINER" \
+  --collection-name "$SPLICE_COLLECTION" \
+  --vector-run-id "$VECTOR_RUN_ID" \
+  --expected-vector-size 768
+```
+
+```bash
+CLOUD_RUN_ID="<cloud_run_id_from_launcher_output>"
+```
+
+The launcher uploads a fresh code archive and the remote start script replaces
+the VM checkout while preserving `data/` and `.venv/`. This keeps local raw,
+processed, Qdrant, and vector artifacts available for the splice job.
+
 ## Live Status
 
 ```bash

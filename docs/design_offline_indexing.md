@@ -97,8 +97,10 @@ language, or part of speech. Those fields are stored as metadata and used for
 display/filtering.
 
 Pronunciation display fields are selected greedily from the raw Wiktextract
-`sounds[]` array. The parser keeps the first non-empty IPA string, OGG URL, and
-MP3 URL encountered in list order. These fields are not embedded.
+`sounds[]` array. English rows prefer `General-American` sound entries when
+available, then fall back to source list order. Other languages keep the first
+non-empty IPA string, OGG URL, and MP3 URL encountered in list order. These
+fields are not embedded.
 
 Wiktionary result links are derived by the serving layer from `word` and `lang`.
 The offline artifact does not store full URLs or duplicate URL components that
@@ -161,8 +163,65 @@ The generator writes per-shard vector artifacts before Qdrant upsert. This makes
 Qdrant upsert and snapshot recovery independent of GPU embedding once a shard
 has been encoded.
 
+Uploaded embedding runs include:
+
+```text
+embeddings/<run_id>/manifest.json
+embeddings/<run_id>/vectors/shard_00000.npz
+embeddings/<run_id>/vectors/shard_00000.json
+...
+```
+
+The vector shard artifacts are durable recovery inputs. They should be uploaded
+for full embedding runs and reused for splice runs.
+
 Qdrant upsert requests use a fixed 3600-second client timeout. This is an
 internal guardrail for large on-disk collection writes, not a run parameter.
+
+## Splice Rebuilds
+
+Producer:
+
+```text
+src/embeddings/splice_embeddings.py
+```
+
+Launcher:
+
+```text
+scripts/run_splice_on_azure_vm.sh
+```
+
+A splice rebuild refreshes processed payload fields without rerunning GPU
+embedding. It is valid only when the new processed shards preserve the same row
+order and row count as the saved vector artifacts.
+
+The splice workflow is:
+
+```text
+raw Wiktionary JSONL
+  -> patched preprocessing
+  -> new processed JSONL shards
+  -> validate saved vector shard alignment
+  -> Qdrant upsert with new payloads and old vectors
+  -> payload indexes
+  -> quantization
+  -> Qdrant snapshot
+  -> Azure Blob Storage
+```
+
+The splice script validates each shard before upsert:
+
+```text
+processed row count == vector count
+processed source_row_index == vector source_row_indices
+deterministic point ID == vector point_ids
+vector dimension == expected_vector_size
+```
+
+Splice jobs upload the new processed run, splice manifest, logs, and Qdrant
+snapshot. They intentionally do not upload a new embedding manifest or vector
+shards because the vectors come from an existing embedding run.
 
 ## Qdrant Collection
 
